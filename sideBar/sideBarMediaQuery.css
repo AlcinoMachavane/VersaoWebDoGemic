@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 500px){
+
+    .sidebar-hidden {
+        display: none;
+    }
+    .menuBar {
+        width: 100%;
+        position: absolute;
+        justify-content: center;
+        z-index: 3;
+        backdrop-filter: blur(15px);
+        height: auto;
+    }
+
+    .menuBar > ul:hover{
+        border-radius: 0 0 20px 20px;
+    }
+
+    .menuBar > ul{
+        height: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.profileSection{
+    display: flex;
+    flex-basis: 100%;
+    height: calc(100Vh - 140px);
+    flex-wrap: wrap;
+    overflow: auto;
+    background-color: #3E97FF;
+}

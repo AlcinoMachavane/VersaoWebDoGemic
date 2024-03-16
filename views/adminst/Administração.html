@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="../../set.css">
+    <link rel="stylesheet" href="../../header/header.css">
+    <link rel="stylesheet" href="../../sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../footer/footer.css">
+    <link rel="stylesheet" href="adminst.css">
+    <link rel="stylesheet" href="../../titleBar/titleBarMediaQuery.css">
+    <link rel="stylesheet" href="adminstMediaQuery.css">
+    <link rel="stylesheet" href="../../sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../header/userSign/signIn.css">
+    <link rel="stylesheet" href="../../header/headerMediaQuery.css">
+    <title>Administração</title>
+</head>
+<body>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <i class="fa-regular cancelButton fa-circle-xmark" id="modalClose"></i>
+        <h1 class="modalTitle">Cadastro de usuário</h1>
+        <form action="#" class="signIn" id="sign">
+
+            <div class="labelInputConteiner">
+                <label for="fullName">Nome completo</label>
+                <input type="text" id="fullName" name="fullName" autofocus>
+                <div id="fullNameDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="residence">Moradia</label>
+                <input type="text" id="residence" name="residence">
+                <div id="residenceDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+                <div id="emailDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password">
+                <div id="passwordDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="passwordConfirm">Confirmar a senha</label>
+                <input type="password" id="passwordConfirm" name="passwordConfirm">
+                <div id="passwordConfirmDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Adicione mensagens de validação para os campos de rádio -->
+
+            <div class="labelInputConteiner radio">
+                <div class="radioConteiner">
+                    <input type="radio" name="position" id="owner">
+                    <label for="owner">Proprietário</label>
+                </div>
+                <p>Melhor para proprietários de negócios e administradores da empresa.</p>
+            </div>
+
+            <div class="labelInputConteiner radio">
+                <div class="radioConteiner">
+                    <input type="radio" name="position" id="manager">
+                    <label for="manager">Gerente</label>
+                </div>
+                <p>Melhor para gerentes e administradores de empresa.</p>
+            </div>
+
+            <div class="labelInputConteiner radio">
+                <div class="radioConteiner">
+                    <input type="radio" name="position" id="HR">
+                    <label for="HR">Gestor RH</label>
+                </div>
+                <p>Melhor para gestores de recursos humanos e administradores de pessoal da empresa.</p>
+            </div>
+
+            <div class="labelInputConteiner radio">
+                <div class="radioConteiner">
+                    <input type="radio" name="position" id="financialManagers">
+                    <label for="financialManagers">Gestor financeiro</label>
+                </div>
+                <p>Melhor para gestores financeiros e administradores de finanças da empresa.</p>
+            </div>
+
+            <div class="labelInputConteiner radio">
+                <div class="radioConteiner">
+                    <input type="radio" name="position" id="loanOfficers">
+                    <label for="loanOfficers">Agente de crédito</label>
+                </div>
+                <p>Melhor para agentes de crédito responsáveis pela concessão e análise de empréstimos na empresa.</p>
+                <p class="validationMessage" id="positionValidation"></p>
+            </div>
+
+            <!-- Adicione mensagens de validação para outros campos de rádio se necessário -->
+
+            <div class="button-container">
+                <button class="resetForm" type="reset" onclick="resetForm()">Descartar</button>
+                <button class="submitForm" type="submit">Submeter</button>
+            </div>
+        </form>
+        <h1 class="modalTitle"></h1>
+    </div>
+</div>
+
+
+
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+
+<menu id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+
+        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
+            <span><i class="fa-regular fa-circle-xmark"></i></span>
+        </li>
+
+        <li onclick="changeContent('Dashboard')"><a href="../../views/dashboard/Dashboard.html"><i
+                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li onclick="changeContent('adminst')"><a href="../../views/adminst/Administração.html"><i
+                class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li onclick="changeContent('clients')"><a href="../../views/clients/Clientes.html"><i
+                class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li onclick="changeContent('Loans')"><a href="../../views/loans/Empréstimos.html"><i
+                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li onclick="changeContent('cashFlow')"><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i
+                class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li onclick="changeContent('reports')"><a href="../../views/reports/Reports.html"><i
+                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li onclick="changeContent('configs')"><a href="../../views/configs/Configurações.html"><i
+                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li onclick="changeContent('logOut')"><a href="../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+
+    </ul>
+</menu>
+
+<main class="topFoot">
+
+    <nav class="topBar">
+        <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
+    </nav>
+
+
+    <nav class="topBar2">
+        <p><i class="fa-solid fa-magnifying-glass"></i><input type="search" name="search" id="search" value="Pesquisar">
+        </p>
+        <!--        <p class="filter">-->
+        <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>
+
+        <form action="#" class="dropDown" id="popupForm">
+            <i class="fa-regular cancelButton fa-circle-xmark" id="cancelButton"></i>
+            <h1>Opção de filtragem</h1>
+
+            <div class="PopUpConteiner">
+                <label for="by">Por:</label>
+                <select type="text" name="by" id="by">
+<!--                    <option value="Cargo">Cargo</option>-->
+                    <option value="Cargo">Cargo</option>
+                    <option value="Ultimo login">Ultimo login</option>
+                    <option value="Estado">Estado</option>
+                </select>
+            </div>
+
+            <div class="ButtonsConteiner">
+                <button class="deny" type="reset">Repor</button>
+                <button class="accept" type="submit">Filtrar</button>
+            </div>
+
+        </form>
+
+
+        <!--        </p>-->
+        <button class="add" id="showModal" onclick="openModal()">Adicionar Usuário +</button>
+    </nav>
+    <div class="forScroll">
+        <div class="tableConteiner">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Cargo</th>
+                    <th>Data de Último Login</th>
+                    <th>Data de Cadastro</th>
+                    <th>Estado</th>
+                    <th class="actionEye">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="user">
+                    <td>Alcino de Almeida Martins Tsengo</td>
+                    <td>alcinomachavene@gmail.com</td>
+                    <td>Gestor de Recursos Humanos</td>
+                    <td>17-09-2024</td>
+                    <td>17-09-2024</td>
+                    <td>Ativo</td>
+                    <td class="actionEye"><i class="fa-solid fa-eye"></i></td>
+                </tr>
+                <!-- Repita este bloco de tr para cada usuário -->
+
+
+                <div class="lastVersion">
+
+                    <!--        <div class="titlesConteiner">-->
+                    <!--            <div class="titles">-->
+                    <!--                <h1 class="data image">Avatar</h1>-->
+                    <!--                <h1 class="data name">Nome</h1>-->
+                    <!--                <h1 class="data email">e-Mail</h1>-->
+                    <!--                <h1 class="data position">Cargo</h1>-->
+                    <!--                <h1 class="data lastLogin">Ultimo Login</h1>-->
+                    <!--                <h1 class="data joinedDate">Data de cadastro</h1>-->
+                    <!--                <h1 class="data status">Estado</h1>-->
+                    <!--                <h1 class="actions">Detalhes</h1>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+
+                    <!--        <section class="userLis">-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--            <article class="user">-->
+                    <!--                <div class="mainInfo">-->
+                    <!--                    <div class="data image">-->
+                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data name">-->
+                    <!--                        <h3>Nome</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data email">-->
+                    <!--                        <h3>e-Mail</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data position">-->
+                    <!--                        <h3>Gestor</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data lastLogin">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data joinedDate">-->
+                    <!--                        <h3>17-09-2024</h3>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data status">-->
+                    <!--                        <h3>Activo</h3>-->
+                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="data actions">-->
+                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
+                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </article>-->
+
+                    <!--        </section>-->
+
+                </div>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+</main>
+
+<script src="../../header/topBar2.js"></script>
+<script src="../../sideBar/sideBar.js"></script>
+<script src="../../header/userSign/signIn.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+* {
+    color: var(--myLight);
+}
+
+header {
+    width: 100vw;
+    margin: auto;
+    background-color: var(--myBlack);
+}
+
+header .navBar {
+    display: flex;
+    flex-basis: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+header .navBar ul {
+    display: flex;
+    flex-basis: 100%;
+}
+
+header .navBar > ul > li {
+    margin: 10px;
+}
+
+header .navBar > ul > li a {
+    color: var(--myLight);
+}
+
+header .navBar > ul > li a:hover {
+    color: white;
+}
+
+
+.topFoot {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.topBar, .topBar2 {
+    width: 100%;
+    background-color: white;
+    height: 55px;
+}
+
+.topBar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+}
+
+#buttonForBarMobile{
+    display: none;
+    position: absolute;
+    /*background-color: red;*/
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.topBar2{
+    padding: 0 20px;
+}
+
+.topBar > p {
+    display: flex;
+    /*flex-basis: 50%;*/
+    align-items: center;
+    /*background-color: red;*/
+}
+
+.topBar > a > i{
+    font-size: 12pt;
+    color: rgba(255, 0, 0, 0.75);
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 50%;
+    margin: 0 40px;
+}
+
+.topBar > a > i:hover{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.50);
+}
+
+.topBar2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 10px 0 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.topBar2 p, button {
+    display: flex;
+    text-align: right;
+    background-color: var(--myLightBlueButton);
+    border-radius: 6px;
+    padding-right: 8px;
+    align-items: center;
+    height: 70%;
+    border: none;
+
+}
+
+.topBar2 > p > input {
+    padding: 5px;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+}
+
+.filter {
+    margin: 40px;
+    justify-content: center;
+    text-align: center;
+    height: 70%;
+}
+
+button {
+    margin: 40px;
+
+}
+
+.filter > p {
+    position: absolute;
+    color: var(--myLightBlue);
+}
+
+.filter > p > i {
+    text-align: center;
+    color: var(--myLightBlue);
+}
+
+.dropDown {
+    display: flex;
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    flex-wrap: wrap;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 5px 5px 20px var(--myLightBlueButton);
+}
+
+.dropDown > h1 {
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 2px;
+}
+
+.dropDown > i.cancelButton {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    color: rgba(255, 0, 0, 0.1) !important;
+}
+
+.dropDown > i.cancelButton:hover{
+    color: rgba(255, 0, 0, 0.75)!important;
+}
+
+
+.dropDown > h1 {
+    display: flex;
+    flex-basis: 100%;
+    /*background-color: blue;*/
+    border-bottom: 1px dashed var(--myLightBlueButton);
+}
+
+.dropDown > .PopUpConteiner {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.dropDown > .PopUpConteiner > label, select {
+    display: flex;
+    flex-basis: 100%;
+    border-radius: 5px;
+}
+
+.dropDown > .PopUpConteiner > label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 8pt;
+}
+
+.dropDown > .PopUpConteiner > select {
+    background-color: var(--myLightBlueButton);
+    border: none;
+    padding: 5px 2px;
+}
+
+.dropDown > .PopUpConteiner > select > option {
+    border: none;
+}
+
+.ButtonsConteiner {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.ButtonsConteiner > button {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.ButtonsConteiner > button.deny:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.ButtonsConteiner > button.accept:hover {
+    color: white;
+    background-color: var(--myLightBlue);
+}
+
+#popupForm {
+    display: none;
+}
+
+.profile {
+    align-items: center;
+}
+
+.topBar2 > button.add {
+    color: white;
+    display: flex;
+    height: auto;
+    background-color: var(--myLightBlue);
+    margin-left: auto;
+    /*right: 50px;*/
+    padding: 5px 5px;
+    max-width: 200px;
+    transition: .5s ease-in-out;
+}
+
+.topBar2 > button.add:hover{
+    color: var(--myLightBlue);
+    /*font-weight: bold;*/
+    background-color: var(--myLightBlueButton);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.topBar2 > button.add > input {
+    color: white;
+    font-weight: bold;
+}
+
+.topBar2 > button.add > input > .fa-plus {
+    color: white !important;
+}
+

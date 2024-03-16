@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1024px){
+    main{
+
+    }
+
+    .userLis{
+
+    }
+
+    .userLis > .user{
+
+    }
+
+    .userLis > .user > .mainInfo{
+
+    }
+
+    .userLis > .user > .mainInfo > .data{
+
+    }
+
+    .actions, .image, .status{
+
+    }
+}
