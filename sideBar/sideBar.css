@@ -24,8 +24,9 @@ i#xmark{
     width: 62px;
     background-color: var(--myBlue);
     height: 100vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
     transition: .8s ease-in-out;
+    overflow: auto;
 }
 
 .menuBar > ul:hover {

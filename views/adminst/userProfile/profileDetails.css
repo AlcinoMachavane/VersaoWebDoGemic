@@ -1,5 +1,75 @@
 @charset "UTF-8";
 
 .profileDetails{
-    background-color: lightpink;
+    display: flex;
+    flex-basis: 20%;
+    margin-right: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+
+    height: 300px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.profileDetails:hover{
+    height: 800px;
+}
+
+.profileName, .sumUp, .personalInformation, .details, .details > h2, p{
+    display: flex;
+    flex-basis: 100%;
+    margin: 5px 0;
+    flex-wrap: wrap;
+}
+
+.profileName, .sumUp, .personalInformation, .details, .details{
+    border-bottom: 1px dashed var(--myLightBlueButton);
+}
+
+.profileName{
+    align-items: center;
+    margin-bottom: 40px;
+    /*background-color: #eeeeee;*/
+}
+
+.profileName > h1{
+    font-size: 14pt;
+}
+
+.sumUp{
+    justify-content: space-between;
+    margin-bottom: 40px;
+    /*background-color: antiquewhite;*/
+}
+
+.sumUp > div.sumUpDetails{
+    /*border: 1px solid black;*/
+}
+
+.personalInformation{
+    /*background-color: lightgoldenrodyellow;*/
+}
+
+.personalInformation > h2{
+    display: flex;
+    flex-basis: 80%;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 11pt;
+    /*background-color: #3E97FF;*/
+}
+
+.personalInformation > .fa-pen-to-square{
+    display: flex;
+    flex-basis: 20%;
+    justify-content: center;
+    /*background-color: #ae90fe;*/
+}
+
+#detailsTopic{
+margin-bottom: 60px;
 }

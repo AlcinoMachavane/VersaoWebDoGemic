@@ -15,6 +15,7 @@ body, main{
 .forScroll{
     display: flex;
     flex-basis: 100%;
+    justify-content: space-between;
     margin: 0 9px;
     height: calc(100vh - 151px); /**/
     overflow-x: auto;
@@ -23,9 +24,9 @@ body, main{
 
 .tableConteiner{
     display: flex;
-    flex-basis: 100%;
-    width: 100%;
-    min-width: 1000px;
+    flex-basis: 80%;
+    /*width: 100%;*/
+    /*min-width: 500px;*/
     margin: 0;
     padding: 0;
 }
@@ -33,7 +34,7 @@ body, main{
 table {
     width: 100%;
     max-height: 80px;
-    min-width: 1000px;
+    min-width: 800px;
     border-collapse: collapse;
     border: 1px solid var(--myLightBlueButton);
     background-color: white;

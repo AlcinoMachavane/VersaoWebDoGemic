@@ -187,16 +187,16 @@
 
 <!--SUBTOPBAR-->
     <nav class="topBar2">
-        <p class="search">
-            <label for="search" style="display: none"></label>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="search" id="search" value="Pesquisar">
-        </p>
-        <div class="mobileDisplay">
-            <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>
+<!--        <p class="search">-->
+<!--            <label for="search" style="display: none"></label>-->
+<!--            <i class="fa-solid fa-magnifying-glass"></i>-->
+<!--            <input type="search" name="search" id="search" value="Pesquisar">-->
+<!--        </p>-->
+<!--        <div class="mobileDisplay">-->
+<!--            <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>-->
 
-            <button class="add" id="showModal"><i class="fa-solid fa-user-plus"></i></button>
-        </div>
+<!--            <button class="add" id="showModal"><i class="fa-solid fa-user-plus"></i></button>-->
+<!--        </div>-->
     </nav>
 
 <!--MAIN-->
@@ -204,113 +204,68 @@
 
 <!--PROFILEDATA-->
         <section class="profileSection">
-            <article class="profileDetails">
-                <span class="image"><i class="fa-solid fa-circle-user"></i></span>
 
-                <div class="sumUp">
-                    <h2>Finalidade</h2>
-                    <h2>Em curso</h2>
-                    <h2>Abatidas</h2>
+            <article class="profileDetails">
+                <div class="profileName">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h1>Helder Juliao Biza</h1>
                 </div>
 
-                <div>
-                    <h2 class="details">Detalhes</h2>
-                    <div class="name">
+                <div class="sumUp">
+                    <div class="sumUpDetails" id="finalized">
+                        <h2>Finalizados</h2>
+                        <h3>76<i class="fa-solid fa-up-long"></i><i class="fa-solid fa-down-long"></i></h3>
+                    </div>
+                    <div class="sumUpDetails" id="ongoing">
+                        <h2>Em curso</h2>
+                        <h3>31<i class="fa-solid fa-up-long"></i><i class="fa-solid fa-down-long"></i></h3>
+                    </div>
+                    <div class="sumUpDetails" id="shot-down">
+                        <h2>Abatidos</h2>
+                        <h3>9<i class="fa-solid fa-up-long"></i><i class="fa-solid fa-down-long"></i></h3>
+                    </div>
+                </div>
+
+                <div class="personalInformation">
+                    <h2 class="details" id="detailsTopic">Detalhes</h2>
+                    <i class="fa-solid fa-pen-to-square" id="showModal"></i>
+                    <div class="details" id="name">
                         <h2>Nome</h2>
                         <p>Helder Juliao Biza</p>
                     </div>
 
-                    <div class="UserName">
-                        <h2>Nome</h2>
-                        <p>Helder Juliao Biza</p>
+                    <div class="details" id="UserName">
+                        <h2>E-mail</h2>
+                        <p>helderbiza@gmail.com</p>
                     </div>
 
-                    <div class="position">
-                        <h2>Nome</h2>
-                        <p>Helder Juliao Biza</p>
+                    <div class="details" id="position">
+                        <h2>Cargo</h2>
+                        <p>Gestor de credito</p>
                     </div>
 
-                    <div class="accessLevel">
-                        <h2>Nome</h2>
-                        <p>Helder Juliao Biza</p>
-                    </div>
-
-                    <div class="placeOfBirth">
-                        <p>Inhambane</p>
-                    </div>
-
-                    <div class="docType">
+                    <div class="details" id="docType">
+                        <h2>Tipo de documento</h2>
                         <p>BI</p>
                     </div>
 
-                    <div class="docNumber">
+                    <div class="details" id="docNumber">
+                        <h2>Numero do documento</h2>
                         <p>846383294794U</p>
                     </div>
 
-                    <div class="province">
+                    <div class="details" id="province">
+                        <h2>Moradia</h2>
                         <p>Maputo</p>
-                    </div>
-
-                    <div class="district">
                         <p>Boane</p>
-                    </div>
-
-                    <div class="neighborhood">
                         <p>Soweto, Bairro 01</p>
-                    </div>
-
-                    <div class="street">
                         <p>Av. Namaacha</p>
-                    </div>
-
-                    <div class="block">
                         <p>Quarteirao 2</p>
-                    </div>
-
-                    <div class="homeNumber">
                         <p>Casa 1954</p>
                     </div>
 
                 </div>
 
-            </article>
-
-            <article class="personalLoans">
-                <div class="clientName">
-                    <h2>Nome</h2>
-                    <p>Gilberto Cassamo</p>
-                </div>
-                <div class="clientNumber">
-                    <h2>Contacto</h2>
-                    <p>874000778</p>
-                </div>
-                <div class="clientResidence">
-                    <h2>Residencia</h2>
-                    <p>Maputo, Boane</p>
-                </div>
-                <div class="clientStatus">
-                    <h2>Estado</h2>
-                    <p>Activo</p>
-                </div>
-                <div class="clientDetails">
-                    <h2>Visualizas</h2>
-                    <p>+</p>
-                </div>
-                <div class="clientEdit">
-                    <h2>Editar</h2>
-                    <p>@</p>
-                </div>
-                <div class="clientActions">
-                    <h2>Accoes</h2>
-                    <p>Desativar / activar</p>
-                </div>
-            </article>
-
-            <article class="invoices">
-                <div class="operationDate"><h1>Data</h1></div>
-                <div class="operationDescription"><h1>Descricao</h1></div>
-                <div class="operationType"><h1>Dperacao</h1></div>
-                <div class="operationValue"><h1>Valor</h1></div>
             </article>
         </section>
 
@@ -320,22 +275,22 @@
                 <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Cargo</th>
-                    <th>Data de Último Login</th>
-                    <th>Data de Cadastro</th>
+<!--                    <th>E-mail</th>-->
+<!--                    <th>Cargo</th>-->
+                    <th>Valor concedido</th>
+                    <th>Prazo</th>
                     <th>Estado</th>
-                    <th class="actionEye">Ações</th>
+                    <th class="actionEye">Visualizar</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr class="user">
                     <td>Alcino de Almeida Martins Tsengo</td>
-                    <td>alcinomachavene@gmail.com</td>
-                    <td>Gestor de Recursos Humanos</td>
+<!--                    <td>alcinomachavene@gmail.com</td>-->
+<!--                    <td>Gestor de Recursos Humanos</td>-->
+                    <td>13 700,00</td>
                     <td>17-09-2024</td>
-                    <td>17-09-2024</td>
-                    <td>Ativo</td>
+                    <td>Em dia</td>
                     <td class="actionEye"><i class="fa-solid fa-eye"></i></td>
                 </tr>
                 <!-- Repita este bloco de tr para cada usuário -->
