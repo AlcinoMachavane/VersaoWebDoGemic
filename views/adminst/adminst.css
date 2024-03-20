@@ -16,8 +16,7 @@ body, main{
     display: flex;
     flex-basis: 100%;
     margin: 0 9px;
-    height: calc(100vh - 151px);
-    /*background-color: orange;*/
+    height: calc(100vh - 151px); /**/
     overflow-x: auto;
     overflow-y: auto;
 }

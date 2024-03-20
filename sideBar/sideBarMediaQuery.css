@@ -22,4 +22,12 @@
         height: auto;
         width: 100%;
     }
+
+    i#bars{
+        display: none;
+    }
+
+    i#xmark{
+        display: flex;
+    }
 }

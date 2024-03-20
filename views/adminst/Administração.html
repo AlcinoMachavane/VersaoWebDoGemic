@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="../../titleBar/titleBarMediaQuery.css">
     <link rel="stylesheet" href="adminstMediaQuery.css">
     <link rel="stylesheet" href="../../sideBar/sideBarMediaQuery.css">
-    <link rel="stylesheet" href="../../header/userSign/signIn.css">
+    <link rel="stylesheet" href="../../header/modal/signIn.css">
     <link rel="stylesheet" href="../../header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../header/filterModal/fiterModal.css">
     <title>Administração</title>
 </head>
 <body>
 
-<!-- Modal -->
+<!-- SIGN MODAL-->
+
 <div id="myModal" class="modal">
     <div class="modal-content">
         <i class="fa-regular cancelButton fa-circle-xmark" id="modalClose"></i>
@@ -111,6 +113,38 @@
     </div>
 </div>
 
+<!-- FILTER MODAL-->
+
+<form action="#" class="dropDown" id="popupForm">
+    <i class="fa-regular cancelButton fa-circle-xmark" id="cancelButton"></i>
+    <h1>Opção de filtragem</h1>
+
+    <div class="PopUpConteiner">
+        <label for="byPosition">Por Cargo:</label>
+        <select name="by" id="byPosition">
+            <option value="Cargo"></option>
+            <option value="Ultimo login">Proprietário</option>
+            <option value="Estado">Gerente</option>
+            <option value="Estado">Gestor RH</option>
+            <option value="Estado">Gestor Financeiro</option>
+            <option value="Estado">Gestor De Crédito</option>
+        </select>
+
+        <label for="byStatus">Por Estado:</label>
+        <select name="by" id="byStatus">
+            <option value="Ultimo login"></option>
+            <option value="Estado">Activo</option>
+            <option value="Estado">Desativado</option>
+        </select>
+    </div>
+
+    <div class="ButtonsConteiner">
+        <button class="deny" type="reset">Repor</button>
+        <button class="accept" type="submit">Filtrar</button>
+    </div>
+
+</form>
+
 
 
 <span id="buttonForBarMobile" onclick="toggleMenu()">
@@ -118,32 +152,32 @@
     </span>
 
 
-<menu id="menu" class="menuBar sidebar-hidden">
+<aside id="menu" class="menuBar sidebar-hidden">
 
     <ul>
 
         <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
-            <span><i class="fa-regular fa-circle-xmark"></i></span>
+            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
         </li>
 
-        <li onclick="changeContent('Dashboard')"><a href="../../views/dashboard/Dashboard.html"><i
+        <li><a href="../../views/dashboard/Dashboard.html"><i
                 class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li onclick="changeContent('adminst')"><a href="../../views/adminst/Administração.html"><i
+        <li><a href="../../views/adminst/Administração.html"><i
                 class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li onclick="changeContent('clients')"><a href="../../views/clients/Clientes.html"><i
+        <li><a href="../../views/clients/Clientes.html"><i
                 class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li onclick="changeContent('Loans')"><a href="../../views/loans/Empréstimos.html"><i
+        <li><a href="../../views/loans/Empréstimos.html"><i
                 class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li onclick="changeContent('cashFlow')"><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i
+        <li><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i
                 class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li onclick="changeContent('reports')"><a href="../../views/reports/Reports.html"><i
+        <li><a href="../../views/reports/Reports.html"><i
                 class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li onclick="changeContent('configs')"><a href="../../views/configs/Configurações.html"><i
+        <li><a href="../../views/configs/Configurações.html"><i
                 class="fa-solid fa-gear"></i> Configurações</a></li>
-        <li onclick="changeContent('logOut')"><a href="../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+        <li><a href="../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
 
     </ul>
-</menu>
+</aside>
 
 <main class="topFoot">
 
@@ -153,35 +187,16 @@
 
 
     <nav class="topBar2">
-        <p><i class="fa-solid fa-magnifying-glass"></i><input type="search" name="search" id="search" value="Pesquisar">
+        <p class="search">
+            <label for="search" style="display: none"></label>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search" id="search" value="Pesquisar">
         </p>
-        <!--        <p class="filter">-->
+        <div class="mobileDisplay">
         <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>
 
-        <form action="#" class="dropDown" id="popupForm">
-            <i class="fa-regular cancelButton fa-circle-xmark" id="cancelButton"></i>
-            <h1>Opção de filtragem</h1>
-
-            <div class="PopUpConteiner">
-                <label for="by">Por:</label>
-                <select type="text" name="by" id="by">
-<!--                    <option value="Cargo">Cargo</option>-->
-                    <option value="Cargo">Cargo</option>
-                    <option value="Ultimo login">Ultimo login</option>
-                    <option value="Estado">Estado</option>
-                </select>
-            </div>
-
-            <div class="ButtonsConteiner">
-                <button class="deny" type="reset">Repor</button>
-                <button class="accept" type="submit">Filtrar</button>
-            </div>
-
-        </form>
-
-
-        <!--        </p>-->
-        <button class="add" id="showModal" onclick="openModal()">Adicionar Usuário +</button>
+        <button class="add" id="showModal"><i class="fa-solid fa-user-plus"></i></button>
+        </div>
     </nav>
     <div class="forScroll">
         <div class="tableConteiner">
@@ -209,331 +224,6 @@
                 </tr>
                 <!-- Repita este bloco de tr para cada usuário -->
 
-
-                <div class="lastVersion">
-
-                    <!--        <div class="titlesConteiner">-->
-                    <!--            <div class="titles">-->
-                    <!--                <h1 class="data image">Avatar</h1>-->
-                    <!--                <h1 class="data name">Nome</h1>-->
-                    <!--                <h1 class="data email">e-Mail</h1>-->
-                    <!--                <h1 class="data position">Cargo</h1>-->
-                    <!--                <h1 class="data lastLogin">Ultimo Login</h1>-->
-                    <!--                <h1 class="data joinedDate">Data de cadastro</h1>-->
-                    <!--                <h1 class="data status">Estado</h1>-->
-                    <!--                <h1 class="actions">Detalhes</h1>-->
-                    <!--            </div>-->
-                    <!--        </div>-->
-
-                    <!--        <section class="userLis">-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--            <article class="user">-->
-                    <!--                <div class="mainInfo">-->
-                    <!--                    <div class="data image">-->
-                    <!--                        <i class="fa-solid fa-circle-user"></i>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data name">-->
-                    <!--                        <h3>Nome</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data email">-->
-                    <!--                        <h3>e-Mail</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data position">-->
-                    <!--                        <h3>Gestor</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data lastLogin">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data joinedDate">-->
-                    <!--                        <h3>17-09-2024</h3>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data status">-->
-                    <!--                        <h3>Activo</h3>-->
-                    <!--                        &lt;!&ndash;                    <h3><i class="fa-solid fa-plus-minus"></i></h3>&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="data actions">-->
-                    <!--                        &lt;!&ndash;                    <h3>Activo</h3>&ndash;&gt;-->
-                    <!--                        <h3><i class="fa-solid fa-ellipsis-vertical"></i></h3>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </article>-->
-
-                    <!--        </section>-->
-
-                </div>
             </table>
         </div>
     </div>
@@ -543,8 +233,8 @@
     </footer>
 </main>
 
-<script src="../../header/topBar2.js"></script>
+<script src="../../header/filterModal/filterModal.js"></script>
 <script src="../../sideBar/sideBar.js"></script>
-<script src="../../header/userSign/signIn.js"></script>
+<script src="../../header/modal/signIn.js"></script>
 </body>
 </html>

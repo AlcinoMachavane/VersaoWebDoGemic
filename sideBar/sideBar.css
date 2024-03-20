@@ -16,6 +16,10 @@ i {
     width: auto;
 }
 
+i#xmark{
+    display: none;
+}
+
 .menuBar > ul {
     width: 62px;
     background-color: var(--myBlue);

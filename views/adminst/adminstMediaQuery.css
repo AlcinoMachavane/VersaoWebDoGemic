@@ -1,27 +1,7 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 1024px){
-    main{
-
-    }
-
-    .userLis{
-
-    }
-
-    .userLis > .user{
-
-    }
-
-    .userLis > .user > .mainInfo{
-
-    }
-
-    .userLis > .user > .mainInfo > .data{
-
-    }
-
-    .actions, .image, .status{
-
+@media screen and (max-width: 470px){
+    .forScroll{
+        height: calc(100vh - 50px); /**/
     }
 }

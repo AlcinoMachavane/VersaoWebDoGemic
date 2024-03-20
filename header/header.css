@@ -110,10 +110,28 @@ header .navBar > ul > li a:hover {
 }
 
 .topBar2 > p > input {
+    display: flex;
+    flex-basis: 100%;
     padding: 5px;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
+}
+
+
+.mobileDisplay{
+    display: flex;
+    flex-basis: 100%;
+    /*margin: auto;*/
+    justify-content: space-between;
+    margin-left: 20px;
+    align-items: center;
+    height: 100%;
+    /*border: 1px solid #3E97FF;*/
+}
+
+#showPopup{
+    width: 100px;
 }
 
 .filter {
@@ -124,7 +142,7 @@ header .navBar > ul > li a:hover {
 }
 
 button {
-    margin: 40px;
+    margin: 0;
 
 }
 
@@ -138,95 +156,7 @@ button {
     color: var(--myLightBlue);
 }
 
-.dropDown {
-    display: flex;
-    position: absolute;
-    top: 120px;
-    left: 350px;
-    flex-wrap: wrap;
-    width: 200px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    box-shadow: 5px 5px 20px var(--myLightBlueButton);
-}
-
-.dropDown > h1 {
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 2px;
-}
-
-.dropDown > i.cancelButton {
-    position: absolute;
-    right: 5px;
-    top: 0;
-    color: rgba(255, 0, 0, 0.1) !important;
-}
-
-.dropDown > i.cancelButton:hover{
-    color: rgba(255, 0, 0, 0.75)!important;
-}
-
-
-.dropDown > h1 {
-    display: flex;
-    flex-basis: 100%;
-    /*background-color: blue;*/
-    border-bottom: 1px dashed var(--myLightBlueButton);
-}
-
-.dropDown > .PopUpConteiner {
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-}
-
-.dropDown > .PopUpConteiner > label, select {
-    display: flex;
-    flex-basis: 100%;
-    border-radius: 5px;
-}
-
-.dropDown > .PopUpConteiner > label {
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 8pt;
-}
-
-.dropDown > .PopUpConteiner > select {
-    background-color: var(--myLightBlueButton);
-    border: none;
-    padding: 5px 2px;
-}
-
-.dropDown > .PopUpConteiner > select > option {
-    border: none;
-}
-
-.ButtonsConteiner {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.ButtonsConteiner > button {
-    margin: 5px;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.ButtonsConteiner > button.deny:hover {
-    background-color: rgba(255, 0, 0, 0.1);
-    color: rgba(255, 0, 0, 0.75);
-}
-
-.ButtonsConteiner > button.accept:hover {
-    color: white;
-    background-color: var(--myLightBlue);
-}
+/**/
 
 #popupForm {
     display: none;
@@ -236,24 +166,32 @@ button {
     align-items: center;
 }
 
-.topBar2 > button.add {
+div.mobileDisplay > button.add {
     color: white;
     display: flex;
-    height: auto;
+    height: 40px;
     background-color: var(--myLightBlue);
     margin-left: auto;
-    /*right: 50px;*/
+    justify-content: center;
     padding: 5px 5px;
-    max-width: 200px;
+    width: 100px;
     transition: .5s ease-in-out;
 }
 
-.topBar2 > button.add:hover{
+div.mobileDisplay > button.add:hover{
     color: var(--myLightBlue);
     /*font-weight: bold;*/
     background-color: var(--myLightBlueButton);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 
+}
+
+div.mobileDisplay > button.add > .fa-user-plus{
+    color: white;
+}
+
+div.mobileDisplay > button.add:hover .fa-user-plus{
+    color: var(--myLightBlue);
 }
 
 .topBar2 > button.add > input {
@@ -264,4 +202,5 @@ button {
 .topBar2 > button.add > input > .fa-plus {
     color: white !important;
 }
+
 
