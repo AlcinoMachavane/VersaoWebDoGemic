@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+* {
+    scrollbar-color: rgba(62, 151, 255, 0.75) rgba(30, 107, 215, 0.15); /* Cor da barra de rolagem e da área de fundo da barra de rolagem */
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scroll-behavior: smooth;
+}
+
+
+
+body, main{
+    overflow: hidden;
+}
+
+.forScroll{
+    display: flex;
+    flex-basis: 100%;
+    margin: 0 9px;
+    height: calc(100vh - 151px); /**/
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.tableConteiner{
+    display: flex;
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    max-height: 80px;
+    min-width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid var(--myLightBlueButton);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+thead, tbody{
+}
+
+
+th, td {
+    /*min-width: 170px;*/
+    padding: 8px;
+    border: 1px solid var(--myLightBlueButton);
+    text-align: center;
+}
+
+td.actionEye, th.actionEye{
+    text-align: center;
+}
+
+th {
+    color: var(--myLight);
+    background-color: white;
+}
+/*.fa-circle-user {*/
+/*    color: blue; !* ou qualquer outra cor que você deseje *!*/
+/*}*/
+/*.fa-ellipsis-vertical {*/
+/*    color: gray; !* ou qualquer outra cor que você deseje *!*/
+/*}*/
