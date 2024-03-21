@@ -1,75 +1,90 @@
 @charset "UTF-8";
 
-.profileDetails{
+.profileDetails {
     display: flex;
-    flex-basis: 20%;
-    margin-right: 40px;
+    flex-basis: 100%;
+    margin: 10px 40px 10px 10px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     background-color: white;
+    box-shadow: var(--my-box-shadow);
 
-    height: 300px;
+    height: 140px;
     overflow: hidden;
     transition: 1s ease-in-out;
 }
 
-.profileDetails:hover{
-    height: 800px;
+.profileDetails:hover {
+    height: 450px;
 }
 
-.profileName, .sumUp, .personalInformation, .details, .details > h2, p{
+.profileName, .sumUp, .personalInformation, .details, .details > h2, p {
     display: flex;
     flex-basis: 100%;
     margin: 5px 0;
     flex-wrap: wrap;
 }
 
-.profileName, .sumUp, .personalInformation, .details, .details{
+.personalInformation, .details, .details {
     border-bottom: 1px dashed var(--myLightBlueButton);
 }
 
-.profileName{
+.profileName {
     align-items: center;
-    margin-bottom: 40px;
-    /*background-color: #eeeeee;*/
 }
 
-.profileName > h1{
+.profileName > h1 {
     font-size: 14pt;
 }
 
-.sumUp{
+.sumUp {
     justify-content: space-between;
     margin-bottom: 40px;
     /*background-color: antiquewhite;*/
 }
 
-.sumUp > div.sumUpDetails{
-    /*border: 1px solid black;*/
+.sumUp > div.sumUpDetails {
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px dashed var(--myLightBlueButton);
 }
 
-.personalInformation{
-    /*background-color: lightgoldenrodyellow;*/
+.sumUp > div.sumUpDetails > h3 {
+    font-weight: normal;
 }
 
-.personalInformation > h2{
+.sumUp > div.sumUpDetails > h3 > .fa-up-long {
+    color: limegreen;
+}
+
+.sumUp > div.sumUpDetails > h3 > .fa-down-long {
+    color: orangered;
+}
+
+.personalInformation {
+
+}
+
+#detailsTopic > h2 {
     display: flex;
     flex-basis: 80%;
     justify-content: flex-start;
     align-items: center;
     font-size: 11pt;
-    /*background-color: #3E97FF;*/
+    padding-bottom: 10px;
 }
 
-.personalInformation > .fa-pen-to-square{
+.fa-pen-to-square {
     display: flex;
     flex-basis: 20%;
     justify-content: center;
-    /*background-color: #ae90fe;*/
 }
 
-#detailsTopic{
-margin-bottom: 60px;
+#detailsTopic {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }

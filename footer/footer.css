@@ -8,6 +8,7 @@ footer{
 }
 
 footer > p{
+    justify-content: center;
     text-align: center;
     padding: 5px 0 10px 0;
 }

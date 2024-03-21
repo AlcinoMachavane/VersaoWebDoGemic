@@ -12,6 +12,7 @@ body{
     --myLightBlue: #3E97FF;
     --myLightBlueButton: #E9F3FF;
     --myLightBlueOpac: rgba(0, 0, 255, 0.15);
+    --my-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
 }
 
 

@@ -4,38 +4,6 @@
     color: var(--myLight);
 }
 
-header {
-    width: 100vw;
-    margin: auto;
-    background-color: var(--myBlack);
-}
-
-header .navBar {
-    display: flex;
-    flex-basis: 100%;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-header .navBar ul {
-    display: flex;
-    flex-basis: 100%;
-}
-
-header .navBar > ul > li {
-    margin: 10px;
-}
-
-header .navBar > ul > li a {
-    color: var(--myLight);
-}
-
-header .navBar > ul > li a:hover {
-    color: white;
-}
-
-
 .topFoot {
     display: flex;
     flex-basis: 100%;
@@ -71,9 +39,8 @@ header .navBar > ul > li a:hover {
 
 .topBar > p {
     display: flex;
-    /*flex-basis: 50%;*/
+    justify-content: flex-end;
     align-items: center;
-    /*background-color: red;*/
 }
 
 .topBar > a > i{
