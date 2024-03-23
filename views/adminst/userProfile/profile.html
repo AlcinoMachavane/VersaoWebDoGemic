@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="../../../footer/footer.css">
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="profileDetails.css">
+    <link rel="stylesheet" href="graphic/graphic.css">
     <link rel="stylesheet" href="../adminstMediaQuery.css">
     <link rel="stylesheet" href="../../../sideBar/sideBarMediaQuery.css">
     <link rel="stylesheet" href="../../../header/modal/signIn.css">
     <link rel="stylesheet" href="../../../header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../header/filterModal/fiterModal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Administração</title>
 </head>
 <body>
@@ -154,7 +156,6 @@
 <!--SIDEBAR-->
 
 <aside id="menu" class="menuBar sidebar-hidden">
-
     <ul>
 
         <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
@@ -325,6 +326,22 @@
             </table>
         </div>
 
+        <!--GRAPHIC-->
+        <nav class="switch">
+            <button onclick="changeChart(0)" class="switchButton active" id="monthly">Diário</button>
+            <button onclick="changeChart(1)" class="switchButton" id="Yearly">Mensal</button>
+            <button onclick="changeChart(2)" class="switchButton" id="monthlyAnalysis">Por dia</button>
+            <button onclick="changeChart(3)" class="switchButton" id="YearlyAnalysis">Por mês</button>
+        </nav>
+        <div class="chart-container">
+            <canvas id="salesChart" class="first"></canvas>
+            <canvas id="salesChart1"></canvas>
+            <canvas id="salesChart2"></canvas>
+            <canvas id="salesChart3"></canvas>
+        </div>
+
+
+
     </div>
 
     <footer>
@@ -335,5 +352,6 @@
 <script src="../../../header/filterModal/filterModal.js"></script>
 <script src="../../../sideBar/sideBar.js"></script>
 <script src="../../../header/modal/signIn.js"></script>
+<script src="graphic/graphic.js"></script>
 </body>
 </html>
