@@ -5,6 +5,14 @@ body{
 }
 
 
+* {
+    scrollbar-color: rgba(62, 151, 255, 0.75) rgba(30, 107, 215, 0.15); /* Cor da barra de rolagem e da área de fundo da barra de rolagem */
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scroll-behavior: smooth;
+}
+
+
+
 :root{
     --myBlack: #161616;
     --myLight: #636B7E;

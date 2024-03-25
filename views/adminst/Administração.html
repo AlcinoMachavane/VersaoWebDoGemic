@@ -144,13 +144,12 @@
 
 </form>
 
-
-
+<!-- MOBILE BUTTON FOR SIDEBAR-->
 <span id="buttonForBarMobile" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
     </span>
 
-
+<!-- SIDEBAR-->
 <aside id="menu" class="menuBar sidebar-hidden">
 
     <ul>
@@ -178,13 +177,16 @@
     </ul>
 </aside>
 
+<!--MAIN CONTEINER-->
 <main class="topFoot">
 
+<!-- LOGGED NAME AND BUTTON TO PROFILE-->
     <nav class="topBar">
-        <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
+        <span></span>
+        <a href="userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
-
+<!-- SUB NAVBAR-->
     <nav class="topBar2">
         <p class="search">
             <label for="search" style="display: none"></label>
@@ -194,10 +196,14 @@
         <div class="mobileDisplay">
         <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>
 
-        <button class="add" id="showModal"><i class="fa-solid fa-user-plus"></i></button>
+        <button class="add" id="showModal" title="Adicionar usuário"><i class="fa-solid fa-user-plus"></i></button>
         </div>
     </nav>
+
+<!--  CONTEINER FOR MAIN CONTENT-->
     <div class="forScroll">
+
+<!--  TABLE CONTEINER-->
         <div class="tableConteiner">
             <table>
                 <thead>
@@ -219,7 +225,7 @@
                     <td>17-09-2024</td>
                     <td>17-09-2024</td>
                     <td>Ativo</td>
-                    <td class="actionEye"><a href="userProfile/profile.html"> <i class="fa-solid fa-eye"></i></a></td>
+                    <td class="actionEye" title="Visualizar o perfil"><a href="userProfile/profile.html"> <i class="fa-solid fa-eye"></i></a></td>
                 </tr>
                 <!-- Repita este bloco de tr para cada usuário -->
 
@@ -227,6 +233,7 @@
         </div>
     </div>
 
+<!--  FOOTER-->
     <footer>
         <p>&copy;Guizo Informática e Serviços</p>
     </footer>

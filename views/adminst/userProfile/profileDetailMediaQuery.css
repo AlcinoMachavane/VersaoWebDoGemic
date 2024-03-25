@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 360px){
+
+    .sumUp{
+        justify-content: space-around;
+    }
+
+    .sumUpDetails{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .profileDetails {
+        padding: 20px;
+
+    }
+}

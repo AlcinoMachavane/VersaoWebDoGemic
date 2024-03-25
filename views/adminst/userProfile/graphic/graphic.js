@@ -121,6 +121,11 @@ function changeChart(index) {
     buttons[index].classList.add('active');
 }
 
+window.addEventListener('load', (event) => {
+    // Define a função changeChart como padrão ao recarregar a página
+    changeChart(0);
+});
+
 
 
 

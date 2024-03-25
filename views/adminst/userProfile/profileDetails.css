@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.profileSection{
+.profileSection {
     display: flex;
     flex-basis: 100%;
     justify-content: center;
@@ -11,22 +11,42 @@
 .profileDetails {
     display: flex;
     flex-basis: 100%;
-    max-width: 500px;
+    max-width: 600px;
+    /*max-width: 980px;*/
     margin: 10px 10px 10px 10px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: flex-end;
+    padding: 40px;
     border-radius: 10px;
     background-color: white;
     box-shadow: var(--my-box-shadow);
 
-    height: 140px;
+    /*height: 140px;*/
     overflow: hidden;
     transition: 1s ease-in-out;
 }
 
 .profileDetails:hover {
-    height: 450px;
+    /*height: 450px;*/
+}
+
+.profileDetails > button {
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 30px;
+    background-color: var(--myLightBlueButton);
+    font-weight: bold;
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid transparent;
+}
+
+.profileDetails > button:hover {
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid var(--myLightBlue);
+}
+
+.profileDetails > button > i{
+    color: var(--myLightBlue);
 }
 
 .profileName, .sumUp, .personalInformation, .details, .details > h2, p {
@@ -40,6 +60,10 @@
     border-bottom: 1px dashed var(--myLightBlueButton);
 }
 
+.personalInformation {
+    /*background-color: cadetblue;*/
+}
+
 .profileName {
     align-items: center;
 }
@@ -50,7 +74,8 @@
 
 .sumUp {
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    /*margin-bottom: 40px;*/
     /*background-color: antiquewhite;*/
 }
 

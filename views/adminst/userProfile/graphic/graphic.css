@@ -26,8 +26,8 @@
     /*background-color: var(--myLightBlueButton);*/
 }
 
-.fa-eye, .fa-pen-to-square{
-    border-radius: 5px;
+.fa-eye{
+    border-radius: 50%;
     padding: 10px;
     height: auto;
 
@@ -38,7 +38,7 @@
     border: 1px solid transparent;
 }
 
-.fa-eye:hover, .fa-pen-to-square:hover{
+.fa-eye:hover{
     /*color: white;*/
     box-shadow: var(--my-box-shadow);
     border: 1px solid var(--myLightBlue);
