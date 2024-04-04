@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-* {
-    color: var(--myLight);
-}
-
 .topFoot {
     display: flex;
     flex-basis: 100%;
@@ -98,7 +94,8 @@
 }
 
 #showPopup{
-    width: 100px;
+    width: 80px;
+    /*background-color: red;*/
 }
 
 .filter {
@@ -133,40 +130,46 @@ button {
     align-items: center;
 }
 
-div.mobileDisplay > button.add {
+.justifyButton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*background-color: blue;*/
+}
+
+div.mobileDisplay > .justifyButton > button.add, .performanceButton {
     color: white;
     display: flex;
     height: 40px;
     background-color: var(--myLightBlue);
-    margin-left: auto;
+    margin: 0 10px;
     justify-content: center;
     padding: 5px 5px;
-    width: 100px;
+    width: 40px;
     transition: .5s ease-in-out;
 }
 
-div.mobileDisplay > button.add:hover{
+div.mobileDisplay > .justifyButton > button:hover{
     color: var(--myLightBlue);
-    /*font-weight: bold;*/
     background-color: var(--myLightBlueButton);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 
 }
 
-div.mobileDisplay > button.add > .fa-user-plus{
+div.mobileDisplay > .justifyButton > button > i.fa-solid{
     color: white;
 }
 
-div.mobileDisplay > button.add:hover .fa-user-plus{
+div.mobileDisplay > .justifyButton > button:hover i.fa-solid{
     color: var(--myLightBlue);
 }
 
-.topBar2 > button.add > input {
+.topBar2 > button > input {
     color: white;
     font-weight: bold;
 }
 
-.topBar2 > button.add > input > .fa-plus {
+.topBar2 > button > input > i.fa-plus {
     color: white !important;
 }
 

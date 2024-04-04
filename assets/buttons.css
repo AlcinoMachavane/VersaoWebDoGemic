@@ -1,0 +1,57 @@
+.btn {
+    font-family: Arial, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.btn-success:hover {
+    background-color: #ccffcc;
+    color: green;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2); /* Aumentou a opacidade da sombra */
+}
+
+.btn-warning {
+    background-color: #ffffcc;
+    color: darkorange;
+}
+
+.btn-warning:hover {
+    background-color: #ffff99;
+    color: orange;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2); /* Aumentou a opacidade da sombra */
+}
+
+.btn-cancel {
+    background-color: #ffcccc;
+    color: darkred;
+}
+
+.btn-cancel:hover {
+    background-color: #ff9999;
+    color: red;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2); /* Aumentou a opacidade da sombra */
+}
+
+.btn-default {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.btn-default:hover {
+    background-color: #99ccff;
+    color: blue;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2); /* Aumentou a opacidade da sombra */
+}

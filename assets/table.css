@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+body, main{
+    overflow: hidden;
+}
+
+.ScrollAllContent{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 9px;
+    height: calc(100vh - 151px);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.ScrollTable{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.tableConteiner{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1300px;
+    padding: 10px;
+    border-radius: 10px;
+
+    border: 1px solid #E9F3FFFF;
+    background-color: white;
+}
+
+
+/*table {*/
+/*    width: 100%;*/
+/*    min-width: 800px;*/
+/*    border-collapse: collapse;*/
+/*    border: 1px solid #E9F3FFFF;*/
+/*    background-color: white;*/
+/*    margin: 30px auto;*/
+/*    padding: 0;*/
+/*    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+/*thead, tbody{*/
+/*}*/
+
+
+/*th, td {*/
+/*    padding: 8px;*/
+/*    border: 1px solid #f6faff;*/
+/*    text-align: center;*/
+/*}*/
+
+/*td.actionEye, th.actionEye{*/
+/*    text-align: center;*/
+/*}*/
+
+/*th {*/
+/*    color: #636B7EFF;*/
+/*    background-color: white;*/
+/*}*/
+
+
+.fa-eye{
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
+
+    color: #3E97FFFF;
+    background-color: #E9F3FFFF;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+}
+
+.fa-eye:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #3E97FFFF;
+}
+
+/* Estilo personalizado */
+
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}

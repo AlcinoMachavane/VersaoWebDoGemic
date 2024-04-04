@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 750px) {
-    .dropDown {
-        /*margin-top: 25vh;*/
-        margin-left: 20vw !important;
-    }
-}
-
 @media screen and (max-width: 700px) {
 
     .mobileDisplay {

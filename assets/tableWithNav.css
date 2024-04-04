@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+
+
+.tableConteiner{
+    display: flex;
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    max-height: 80px;
+    min-width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid #E9F3FFFF;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+thead, tbody{
+}
+
+
+th, td {
+    /*min-width: 170px;*/
+    padding: 8px;
+    border: 1px solid #E9F3FFFF;
+    text-align: center;
+}
+
+td.actionEye, th.actionEye{
+    text-align: center;
+}
+
+td > a .fa-eye{
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
+    color: #3E97FFFF;
+    background-color: #E9F3FFFF;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+}
+
+td > a .fa-eye:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #3E97FFFF;
+}
+
+th {
+    color: #636B7EFF;
+    background-color: white;
+}

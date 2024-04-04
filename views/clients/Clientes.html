@@ -6,59 +6,276 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../fontawesome-free-6.5.1-web/css/all.min.css">
-    <link rel="stylesheet" href="../../set.css">
+    <link rel="stylesheet" href="../../assets/set.css">
     <link rel="stylesheet" href="../../header/header.css">
     <link rel="stylesheet" href="../../sideBar/sideBar.css">
     <link rel="stylesheet" href="../../footer/footer.css">
+    <link rel="stylesheet" href="../../sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../header/filterModal/fiter.css">
+    <link rel="stylesheet" href="../../assets/modal/modal.css">
+    <link rel="stylesheet" href="../adminst/adminst.css">
+    <link rel="stylesheet" href="../adminst/adminstMediaQuery.css">
     <title>Clientes</title>
 </head>
 <body>
-<!--<header>-->
-<!--    <nav class="navBar">-->
-<!--        <ul>-->
-<!--            <li><a href="#">Home</a></li>-->
-<!--            <li><a href="#">Blog</a></li>-->
-<!--            <li><a href="#">Preços</a></li>-->
-<!--            <li><a href="#">Suporte</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</header>-->
 
-<menu class="menuBar sidebar-hidden hide">
+<!-- SIGN MODAL-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <i class="fa-regular cancelButton fa-circle-xmark" id="modalClose"></i>
+        <h1 class="modalTitle">Cadastrar novo cliente</h1>
+        <form action="#" class="signIn" id="sign">
+
+            <div class="labelInputConteiner">
+                <label for="fullName">Nome completo</label>
+                <input type="text" id="fullName" name="fullName" autofocus>
+                <div id="fullNameDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="documentType">Documento</label>
+                <select name="documentType" id="documentType">
+                    <option value="Cargo"></option>
+                    <option value="Ultimo login">BI</option>
+                    <option value="Estado">Passaporte</option>
+                    <option value="Estado">Cartão de eleitor</option>
+                    <option value="Estado">Cédula pessoal</option>
+                </select>
+                <div id="documentTypeDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="documentNumber">Número do documento</label>
+                <input type="number" id="documentNumber" name="documentNumber">
+                <div id="documentNumberDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="issuenceDate">Data de emissão</label>
+                <input type="date" id="issuenceDate" name="issuenceDate">
+                <div id="issuenceDateDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="therm">Prazo de validade</label>
+                <input type="date" id="therm" name="therm">
+                <div id="thermDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="issuedIn">Local de emissão</label>
+                <input type="text" id="issuedIn" name="issuedIn">
+                <div id="issuedInDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="maritalStatus">Estado civil</label>
+                <input type="text" id="maritalStatus" name="maritalStatus">
+                <div id="maritalStatusDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="fathersName">Nome do pai</label>
+                <input type="text" id="fathersName" name="fathersName">
+                <div id="fathersNameDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="mothersName">Nome da mãe</label>
+                <input type="text" id="mothersName" name="mothersName">
+                <div id="mothersNameDocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="contact1">Contacto</label>
+                <input type="text" id="contact1" name="contact1">
+                <div id="contact1DocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <div class="labelInputConteiner">
+                <label for="contact2">Segundo contacto (opcional)</label>
+                <input type="text" id="contact2" name="contact2">
+                <div id="contact2DocumentoFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Adicione mensagens de validação para os campos de rádio -->
+
+            <div class="comentado">
+<!--                <div class="labelInputConteiner radio">-->
+<!--                    <div class="radioConteiner">-->
+<!--                        <input type="radio" name="position" id="owner">-->
+<!--                        <label for="owner">Proprietário</label>-->
+<!--                    </div>-->
+<!--                    <p>Melhor para proprietários de negócios e administradores da empresa.</p>-->
+<!--                </div>-->
+
+<!--                <div class="labelInputConteiner radio">-->
+<!--                    <div class="radioConteiner">-->
+<!--                        <input type="radio" name="position" id="manager">-->
+<!--                        <label for="manager">Gerente</label>-->
+<!--                    </div>-->
+<!--                    <p>Melhor para gerentes e administradores de empresa.</p>-->
+<!--                </div>-->
+
+<!--                <div class="labelInputConteiner radio">-->
+<!--                    <div class="radioConteiner">-->
+<!--                        <input type="radio" name="position" id="HR">-->
+<!--                        <label for="HR">Gestor RH</label>-->
+<!--                    </div>-->
+<!--                    <p>Melhor para gestores de recursos humanos e administradores de pessoal da empresa.</p>-->
+<!--                </div>-->
+
+<!--                <div class="labelInputConteiner radio">-->
+<!--                    <div class="radioConteiner">-->
+<!--                        <input type="radio" name="position" id="financialManagers">-->
+<!--                        <label for="financialManagers">Gestor financeiro</label>-->
+<!--                    </div>-->
+<!--                    <p>Melhor para gestores financeiros e administradores de finanças da empresa.</p>-->
+<!--                </div>-->
+
+<!--                <div class="labelInputConteiner radio">-->
+<!--                    <div class="radioConteiner">-->
+<!--                        <input type="radio" name="position" id="loanOfficers">-->
+<!--                        <label for="loanOfficers">Agente de crédito</label>-->
+<!--                    </div>-->
+<!--                    <p>Melhor para agentes de crédito responsáveis pela concessão e análise de empréstimos na empresa.</p>-->
+<!--                    <p class="validationMessage" id="positionValidation"></p>-->
+<!--                </div>-->
+            </div>
+
+
+            <!-- Adicione mensagens de validação para outros campos de rádio se necessário -->
+
+            <div class="button-container">
+                <button class="resetForm" type="reset" onclick="resetForm()">Descartar</button>
+                <button class="submitForm" type="submit">Submeter</button>
+            </div>
+        </form>
+        <h1 class="modalTitle"></h1>
+    </div>
+</div>
+
+<!-- FILTER MODAL-->
+<form action="#" class="dropDown" id="popupForm">
+    <i class="fa-regular cancelButton fa-circle-xmark" id="cancelButton"></i>
+    <h1>Opção de filtragem</h1>
+
+    <div class="PopUpConteiner">
+        <label for="numOfLoans">Por número de empréstimos:</label>
+        <input name="number" id="numOfLoans">
+
+        <label for="byResidence">Por residência:</label>
+        <input name="number" id="byResidence">
+
+        <label for="byStatus">Por Estado:</label>
+        <select name="by" id="byStatus">
+            <option value="Ultimo login"></option>
+            <option value="Estado">Activo</option>
+            <option value="Estado">Desativado</option>
+        </select>
+    </div>
+
+    <div class="ButtonsConteiner">
+        <button class="deny" type="reset">Repor</button>
+        <button class="accept" type="submit">Filtrar</button>
+    </div>
+
+</form>
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<!-- SIDEBAR-->
+<aside id="menu" class="menuBar sidebar-hidden">
 
     <ul>
 
-        <li id="buttonForBar" onclick="closeOpen()">
-            <i class="fa-solid fa-bars"></i>
+        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
+            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
         </li>
 
-        <li onclick="changeContent('Dashboard')"><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li onclick="changeContent('adminst')"><a href="../../views/adminst/Administração.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li onclick="changeContent('clients')"><a href="../../views/clients/Clientes.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li onclick="changeContent('Loans')"><a href="../../views/loans/Empréstimos.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li onclick="changeContent('cashFlow')"><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li onclick="changeContent('reports')"><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li onclick="changeContent('configs')"><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
-    </ul>
-</menu>
+        <li><a href="../../views/dashboard/Dashboard.html"><i
+                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../views/adminst/Administração.html"><i
+                class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../../views/clients/Clientes.html"><i
+                class="fa-regular fa-address-card" style="color: var(--myLightBlue)"></i> Clientes</a></li>
+        <li><a href="../../views/loans/Empréstimos.html"><i
+                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i
+                class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i
+                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../views/configs/Configurações.html"><i
+                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
 
+    </ul>
+</aside>
+
+<!--MAIN CONTEINER-->
 <main class="topFoot">
 
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
     <nav class="topBar">
-        <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
+        <span></span>
+        <a href="userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
+    <!-- SUB NAVBAR-->
+    <nav class="topBar2">
+        <p class="search">
+            <label for="search" style="display: none"></label>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search" id="search" value="Pesquisar">
+        </p>
+        <div class="mobileDisplay">
+            <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>
 
-    <div id="content">
-        <!-- O conteúdo será carregado aqui -->
+            <button class="add" id="showModal" title="Cadastrar novo cliente"><i class="fa-solid fa-user-plus"></i></button>
+        </div>
+    </nav>
+
+    <!--  CONTEINER FOR MAIN CONTENT-->
+    <div class="forScroll">
+
+        <!--  TABLE CONTEINER-->
+        <div class="tableConteiner">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Contacto</th>
+                    <th>Residência</th>
+                    <th>Estado</th>
+                    <th class="actionEye">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="user">
+                    <td>Joelma da Glória Martins Tembe</td>
+                    <td>861753403</td>
+                    <td>Matola</td>
+                    <td>Ativo</td>
+                    <td class="actionEye" title="Visualizar o perfil"><a href="clientDetails/clientDetails.html"> <i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                <!-- Repita este bloco de tr para cada usuário -->
+
+            </table>
+        </div>
     </div>
 
-
+    <!--  FOOTER-->
     <footer>
         <p>&copy;Guizo Informática e Serviços</p>
     </footer>
-
 </main>
-<script src="render/render.js"></script>
+
+<script src="../../header/filterModal/filter.js"></script>
+<script src="../../sideBar/sideBar.js"></script>
+<script src="../../assets/modal/modal.js"></script>
 </body>
 </html>
