@@ -25,7 +25,7 @@
                 <td>${getCurrentDate()}</td>
                 <td>${getCurrentDate()}</td>
                 <td>Ativo</td>
-                <td class="actionEye" title="Visualizar o perfil"><a href="userProfile/profile.html"> <i class="fa-solid fa-eye"></i></a></td>
+                <td class="action" title="Visualizar o perfil"><a href="userProfile/profile.html"> <i class="fa-solid fa-eye"></i></a></td>
             `;
 
     // Adiciona a nova linha à tabela

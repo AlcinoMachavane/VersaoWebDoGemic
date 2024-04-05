@@ -61,11 +61,11 @@ th, td {
     text-align: center;
 }
 
-td.actionEye, th.actionEye{
+td.action, th.action{
     text-align: center;
 }
 
-td.actionEye > .fa-eye{
+td.action > .fa-eye{
     border-radius: 50%;
     padding: 10px;
     height: auto;
@@ -76,7 +76,7 @@ td.actionEye > .fa-eye{
     border: 1px solid transparent;
 }
 
-td.actionEye > .fa-eye:hover{
+td.action > .fa-eye:hover{
     box-shadow: var(--my-box-shadow);
     border: 1px solid var(--myLightBlue);
 }
