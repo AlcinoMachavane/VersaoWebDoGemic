@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Editar</title>
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../components/boot/set.css">
+    <link rel="stylesheet" href="../../components/boot/buttons.css">
+    <link rel="stylesheet" href="../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../components/form/form.css">
+
+    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<!-- SIDEBAR-->
+<aside id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+
+        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
+            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
+        </li>
+
+        <li><a href="../dashboard/Dashboard.html"><i
+                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../adminst/Administracao.html"><i
+                class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i
+                class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i
+                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../cashFlow/Fluxo%20de%20caixa.html"><i
+                class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../reports/Reports.html"><i
+                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../configs/Configurações.html"><i
+                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+
+    </ul>
+</aside>
+
+<!--MAIN CONTEINER-->
+<main class="mainContent">
+
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+    <nav class="topBar">
+        <span></span>
+        <a href="../adminst/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+                class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <!--  CONTEINER FOR MAIN CONTENT-->
+    <div class="mainContentJustifiyerWithoutSubMenu">
+        <!-- SIGN form-->
+        <div class="formConteiner">
+            <h1 class="formTitle">Editar dados do usuário</h1>
+            <form action="#" class="form" id="register">
+
+                <div class="labelInputConteiner">
+                    <label for="fullName">Nome completo</label>
+                    <input type="text" id="fullName" name="fullName" autofocus>
+                    <div id="fullNameDocumentoFeedback" class="feedback"></div>
+                </div>
+
+                <div class="labelInputConteiner">
+                    <h2>Género</h2>
+                    <div class="radioInputConteiner">
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Masculino</label>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Femenino</label>
+                    </div>
+                    <div id="genderDocumentoFeedback" class="feedback"></div>
+                </div>
+
+                <div class="labelInputConteiner">
+                    <h2>Estado</h2>
+                    <div class="radioInputConteiner">
+                        <input type="radio" id="active" name="status">
+                        <label for="active">Activo</label>
+                        <input type="radio" id="inactive" name="status">
+                        <label for="inactive">Inactivo</label>
+                    </div>
+                    <div id="statusDocumentoFeedback" class="feedback"></div>
+                </div>
+
+                <div class="labelInputConteiner">
+                    <label for="residence">Moradia</label>
+                    <input type="text" id="residence" name="residence">
+                    <div id="residenceDocumentoFeedback" class="feedback"></div>
+                </div>
+
+                <div class="labelInputConteiner">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                    <div id="emailDocumentoFeedback" class="feedback"></div>
+                </div>
+
+                <!--                <div class="labelInputConteiner">-->
+                <!--                    <label for="password">Senha</label>-->
+                <!--                    <input type="password" id="password" name="password">-->
+                <!--                    <div id="passwordDocumentoFeedback" class="feedback"></div>-->
+                <!--                </div>-->
+
+                <!--                <div class="labelInputConteiner">-->
+                <!--                    <label for="passwordConfirm">Confirmar a senha</label>-->
+                <!--                    <input type="password" id="passwordConfirm" name="passwordConfirm">-->
+                <!--                    <div id="passwordConfirmDocumentoFeedback" class="feedback"></div>-->
+                <!--                </div>-->
+
+                <!-- Adicione mensagens de validação para os campos de rádio -->
+
+                <div class="labelInputConteiner checkbox_and_radio_style">
+                    <div class="checkboxConteiner">
+                        <input type="checkbox" name="administrator" id="manager">
+                        <label for="manager">Administrador</label>
+                    </div>
+                    <p>Melhor para gerentes e administradores de empresa.</p>
+                </div>
+
+                <div class="labelInputConteiner checkbox_and_radio_style">
+                    <div class="checkboxConteiner">
+                        <input type="checkbox" name="rhManager" id="HR">
+                        <label for="HR">Gestor RH</label>
+                    </div>
+                    <p>Melhor para gestores de recursos humanos e/ou administradores de pessoal da empresa.</p>
+                </div>
+
+                <div class="labelInputConteiner checkbox_and_radio_style">
+                    <div class="checkboxConteiner">
+                        <input type="checkbox" name="financialManager" id="financialManagers">
+                        <label for="financialManagers">Gestor financeiro</label>
+                    </div>
+                    <p>Melhor para gestores financeiros e administradores de finanças da empresa.</p>
+                </div>
+
+                <div class="labelInputConteiner checkbox_and_radio_style">
+                    <div class="checkboxConteiner">
+                        <input type="checkbox" name="loanManager" id="loanOfficers">
+                        <label for="loanOfficers">Gestor de crédito</label>
+                    </div>
+                    <p>Melhor para agentes de crédito responsáveis pela concessão e análise de empréstimos na
+                        empresa.</p>
+                    <p class="validationMessage" id="positionValidation"></p>
+                </div>
+
+                <!-- Adicione mensagens de validação para outros campos de rádio se necessário -->
+
+                <div class="button-container">
+                    <button class="btn btn-cancel" type="reset">Descartar</button>
+                    <button class="btn btn-success" type="submit">Submeter</button>
+                </div>
+            </form>
+            <h1 class="formTitle"></h1>
+        </div>
+    </div>
+
+    <!--  FOOTER-->
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+</main>
+
+</body>
+</html>

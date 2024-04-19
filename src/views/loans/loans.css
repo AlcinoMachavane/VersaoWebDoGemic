@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+* {
+    scrollbar-color: rgba(62, 151, 255, 0.75) rgba(30, 107, 215, 0.15); /* Cor da barra de rolagem e da área de fundo da barra de rolagem */
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scroll-behavior: smooth;
+}
+
+body, main{
+    overflow: hidden;
+}
+
+.mainContentJustifiyer{
+    display: flex;
+    flex-basis: 100%;
+    margin: 0 9px;
+    height: calc(100vh - 160px);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.mainContentJustifiyer{
+    min-width: 287px;}
+
+.mobileDisplay{
+    min-width: 240px;
+  }
+
+.tableConteiner{
+    display: flex;
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    max-height: 80px;
+    min-width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid var(--myLightBlueButton);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+thead, tbody{
+}
+
+
+th, td {
+    /*min-width: 170px;*/
+    padding: 8px;
+    border: 1px solid var(--myLightBlueButton);
+    text-align: center;
+}
+
+td.action, th.action{
+    text-align: center;
+}
+
+td > a .fa-eye{
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
+    color: var(--myLightBlue);
+    background-color: var(--myLightBlueButton);
+    font-weight: bold;
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid transparent;
+}
+
+td > a .fa-eye:hover{
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid var(--myLightBlue);
+}
+
+th {
+    color: var(--myLight);
+    background-color: white;
+}

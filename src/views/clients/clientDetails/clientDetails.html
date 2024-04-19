@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Detalhes do cliente</title>
+
+    <link rel="stylesheet" href="../../../components/header/header.css">
+    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../../components/boot/set.css">
+    <link rel="stylesheet" href="../../../components/boot/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/clientRegisterForm.css">
+
+    <link rel="stylesheet" href="clientDetails.css">
+    <link rel="stylesheet" href="clientDetailMediaQuery.css">
+
+    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
+
+</head>
+<body>
+
+<!--MENU BUTTON-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<!--SIDEBAR-->
+<aside id="menu" class="menuBar sidebar-hidden">
+    <ul>
+
+        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
+            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
+        </li>
+
+        <li><a href="../../../views/dashboard/Dashboard.html"><i
+                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../adminst/Administracao.html"><i
+                class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../Client.html"><i
+                class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../../loans/loans.html"><i
+                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../../views/cashFlow/Fluxo%20de%20caixa.html"><i
+                class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../../views/reports/Reports.html"><i
+                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../../views/configs/Configurações.html"><i
+                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+
+    </ul>
+</aside>
+
+<main class="mainContent">
+
+    <!--TOPBAR-->
+    <nav class="topBar">
+        <span></span>
+        <a href="../../adminst/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <!--TOPBAR2-->
+    <nav class="topBar2">
+        <div class="mobileDisplay">
+            <div class="justifyButton">
+                <a href="../../clientRegister/clientRegister.html" class="btn btn-default" id="registerButton" title="Editar dados do cliente"><i class="fa-solid fa-pen-to-square"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--MAIN-->
+    <div class="mainContentJustifiyer">
+
+        <!--CLIENTPROFILEDATA-->
+        <section class="profileSection">
+            <article class="profileDetails">
+
+                <div class="personalInformation">
+
+                    <div class="profileName">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <h1>Helder Juliao Biza</h1>
+                    </div>
+
+                    <div class="details" id="detailsTopic">
+                        <h2>Detalhes</h2>
+                    </div>
+
+                    <div class="documentInformation">
+                        <h2>Documento</h2>
+
+                        <div class="details" id="clientGender">
+                            <h3>Género</h3>
+                            <p>Masculino</p>
+                        </div>
+
+                        <div class="details" id="clientMaritalStatus">
+                            <h3>Estado civil</h3>
+                            <p>Casado</p>
+                        </div>
+
+                        <div class="details" id="clientDocument">
+                            <h3>Tipo de documento</h3>
+                            <p>BI</p>
+                        </div>
+
+                        <div class="details" id="clientDocumentNumber">
+                            <h3>Documento nº</h3>
+                            <p>53879388739739G</p>
+                        </div>
+
+                        <div class="details" id="clientDocumentIssuenceLocal">
+                            <h3>Emitido em</h3>
+                            <p>Matola</p>
+                        </div>
+
+                        <div class="details" id="clientDocumentIssuedDate">
+                            <h3>Data de emissão</h3>
+                            <p>16/05/2022</p>
+                        </div>
+
+                        <div class="details" id="clientDocumentTherm">
+                            <h3>Validade</h3>
+                            <p>16/05/2028</p>
+                        </div>
+
+                        <div class="details" id="clientNUIT">
+                            <h3>NUIT</h3>
+                            <p>567028</p>
+                        </div>
+
+                    </div>
+
+                    <div class="residenceInformation">
+                        <h2>Residência</h2>
+
+                        <div class="details" id="clientNaturalness">
+                            <h3>Naturalidade</h3>
+                            <p>Maputo</p>
+                        </div>
+
+                        <div class="details" id="clientResidence">
+                            <h3>Residência</h3>
+                            <p>Boane</p>
+                        </div>
+
+                        <div class="details" id="clientNeighborhood">
+                            <h3>Bairro</h3>
+                            <p>08</p>
+                        </div>
+
+                        <div class="details" id="clientBlock">
+                            <h3>Quarteirão</h3>
+                            <p>04</p>
+                        </div>
+
+                        <div class="details" id="clientHouseNumber">
+                            <h3>Casa nº</h3>
+                            <p>1884</p>
+                        </div>
+                    </div>
+
+                    <div class="affiliationInformation">
+                        <h2>Filiação</h2>
+
+                        <div class="details" id="clientFathersName">
+                            <h3>Nome do pai</h3>
+                            <p>Julio Baltazar</p>
+                        </div>
+
+                        <div class="details" id="clientMothersName">
+                            <h3>Nome da mãe</h3>
+                            <p>Judite Francisco</p>
+                        </div>
+
+                    </div>
+
+                    <div class="contactInformation">
+                        <h2>Contactos</h2>
+
+                        <div class="details" id="clientContact">
+                            <h3>Contacto 1</h3>
+                            <p>873004432</p>
+                        </div>
+
+                        <div class="details" id="optionalClientContact">
+                            <h3>Contacto 2</h3>
+                            <p>843004432</p>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--TABLES-->
+        <div class="ScrollTable">
+            <div class="tableConteiner">
+                <table id="first_table_on_profile_view" class="display" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Valor concedido</th>
+                        <th>Valor em dívida</th>
+                        <th>Data de concessão</th>
+                        <th>Prazo</th>
+                        <th>Estado</th>
+                        <th class="actionEye">Visualizar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="user">
+                        <td>1</td>
+                        <td>13 700,00</td>
+                        <td>6 100,00</td>
+                        <td>17-09-2024</td>
+                        <td>17-12-2024</td>
+                        <td>Em curso</td>
+                        <td class="actionEye" title="Visualisar este empréstimo"><i class="fa-solid fa-eye"></i></td>
+                    </tr>
+                    <!-- Repita este bloco de tr para cada usuário -->
+                    <tfoot>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Valor concedido</th>
+                        <th>Valor em dívida</th>
+                        <th>Data de concessão</th>
+                        <th>Prazo</th>
+                        <th>Estado</th>
+                        <!--                    <th></th>-->
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--    FOOTER-->
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
+<script src="../../../components/table/table.js"></script>
+
+</body>
+</html>

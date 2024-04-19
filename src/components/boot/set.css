@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+input:focus {
+    border: 2px solid var(--myLightBlue); /* Altere as propriedades da borda conforme necessário */
+    outline: none; /* Remove o contorno padrão */
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /*background-color: rgba(30, 107, 215, 0.15);*/
+    background-color: rgba(30, 107, 215, 0.08);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*background-color: rgba(62, 151, 255, 0.75);*/
+    background-color: rgba(62, 151, 255, 0.15);
+    border-radius: 5px;
+}
+
+
+/* FONTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+/* /////////////////////////////////////////////// ///////*/
+
+body{
+    background-color: whitesmoke;
+    overflow: auto;
+}
+
+main{
+    overflow: auto;
+}
+
+/**/
+
+*[value]{
+    color: var(--myLight);
+}
+
+
+
+:root{
+    --myBlack: #161616;
+    --myLight: #636B7E;
+    --myBlue: #202B46;
+    --myLightBlue: #3E97FF;
+    --myLightBlueButton: #E9F3FF;
+    --myLightBlueOpac: rgba(0, 0, 255, 0.15);
+    --my-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+
+*{
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    scroll-behavior: smooth;
+    color: var(--myBlack);
+    font-family: Quicksand, sans-serif;
+    font-size: 10pt;
+}
+
+/*//////////////////////////////////// MAIN CONTET DIAGRAMER /////////////////////////////////////////*/
+
+.mainContentJustifiyer, .mainContentJustifiyerWithoutSubMenu{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin: 0 9px;
+    overflow-x: auto;
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: center;
+    /*background-color: gold;*/
+}
+
+.mainContentJustifiyer{
+    height: calc(100vh - 150px);
+}
+
+.mainContentJustifiyerWithoutSubMenu{
+    height: calc(100vh - 90px);
+}
+
+

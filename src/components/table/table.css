@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.tableConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.display{
+    background-color: white;
+}
+
+td.action, th.action{
+    text-align: center;
+}
+
+td > a .fa-eye{
+    border-radius: 50%;
+    height: auto;
+    color: #3E97FFFF;
+    background-color: #E9F3FFFF;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+}
+
+td > a .fa-eye:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #3E97FFFF;
+}

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 50px 0 0 0;
+}
+
+.switchButton:not(:last-child){
+    margin-right: 20px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    width: 400%;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+canvas {
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+
+/*////////////////////////////////////////////////////*/
+
+.switchButton.active,
+.switchButton:hover {
+    /* Adicione seus estilos hover aqui */
+    color: #3E97FFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+

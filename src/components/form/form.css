@@ -1,0 +1,123 @@
+/* styles.css */
+
+/* Estilos do form */
+
+.formConteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.23);
+}
+
+label {
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 5px;
+}
+
+h1.formTitle, h1.formTitleBottom {
+    display: flex;
+    flex-basis: 100%;
+    font-size: 18pt;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.formTitle {
+    height: 50px;
+    margin: 0 0 20px 0;
+}
+
+h1.formTitleBottom {
+    height: 10px;
+    margin: 0 0 10px 0;
+    /*background-color: #106EC5;*/
+}
+
+.form {
+    margin: auto;
+    border-radius: 5px;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+/* Estilos adicionais */
+
+.labelInputConteiner {
+    display: flex;
+    flex-basis: 100%;
+    margin: auto;
+    max-width: 90%;
+    flex-wrap: wrap;
+}
+
+.checkboxConteiner {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.checkboxConteiner > input {
+    margin-right: 10px;
+}
+
+.checkboxConteiner > label {
+    font-weight: bold;
+}
+
+.radioInputConteiner {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.radioInputConteiner > h2{
+    margin-top: 10px;
+    background-color: #17C653;
+}
+
+.radioInputConteiner > input{
+    margin-right: 10px;
+}
+
+.checkbox_and_radio_style {
+    padding: 20px 0;
+    border-bottom: 1px dashed #E9F3FFFF;
+}
+
+.button-container {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+input[type="text"], input[type="email"],
+input[type="password"],
+select {
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    text-align: right;
+    margin: 20px 0;
+}
