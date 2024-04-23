@@ -1,64 +1,40 @@
-/* styles.css */
+@charset "UTF-8";
 
 /* Estilos do form */
 
 .formConteiner {
     display: flex;
-    /*flex-basis: 100%;*/
-    max-width: 500px;
+    max-width: 600px;
     justify-content: center;
     flex-wrap: wrap;
     background-color: #fefefe;
-    margin: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: 40px auto;
     overflow: hidden;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.23);
+    box-shadow: var(--my-box-shadow);
 }
 
 form#register {
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 0 20px;
+    justify-content: space-between;
     /*background-color: #17C653;*/
 }
 
-.documentData, .residenceData, .parentsNames, .contacts {
-    /*display: flex;*/
-    flex-direction: column;
+ .residenceData {
+     flex-wrap: wrap;
 }
 
-.documentData {
-    display: flex;
-    flex-basis: 50%;
+.firstSide {
+
     /*background-color: red;*/
 }
 
-.residenceData {
-    /*background-color: var(--myLightBlue);*/
-}
-
-.parentsNames {
-    /*background-color: gold;*/
-}
-
-.contacts {
-    /*background-color: aqua;*/
-}
-
-/*.dataArange {*/
-/*    display: flex;*/
-/*    flex-basis: 100%;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-between;*/
-/*}*/
 
 .secundSide {
-    display: flex;
-    flex-basis: 50%;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*background-color: #F0F0F0;*/
+    /*background-color: pink;*/
 }
 
 

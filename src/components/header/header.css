@@ -32,6 +32,7 @@
 
 .topBar2{
     padding: 0 20px;
+    margin-top: 10px;
 }
 
 
@@ -43,8 +44,6 @@
     align-items: center;
     height: 100%;
 }
-
-/**/
 
 .profile {
     align-items: center;

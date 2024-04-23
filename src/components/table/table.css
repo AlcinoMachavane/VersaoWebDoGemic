@@ -3,35 +3,51 @@
 .tableConteiner{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 1000px;
     background-color: white;
     align-items: center;
     margin: 40px auto;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--my-box-shadow);
+    overflow-y: auto;
 }
 
 .display{
     background-color: white;
 }
 
+.actionEye{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /*background-color: gold;*/
+
+}
+
 td.action, th.action{
     text-align: center;
 }
 
-td > a .fa-eye{
+td > a > i{
     border-radius: 50%;
     height: auto;
-    color: #3E97FFFF;
-    background-color: #E9F3FFFF;
+    color: var(--myLightBlue);
+    background-color: var(--myLightBlueButton);
     font-weight: bold;
     font-size: 10pt;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--my-box-shadow);
     border: 1px solid transparent;
 }
 
-td > a .fa-eye:hover{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    border: 1px solid #3E97FFFF;
+td > a > i:not(last-child){
+    margin-right: 10px;
+   /*border: 2px solid black;*/
+}
+
+td > a > i:hover{
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid var(--myLightBlue);
 }

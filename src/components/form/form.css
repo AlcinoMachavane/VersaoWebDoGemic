@@ -95,7 +95,7 @@ h1.formTitleBottom {
 
 .checkbox_and_radio_style {
     padding: 20px 0;
-    border-bottom: 1px dashed #E9F3FFFF;
+    border-bottom: 1px dashed var(--myLightBlueButton);
 }
 
 .button-container {

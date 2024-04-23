@@ -89,19 +89,19 @@
 
 .btn-default {
     border: 1px solid lightblue;
-    color:  #3E97FFFF;
+    color:  var(--myLightBlue);
 }
 
 .btn-default > i{
-    color:  #3E97FFFF;
+    color:  var(--myLightBlue);
 }
 
 .btn-default:hover {
     border: 1px solid #99ccff;
-    color:  #3E97FFFF;
+    color:  var(--myLightBlue);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); /* Aumentou a opacidade da sombra */
 }
 
 .btn-default:hover > i{
-    color: #3E97FFFF;
+    color: var(--myLightBlue);
 }

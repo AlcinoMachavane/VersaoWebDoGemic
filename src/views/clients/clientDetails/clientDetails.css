@@ -21,7 +21,7 @@
     padding: 40px;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--my-box-shadow);
     overflow: hidden;
     transition: 1s ease-in-out;
 }

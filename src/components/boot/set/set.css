@@ -64,7 +64,7 @@ main{
     text-decoration: none;
     transition: .3s ease-in-out;
     scroll-behavior: smooth;
-    color: var(--myBlack);
+    color: var(--myLight);
     font-family: Quicksand, sans-serif;
     font-size: 10pt;
 }
@@ -84,11 +84,15 @@ main{
 }
 
 .mainContentJustifiyer{
-    height: calc(100vh - 150px);
+    height: calc(100vh - 160px);
 }
 
 .mainContentJustifiyerWithoutSubMenu{
-    height: calc(100vh - 90px);
+    height: calc(100vh - 85px);
 }
+
+/*.hide {*/
+/*    display: none !important;*/
+/*}*/
 
 

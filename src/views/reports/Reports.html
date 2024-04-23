@@ -5,12 +5,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../../src/components/boot/set.css">
+
+    <link rel="stylesheet" href="../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../src/components/header/header.css">
+    <link rel="stylesheet" href="../../../src/components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../src/components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../src/components/sideBar/sideBarMediaQuery.css">
     <link rel="stylesheet" href="../../../src/components/footer/footer.css">
+
+    <link rel="stylesheet" href="reports.css">
+    <!--    -->
+    <link rel="stylesheet" href="../../../src/components/boot/buttons.css">
+    <link rel="stylesheet" href="../../../src/components/boot/infoTextType.css">
+    <link rel="stylesheet" href="../../../src/components/table/table.css">
+    <link rel="stylesheet" href="../../../src/components/boot/inputs.css">
+    <!--    -->
+    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
     <title>Relatórios</title>
+
 </head>
 <body>
 
@@ -22,27 +37,110 @@
             <i class="fa-solid fa-bars"></i>
         </li>
 
-        <li onclick="changeContent('Dashboard')"><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li onclick="changeContent('adminst')"><a href="../adminst/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li onclick="changeContent('clients')"><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li onclick="changeContent('Loans')"><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li onclick="changeContent('cashFlow')"><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li onclick="changeContent('reports')"><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li onclick="changeContent('configs')"><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../adminst/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i class="fa-solid fa-cash-register"></i> Caixa</a>
+        </li>
+        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice" style="color: var(--myLightBlue)"></i> Relatórios</a></li>
+        <li><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
     </ul>
 </menu>
 
 <main class="mainContent">
 
-    <nav class="topBar">
-        <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+    <nav class="topBar hide">
+        <span></span>
+        <a href="userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+                class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
+    <!-- SUB NAVBAR-->
+    <nav class="topBar2">
+        <div class="mobileDisplay">
 
-    <div id="content">
-        <!-- O conteúdo será carregado aqui -->
+            <label for="searchFirstDay">
+                <input type="date" name="searchFirstDay" id="searchFirstDay" value="Data inicial">
+            </label>
+
+            <label for="searchLastDay">
+                <input type="date" name="searchFirstDay" id="searchLastDay" value="Data Final">
+            </label>
+
+            <div class="justifyButton">
+                <a href="performance/performance.html" class="btn btn-default" id="performance" title="Gerar relatório"><<i
+                        class="fa-solid fa-file-lines"></i>
+                </a>
+
+                <a href="../userRegister/userRegister.html" class="btn btn-default" id="registerButton"
+                   title="Imprimir relatório"><i class="fa-solid fa-print"></i>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--  CONTEINER FOR MAIN CONTENT-->
+    <div class="mainContentJustifiyer">
+
+        <!--  TABLE CONTEINER-->
+        <div class="tableConteiner">
+
+            <table id="first_table_on_profile_view" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Desembolso (Data)</th>
+                    <th>Prazo (Data)</th>
+                    <th>Juros</th>
+                    <th>Em dívida</th>
+                    <th>Prestação</th>
+                    <th>Em atraso</th>
+                    <th>Desembolso</th>
+                    <th>Finalidade</th>
+                    <th>Periodicidade</th>
+                    <th>Dias em atraso</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jorge Domingos</td>
+                    <td>Gestor</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Desembolso</th>
+                    <th>Prazo</th>
+                    <th>Juros</th>
+                    <th>Em dívida</th>
+                    <th>Prestação</th>
+                    <th>Em atraso</th>
+                    <th>Desembolso</th>
+                    <th>Finalidade</th>
+                    <th>Periodicidade</th>
+                    <th>Dias em atraso</th>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
     </div>
-
 
     <footer>
         <p>&copy;Guizo Informática e Serviços</p>
@@ -50,5 +148,11 @@
 
 </main>
 
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
+
+<script src="../../../src/components/table/table.js"></script>
+<script src="../../components/boot/set/set.js"></script>
 </body>
 </html>

@@ -28,7 +28,7 @@ canvas {
     display: flex;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--my-box-shadow);
     background-color: white;
 }
 
@@ -38,8 +38,8 @@ canvas {
 .switchButton.active,
 .switchButton:hover {
     /* Adicione seus estilos hover aqui */
-    color: #3E97FFFF;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    color: var(--myLightBlue);
+    box-shadow: var(--my-box-shadow);
     background: white;
 }
 

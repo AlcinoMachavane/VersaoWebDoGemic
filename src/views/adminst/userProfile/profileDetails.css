@@ -12,15 +12,12 @@
     flex-basis: 100%;
     max-width: 600px;
     margin: 10px 10px 10px 10px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-end;
     padding: 40px;
     border-radius: 10px;
-    /*background-color: rgba(233, 243, 255, 0.3);*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-
-    /*clip-path: polygon(0.1% 0%, 84.9% 0%, 100% 0%, 100% 85%, 84.9% 100%, 15.1% 100%, 15.1% 32.8%, 0.1% 32.5%);*/
-
+    border: 1px solid rgba(62, 151, 255, 0.10);
+        /*clip-path: polygon(0.1% 0%, 84.9% 0%, 100% 0%, 100% 85%, 84.9% 100%, 15.1% 100%, 15.1% 32.8%, 0.1% 32.5%);*/
     overflow: hidden;
     transition: 1s ease-in-out;
 }
@@ -39,7 +36,7 @@
 .details, .details {
     padding: 5px;
     border-radius: 10px;
-    border: 1px dashed #E9F3FFFF;
+    border: 1px dashed var(--myLightBlueButton);
 }
 
 .personalInformation {
@@ -50,7 +47,7 @@
     padding: 20px;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--my-box-shadow);
 
 }
 
@@ -62,12 +59,12 @@
     font-size: 14pt;
 }
 
-.justifyProfileSectionButton {
+.justifyProfileSectionDetails {
     display: flex;
     flex-basis: 100%;
-    flex-wrap: wrap;
-    margin-left: 40px;
-    max-width: 150px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    /*border: 2px dashed pink;*/
     justify-content: space-around;
     border-radius: 10px;
 }
@@ -75,10 +72,11 @@
 .sumUp {
     height: 100%;
     justify-content: center;
-    border-radius: 20px;
-    padding: 0 10px;
-    background-color: rgba(255, 255, 255, 0.30);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    flex-wrap: nowrap;
+    /*padding: 0 10px;*/
+    /*background-color: rgba(255, 255, 255, 0.30);*/
+    /*border: 2px dashed red;*/
+    /*box-shadow: var(--my-box-shadow);*/
 }
 
 .sumUp > div.sumUpDetails {
@@ -87,8 +85,13 @@
     padding: 10px;
     text-align: center;
     border-radius: 10px;
-    /*border: 1px dashed #E9F3FFFF;*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    /*border: 1px dashed var(--myLightBlueButton);*/
+    box-shadow: var(--my-box-shadow);
+}
+
+.sumUp > div.sumUpDetails:not(:last-child){
+    margin-right: 20px;
 }
 
 .sumUp > div.sumUpDetails > h3 {

@@ -4,30 +4,13 @@
 input {
 }
 
-.checkboxConteiner > input {
-    margin-right: 10px;
-}
-
-.checkboxConteiner > label {
-    font-weight: bold;
-}
-
-.checkbox_and_radio_style {
-    padding: 20px 0;
-    border-bottom: 1px dashed var(--myLightBlueButton);
-}
-
-.labelInputConteiner > h3{
+.loanLabelInputConteiner > h3{
     display: flex;
     flex-basis: 100%;
-    /*background-color: #17C653;*/
 }
 
-.labelInputConteiner {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-
-    display: flex;
+.loanLabelInputConteiner {
+      display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
     align-items: center;
@@ -36,22 +19,24 @@ input {
     padding: 10px 0;
 }
 
-
-.radioInputConteiner {
+.valueAndTherm{
     display: flex;
-    justify-content: space-between;
+    flex-basis: 100%;
     flex-wrap: nowrap;
-    /*background-color: blue;*/
+    justify-content: center;
+    align-items: center;
 }
 
-.radioInputConteiner > input{
-    flex-basis: 50%;
-    margin-right: 5px;
+.valueAndTherm > .loanLabelInputConteiner{
+    display: flex;
+    /*background-color: gold;*/
+    /*border: 1px solid red;*/
+    justify-content: center;
 }
 
-.radioInputConteiner > label{
-    /*flex-basis: 50%;*/
-    margin-right: 10px;
+.valueAndTherm > .loanLabelInputConteiner > label{
+    display: flex;
+    justify-content: center;
 }
 
 /* SET DATATABLE INPUTS */
