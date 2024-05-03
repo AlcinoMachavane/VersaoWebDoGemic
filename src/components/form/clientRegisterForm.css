@@ -53,7 +53,7 @@ form#register {
 /*    justify-content: space-between;*/
 /*}*/
 
-.secundSide {
+.secundSideOfPaiment {
     display: flex;
     flex-basis: 50%;
     flex-wrap: wrap;

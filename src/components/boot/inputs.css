@@ -58,8 +58,16 @@ input {
 
 div.dt-container .dt-search input, .dt-input{
     border: 1px solid rgba(204, 204, 204, 0.35) !important;
-    border-radius: 25px !important;
     padding: 5px !important;
+}
+
+input[type="text"], input[type="email"],
+input[type="password"], input[type="number"],
+input[type="tel"],input[type="date"],
+select{
+
+    display: flex;
+    flex-basis: 100%;
 }
 
 input[type="text"], input[type="email"],
@@ -67,11 +75,9 @@ input[type="password"], input[type="number"],
 input[type="tel"],
 input[type="search"],input[type="date"],
 select{
-    display: flex;
-    flex-basis: 100%;
+
     padding: 10px;
     border: 1px solid rgba(204, 204, 204, 0.35);
-    border-radius: 25px;
     box-sizing: border-box;
 }
 

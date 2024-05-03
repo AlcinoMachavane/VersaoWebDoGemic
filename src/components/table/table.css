@@ -4,10 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    max-width: 1000px;
+    max-width: 1300px;
     background-color: white;
     align-items: center;
-    margin: 40px auto;
+    margin: 40px 20px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: var(--my-box-shadow);

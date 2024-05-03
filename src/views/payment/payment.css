@@ -1,15 +1,28 @@
 @charset "UTF-8";
 
 
-input {
+h2{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px 0;
 }
 
-.loanLabelInputConteiner > h3{
+.formConteiner > form > .firstSideOfPaiment{
+    margin: 0 20px;
+}
+
+.titleAndDataConteiner > h3{
     display: flex;
     flex-basis: 100%;
 }
 
-.loanLabelInputConteiner {
+.titleAndDataConteiner > p{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+
+.titleAndDataConteiner {
       display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
@@ -27,14 +40,14 @@ input {
     align-items: center;
 }
 
-.valueAndTherm > .loanLabelInputConteiner{
+.valueAndTherm > .titleAndDataConteiner{
     display: flex;
     /*background-color: gold;*/
     /*border: 1px solid red;*/
     justify-content: center;
 }
 
-.valueAndTherm > .loanLabelInputConteiner > label{
+.valueAndTherm > .titleAndDataConteiner > label{
     display: flex;
     justify-content: center;
 }
