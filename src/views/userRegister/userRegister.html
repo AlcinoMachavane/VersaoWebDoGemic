@@ -30,45 +30,37 @@
     </span>
 
 <!-- SIDEBAR-->
-<aside id="menu" class="menuBar sidebar-hidden">
+<menu class="menuBar sidebar-hidden hide">
 
     <ul>
 
-        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
-            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
+        <li id="buttonForBar" onclick="closeOpen()">
+            <i class="fa-solid fa-bars"></i>
         </li>
 
-        <li><a href="../dashboard/Dashboard.html"><i
-                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li><a href="../adminst/Administracao.html"><i
-                class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li><a href="../clients/Client.html"><i
-                class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li><a href="../loans/loans.html"><i
-                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li><a href="../cashFlow/Fluxo%20de%20caixa.html"><i
-                class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li><a href="../reports/Reports.html"><i
-                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li><a href="../configs/Configurações.html"><i
-                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../admin/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../views/cashFlow/cashFlow.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
         <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
-
     </ul>
-</aside>
+</menu>
 
 <!--MAIN CONTEINER-->
 <main class="mainContent">
 
     <!-- LOGGED NAME AND BUTTON TO PROFILE-->
-    <nav class="topBar">
+    <nav class="navBar">
         <span></span>
-        <a href="../adminst/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+        <a href="../admin/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
                 class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
     <!--  CONTEINER FOR MAIN CONTENT-->
-    <div class="mainContentJustifiyerWithoutSubMenu">
+    <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Cadastro de usuário</h1>

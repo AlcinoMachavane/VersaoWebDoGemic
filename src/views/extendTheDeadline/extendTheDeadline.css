@@ -1,33 +1,30 @@
 @charset "UTF-8";
 
 
-input {
-}
-
-.checkboxConteiner > input {
-    margin-right: 10px;
-}
-
-.checkboxConteiner > label {
-    font-weight: bold;
-}
-
-.checkbox_and_radio_style {
-    padding: 20px 0;
-    border-bottom: 1px dashed var(--myLightBlueButton);
-}
-
-.labelInputConteiner > h3{
+h2{
     display: flex;
     flex-basis: 100%;
-    /*background-color: #17C653;*/
+    padding: 10px 0;
 }
 
-.labelInputConteiner {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
+.formConteiner > form > .firstSideOfPaiment{
+    margin: 0 20px;
+    /*height: 360px;*/
+}
 
+.titleAndDataConteiner > h3{
     display: flex;
+    flex-basis: 100%;
+}
+
+.titleAndDataConteiner > p{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+
+.titleAndDataConteiner {
+      display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
     align-items: center;
@@ -36,22 +33,24 @@ input {
     padding: 10px 0;
 }
 
-
-.radioInputConteiner {
+.valueAndTherm{
     display: flex;
-    justify-content: space-between;
+    flex-basis: 100%;
     flex-wrap: nowrap;
-    /*background-color: blue;*/
+    justify-content: center;
+    align-items: center;
 }
 
-.radioInputConteiner > input{
-    flex-basis: 50%;
-    margin-right: 5px;
+.valueAndTherm > .titleAndDataConteiner{
+    display: flex;
+    /*background-color: gold;*/
+    /*border: 1px solid red;*/
+    justify-content: center;
 }
 
-.radioInputConteiner > label{
-    /*flex-basis: 50%;*/
-    margin-right: 10px;
+.valueAndTherm > .titleAndDataConteiner > label{
+    display: flex;
+    justify-content: center;
 }
 
 /* SET DATATABLE INPUTS */
@@ -63,23 +62,14 @@ div.dt-container .dt-search input, .dt-input{
 
 input[type="text"], input[type="email"],
 input[type="password"], input[type="number"],
-input[type="tel"],input[type="date"],
-textarea,
-select{
-
-    display: flex;
-    flex-basis: 100%;
-}
-
-input[type="text"], input[type="email"],
-input[type="password"], input[type="number"],
 input[type="tel"],
 input[type="search"],input[type="date"],
-textarea,
 select{
-
+    display: flex;
+    flex-basis: 100%;
     padding: 10px;
     border: 1px solid rgba(204, 204, 204, 0.35);
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
@@ -87,7 +77,6 @@ input[type="text"], input[type="email"],
 input[type="password"], input[type="number"],
 input[type="tel"],
 input[type="search"],
-textarea,
 select {
     margin-bottom: 10px;
 }

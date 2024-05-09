@@ -71,7 +71,7 @@ main{
 
 /*//////////////////////////////////// MAIN CONTET DIAGRAMER /////////////////////////////////////////*/
 
-.mainContentJustifiyer, .mainContentJustifiyerWithoutSubMenu{
+.mainContentJustifier, .mainContentJustifierWithoutSubMenu{
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
@@ -83,11 +83,11 @@ main{
     /*background-color: gold;*/
 }
 
-.mainContentJustifiyer{
+.mainContentJustifier{
     height: calc(100vh - 160px);
 }
 
-.mainContentJustifiyerWithoutSubMenu{
+.mainContentJustifierWithoutSubMenu{
     height: calc(100vh - 85px);
 }
 

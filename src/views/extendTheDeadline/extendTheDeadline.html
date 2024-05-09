@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Pagamentos</title>
+    <title>Extender o prazo</title>
 
     <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../components/boot/buttons.css">
     <link rel="stylesheet" href="../../components/form/simpleForm.css">
+    <link rel="stylesheet" href="../../components/boot/inputs.css">
 
     <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="extendTheDeadline.css">
 
 </head>
 <body>
@@ -63,79 +64,41 @@
     <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
-            <h1 class="formTitle">Fazer pagamento</h1>
+            <h1 class="formTitle">Extender o prazo</h1>
             <form action="#" class="form" id="register">
 
                 <div class="firstSideOfPaiment">
 
                     <div class="titleAndDataConteiner">
-                        <h2>Nome do cliente</h2>
-                        <p>Jeremias Francisco Tadeu</p>
-                    </div>
-
-                    <div class="titleAndDataConteiner">
-                        <label for="concessionDate">Data de pagamento</label>
+                        <label for="concessionDate">Nova data</label>
                         <input type="date" id="concessionDate" name="concessionDate">
                         <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="titleAndDataConteiner">
-                        <label for="acount">Conta</label>
-                        <select name="acount" id="acount">
-                            <option value="Ultimo login"></option>
-                            <option value="Estado">e-Mola</option>
-                            <option value="Estado">m-pesa</option>
-                            <option value="Estado">m-Kesh</option>
-                            <option value="Estado">Caixa</option>
-                            <option value="Estado">Banco</option>
+                        <label for="autoInstallmentsValue">Parcelas</label>
+                        <select name="autoInstallmentsValue" id="autoInstallmentsValue">
+                            <option value="Parcelas"></option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
                         </select>
-                        <div id="acountDocumentoFeedback" class="feedback"></div>
+                        <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="titleAndDataConteiner">
-                        <label for="loanValue">Valor do pagamento</label>
-                        <input type="number" id="loanValue" name="loanValue">
-                        <div id="loanValueDocumentoFeedback" class="feedback"></div>
+                        <label for="description">Observação</label>
+                        <textarea id="description" name="description"></textarea>
+                        <div id="descriptionDocumentoFeedback" class="feedback"></div>
                     </div>
 
                 </div>
-
-<!--                <div class="secundSideOfPaiment">-->
-<!--                    <div class="residenceData">-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Total em divida</legend>-->
-<!--                            <p id="totalInDebt">9 746,00</p>-->
-<!--                        </fieldset>-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Prestação corrente</legend>-->
-<!--                            <p id="currentInstallment">9 746,00</p>-->
-<!--                        </fieldset>-->
-
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Capital pago</legend>-->
-<!--                            <p id="paidCapital">9 746,00</p>-->
-<!--                            <p class="percent" id="percentOfPaidCapital">100%</p>-->
-<!--                        </fieldset>-->
-
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Juros pagos</legend>-->
-<!--                            <p id="interestPaid">656,00</p>-->
-<!--                            <p class="percent" id="percentInterestPaid">57%</p>-->
-<!--                        </fieldset>-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Multa paga</legend>-->
-<!--                            <p id="paidFine">0,00</p>-->
-<!--                            <p class="percent" id="percentOfPaidFine">0%</p>-->
-<!--                        </fieldset>-->
-
-<!--                    </div>-->
-<!--                </div>-->
-
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>

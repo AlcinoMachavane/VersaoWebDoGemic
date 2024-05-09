@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+
+.arangeSmallContent{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /*background-color: #202B46;*/
+    justify-content: center;
+}
+
+.paymentDataConteiner{
+    display: flex;
+    max-width: 940px;
+    /*box-shadow: var(--my-box-shadow);*/
+    /*background-color: white;*/
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    /*border-radius: 10px;*/
+}
+
+h1.paymentTitle{
+    display: flex;
+    flex-basis: 100%;
+    margin: 20px;
+    font-size: 14pt;
+    justify-content: center;
+}
+
+.paymentDataConteiner > article{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    /*border: 1px solid purple;*/
+}
+
+.firstSideOfPaiment{
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    max-width: 200px;
+    /*border: 1px solid green;*/
+    /*padding: 0 20px;*/
+    background-color: white;
+    border-radius: 10px;
+    /*margin-right: 20px;*/
+    box-shadow: var(--my-box-shadow);
+}
+
+.secundSideOfPaiment{
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    /*border: 1px solid red;*/
+   align-items: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--my-box-shadow);
+}
+
+.alineData{
+    display: flex;
+    flex-basis: 100%;
+}
+
+.titleAndDataConteiner {
+      display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+fieldset{
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 50px;
+    /*background-color: #106EC5;*/
+    justify-content: center;
+    align-items: flex-start;
+    width: 150px;
+}
+
+fieldset > legend{
+    font-weight: bold;
+}
+
+fieldset > p{
+    /*background-color: whitesmoke;*/
+    display: flex;
+    flex-basis: 100%;
+    margin: 5px;
+    border-radius: 25px;
+    border: 1px solid lightgreen;
+    color: darkgreen;
+    padding: 5px 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px 0;
+    justify-content: center;
+    height: 30px;
+}
+.titleAndDataConteiner > p{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*table*/
+
+div.dt-search{
+    display: none;
+    background-color: black !important;
+}

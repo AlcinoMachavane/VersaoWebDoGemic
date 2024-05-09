@@ -1,6 +1,6 @@
 
 var lastScrollTop = 0;
-navbar = document.getElementById("topBar");
+navbar = document.getElementById("navBar");
 window.addEventListener("scroll", function () {
     var scrollTop = window.pageYOffset || document
         .documentElement.scrollTop;

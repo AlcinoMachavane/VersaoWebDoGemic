@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Pagamentos</title>
+    <title>Adicionar movimento</title>
 
     <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../components/boot/buttons.css">
     <link rel="stylesheet" href="../../components/form/simpleForm.css">
+    <link rel="stylesheet" href="../../components/boot/inputs.css">
 
     <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="addMoviment.css">
 
 </head>
 <body>
@@ -63,24 +64,30 @@
     <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
-            <h1 class="formTitle">Fazer pagamento</h1>
+            <h1 class="formTitle">Adicionar movimento</h1>
             <form action="#" class="form" id="register">
 
                 <div class="firstSideOfPaiment">
 
                     <div class="titleAndDataConteiner">
-                        <h2>Nome do cliente</h2>
-                        <p>Jeremias Francisco Tadeu</p>
+                        <h2>Movimento</h2>
+
+                        <input type="radio" id="income" name="typeOfTransaction">
+                        <label for="income">Entradas</label>
+
+                        <input type="radio" id="expenses" name="typeOfTransaction">
+                        <label for="expenses">Saídas</label>
+
                     </div>
 
                     <div class="titleAndDataConteiner">
-                        <label for="concessionDate">Data de pagamento</label>
+                        <label for="concessionDate">Data da transação</label>
                         <input type="date" id="concessionDate" name="concessionDate">
                         <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="titleAndDataConteiner">
-                        <label for="acount">Conta</label>
+                        <label for="acount">Método de pagamento</label>
                         <select name="acount" id="acount">
                             <option value="Ultimo login"></option>
                             <option value="Estado">e-Mola</option>
@@ -93,49 +100,41 @@
                     </div>
 
                     <div class="titleAndDataConteiner">
-                        <label for="loanValue">Valor do pagamento</label>
+                        <label for="typeOfAcount">Tipo de conta</label>
+                        <select name="acount" id="typeOfAcount">
+                            <option value="Ultimo login"></option>
+                            <option value="Estado">Investimento</option>
+                            <option value="Estado">Despesas fixas</option>
+                            <option value="Estado">Entradas não operacionais</option>
+                            <option value="Estado">Saídas não operacionais</option>
+                        </select>
+                        <div id="typeOfAcountDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="titleAndDataConteiner">
+                        <label for="accountToDebit">Conta a debitar</label>
+                        <select name="acount" id="accountToDebit">
+                            <option value="Ultimo login">Selecione a descrição do pagamento</option>
+                            <option value="Estado">Pagamento de renda</option>
+                            <option value="Estado">Pagamento de salário</option>
+                            <option value="Estado">Investimento de captal externo</option>
+                        </select>
+                        <div id="accountToDebitDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="titleAndDataConteiner">
+                        <label for="loanValue">Valor</label>
                         <input type="number" id="loanValue" name="loanValue">
                         <div id="loanValueDocumentoFeedback" class="feedback"></div>
                     </div>
 
+                    <div class="titleAndDataConteiner">
+                        <label for="description">Descrição</label>
+                        <textarea id="description" name="description"></textarea>
+                        <div id="descriptionDocumentoFeedback" class="feedback"></div>
+                    </div>
+
                 </div>
-
-<!--                <div class="secundSideOfPaiment">-->
-<!--                    <div class="residenceData">-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Total em divida</legend>-->
-<!--                            <p id="totalInDebt">9 746,00</p>-->
-<!--                        </fieldset>-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Prestação corrente</legend>-->
-<!--                            <p id="currentInstallment">9 746,00</p>-->
-<!--                        </fieldset>-->
-
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Capital pago</legend>-->
-<!--                            <p id="paidCapital">9 746,00</p>-->
-<!--                            <p class="percent" id="percentOfPaidCapital">100%</p>-->
-<!--                        </fieldset>-->
-
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Juros pagos</legend>-->
-<!--                            <p id="interestPaid">656,00</p>-->
-<!--                            <p class="percent" id="percentInterestPaid">57%</p>-->
-<!--                        </fieldset>-->
-
-<!--                        <fieldset class="titleAndDataConteiner">-->
-<!--                            <legend>Multa paga</legend>-->
-<!--                            <p id="paidFine">0,00</p>-->
-<!--                            <p class="percent" id="percentOfPaidFine">0%</p>-->
-<!--                        </fieldset>-->
-
-<!--                    </div>-->
-<!--                </div>-->
-
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>

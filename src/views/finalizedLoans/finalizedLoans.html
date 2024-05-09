@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Gestão do empréstimo</title>
+    <title>Empréstimos Finalizados</title>
 
     <link rel="stylesheet" href="../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../src/components/header/header.css">
@@ -72,35 +72,10 @@
                 class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
-    <!-- SUB NAVBAR-->
-    <nav class="subNavBar">
+    <!--  CONTAINER FOR MAIN CONTENT-->
+    <div class="mainContentJustifierWithoutSubMenu">
 
-        <div class="mobileDisplay">
-            <div class="justifyButton">
-
-                <a href="../finalizedLoans/finalizedLoans.html" class="btn btn-default" id="finishedLoanButton"
-                   title="Ver empréstimos finalizados">
-                    <i class="fa-solid fa-circle-check"></i>
-                </a>
-
-                <a href="../slaughteredLoan/slaughteredLoan.html" class="btn btn-default" id="slaughteredLoanButton"
-                   title="Ver empréstimos abatidos">
-                    <i class="fa-solid fa-sack-xmark"></i>
-                </a>
-
-                <a href="../grantLoan/grantLoan.html" class="btn btn-success" id="grantLoanButton"
-                   title="Conceder empréstimo">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                </a>
-
-            </div>
-        </div>
-    </nav>
-
-    <!--  CONTEINER FOR MAIN CONTENT-->
-    <div class="mainContentJustifier">
-
-        <!--  TABLE CONTEINER-->
+        <!--  TABLE CONTAINER-->
         <div class="tableConteiner">
             <table  class="display table_on_profile_view" style="width:100%">
                 <thead>
@@ -112,9 +87,6 @@
                     <th>Data de concessão</th>
                     <th>Data final</th>
                     <th>Valor pago</th>
-                    <th>Valor por pagar</th>
-                    <th>Estado</th>
-                    <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -126,23 +98,6 @@
                     <td>17-09-2024</td>
                     <td>17-12-2024</td>
                     <td>0,00</td>
-                    <td>65 000,00</td>
-                    <td class="info-text-without-backgroud">Em dia</td>
-                    <td class="actionEye">
-
-                        <a href="../payment/payment.html" title="Fazer pagamento">
-                            <i class="fa-solid fa-money-bill-wave"></i></a>
-
-                        <a href="../loanManagement/loanManagement.html" title="Gerir o empréstimo">
-                            <i class="fa-solid fa-scale-unbalanced"></i></a>
-
-                        <a href="../paymentReport/paymentReport.html" title="Visualizar empréstimo">
-                            <i class="fa-solid fa-eye"></i></a>
-
-                        <a href="#" title="Imprimir recibo">
-                            <i class="fa-solid fa-receipt"></i></a>
-
-                    </td>
                 </tr>
                 <!-- Repita este bloco de tr para cada usuário -->
                 <tfoot>
@@ -154,8 +109,6 @@
                     <th>Data de concessão</th>
                     <th>Data final</th>
                     <th>Valor pago</th>
-                    <th>Valor por pagar</th>
-                    <th>Estado</th>
                     <!--                    <th class="actionEye">Ações</th>-->
                 </tr>
                 </tfoot>

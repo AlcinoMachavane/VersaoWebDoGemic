@@ -34,45 +34,37 @@
     </span>
 
 <!-- SIDEBAR-->
-<aside id="menu" class="menuBar sidebar-hidden">
+<menu class="menuBar sidebar-hidden hide">
 
     <ul>
 
-        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
-            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
+        <li id="buttonForBar" onclick="closeOpen()">
+            <i class="fa-solid fa-bars"></i>
         </li>
 
-        <li><a href="../dashboard/Dashboard.html"><i
-                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li><a href="../adminst/Administracao.html"><i
-                class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li><a href="../clients/Client.html"><i
-                class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li><a href="../loans/loans.html"><i
-                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li><a href="../cashFlow/Fluxo%20de%20caixa.html"><i
-                class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li><a href="../reports/Reports.html"><i
-                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li><a href="../configs/Configurações.html"><i
-                class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../admin/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../views/cashFlow/cashFlow.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
         <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
-
     </ul>
-</aside>
+</menu>
 
 <!--MAIN CONTEINER-->
 <main class="mainContent">
 
     <!-- LOGGED NAME AND BUTTON TO PROFILE-->
-    <nav class="topBar">
+    <nav class="navBar">
         <span></span>
-        <a href="../adminst/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+        <a href="../admin/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
                 class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
     <!--  CONTEINER FOR MAIN CONTENT-->
-    <div class="mainContentJustifiyerWithoutSubMenu">
+    <div class="mainContentJustifierWithoutSubMenu">
 
         <div class="arangeSmallContent">
 
@@ -135,7 +127,30 @@
 
             <!--  TABLE CONTEINER-->
             <div class="tableConteiner">
-                <table id="first_table_on_profile_view" class="display" style="width:100%">
+                <table  class="display table_on_profile_view" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Data</th>
+                        <th>Operador</th>
+                        <th>Conta</th>
+                        <th>Valor pago</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="user">
+                        <td>1</td>
+                        <td>17-09-2024</td>
+                        <td>Joelma Sebastião</td>
+                        <td>E_MOLA</td>
+                        <td>12 000,00</td>
+                    </tr>
+                    <!-- Repita este bloco de tr para cada usuário -->
+                </table>
+            </div>
+
+            <div class="tableConteiner">
+                <table  class="display secund_table_on_profile_view" style="width:100%">
                     <thead>
                     <tr>
                         <th>Nº</th>
@@ -173,6 +188,7 @@
 <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
 
+<script src="../../../src/components/table/secundTable.js"></script>
 <script src="../../../src/components/table/table.js"></script>
 <script src="../../components/boot/set/set.js"></script>
 

@@ -1,5 +1,5 @@
 
-new DataTable('.table_on_profile_view', {
+new DataTable('.secund_table_on_profile_view', {
     initComplete: function () {
         this.api()
             .columns()

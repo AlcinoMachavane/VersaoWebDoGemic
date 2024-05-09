@@ -5,12 +5,23 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../components/boot/set/set.css">
-    <link rel="stylesheet" href="../../../src/components/header/header.css">
-    <link rel="stylesheet" href="../../../src/components/sideBar/sideBar.css">
-    <link rel="stylesheet" href="../../../src/components/footer/footer.css">
     <title>Configurações</title>
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../components/boot/buttons.css">
+    <link rel="stylesheet" href="../../components/form/grantLoanForm.css">
+    <link rel="stylesheet" href="../../components/boot/inputs.css">
+<!--    <link rel="stylesheet" href="../../components/form/clientRegisterForm.css">-->
+
+    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 <!--<header>-->
@@ -23,7 +34,6 @@
 <!--        </ul>-->
 <!--    </nav>-->
 <!--</header>-->
-
 <menu class="menuBar sidebar-hidden hide">
 
     <ul>
@@ -32,25 +42,177 @@
             <i class="fa-solid fa-bars"></i>
         </li>
 
-        <li onclick="changeContent('Dashboard')"><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li onclick="changeContent('adminst')"><a href="../adminst/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li onclick="changeContent('clients')"><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li onclick="changeContent('Loans')"><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li onclick="changeContent('cashFlow')"><a href="../../views/cashFlow/Fluxo%20de%20caixa.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li onclick="changeContent('reports')"><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li onclick="changeContent('configs')"><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../admin/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../views/cashFlow/cashFlow.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
     </ul>
 </menu>
 
 <main class="mainContent">
 
-    <nav class="topBar">
+    <nav class="navBar">
         <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
+        <span></span>
     </nav>
 
 
-    <div id="content">
-        <!-- O conteúdo será carregado aqui -->
+    <!--  CONTAINER FOR MAIN CONTENT-->
+    <div class="mainContentJustifierWithoutSubMenu">
+        <!-- SIGN form-->
+        <div class="formConteiner">
+            <h1 class="formTitle">Configurações</h1>
+            <form action="#" class="form" id="register">
+
+                <div class="firstSideOfPaiment">
+                    <h2 class="formTitle">Dados da empresa</h2>
+                    <div class="loanLabelInputConteiner">
+                        <label for="LoanName">Nome</label>
+                        <input type="text" name="LoanName" id="LoanName">
+                        <div id="fullNameDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="loanLabelInputConteiner">
+                        <label for="NUIT">NUIT</label>
+                        <input type="number" id="NUIT" name="NUIT">
+                        <div id="NUITDateDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="loanLabelInputConteiner">
+                        <label for="startOfActivity">Início de actividade</label>
+                        <input type="date" id="startOfActivity" name="startOfActivity">
+                        <div id="startOfActivityDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="loanLabelInputConteiner">
+                        <label for="startingCapital">Capital inicial</label>
+                        <input type="number" id="startingCapital" name="startingCapital">
+                        <div id="startingCapitalDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="loanLabelInputConteiner">
+                        <label for="province">Província</label>
+                        <select name="province" id="province">
+                            <option></option>
+                            <option>Cabo Delgado</option>
+                            <option>Gaza</option>
+                            <option>Inhambane</option>
+                            <option>Manica</option>
+                            <option>Maputo (Cidade)</option>
+                            <option>Maputo (Província)</option>
+                            <option>Nampula</option>
+                            <option>Niassa</option>
+                            <option>Sofala</option>
+                            <option>Tete</option>
+                            <option>Zambézia</option>
+                        </select>
+                        <div id="loanGoalDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="loanLabelInputConteiner">
+                        <label for="address">Endereço</label>
+                        <input type="text" id="address" name="address">
+                        <div id="addressDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="secundSideOfPaiment">
+
+                    <div class="residenceData">
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="contact">Contacto</label>
+                            <input type="tel" name="contact" id="contact">
+                            <div id="contactDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="secondContact">Contacto</label>
+                            <input type="tel" name="secondContact" id="secondContact">
+                            <div id="secondContactDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="email">E-mail</label>
+                            <input type="number" id="email" name="email">
+                            <div id="emailDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="ownerName">Nome do proprietário</label>
+                            <input type="text" id="ownerName" name="ownerName">
+                            <div id="ownerNameDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="residenceData">
+                        <h2 class="formTitle">Prefências</h2>
+                        <div class="loanLabelInputConteiner">
+                            <h3>Comissão para promotor de venda</h3>
+                            <input type="checkbox" name="activateCommission" id="activateCommission">
+                            <label for="activateCommission">Ativar</label>
+                            <label for="percentOfCommission">Percentagem</label>
+                            <input type="number" name="percentOfCommission" id="percentOfCommission">
+                            <div id="percentOfCommissionDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <input type="checkbox" name="activateCommission" id="NUITOnReceipt">
+                            <label for="NUITOnReceipt">NUIT</label>
+                            <input type="checkbox" name="activateCommission" id="contactOnReceipt">
+                            <label for="contactOnReceipt">Contacto</label>
+                            <input type="checkbox" name="activateCommission" id="userNameOnReceipt">
+                            <label for="userNameOnReceipt">Usuário</label>
+                            <div id="dataOnReceiptDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="ownerName">Forma de cálculo das prestações</label>
+
+                                <label for="typeOfInstallments">Província</label>
+                                <select name="province" id="typeOfInstallments">
+                                    <option></option>
+                                    <option>(Capital/Número de prestações)+Percentagem (de juros) do valor remanescente</option>
+                                    <option>(Capital + Juros)/Numero de prestações</option>
+                                    <option>(Capital + Juros)+25%</option>
+                                </select>
+
+                            <div id="typeOfInstallmentsDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="loanLabelInputConteiner">
+                            <label for="ownerName">Periodicidade de prestações</label>
+
+                            <label for="frequency">Província</label>
+                            <select name="province" id="frequency">
+                                <option>Diário</option>
+                                <option>Semanal</option>
+                                <option>Mensal</option>
+                                <option>Trimestral</option>
+                                <option>Semestral</option>
+                                <option>Anual</option>
+                            </select>
+
+                            <div id="frequencyDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                    </div>
+<!--                  -->
+                </div>
+
+                <div class="button-container">
+                    <button class="btn btn-cancel" type="reset">Descartar</button>
+                    <button class="btn btn-success" type="submit">Submeter</button>
+                </div>
+            </form>
+            <h1 class="formTitleBottom"></h1>
+        </div>
+
     </div>
 
 
