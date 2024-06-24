@@ -9,10 +9,10 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #fefefe;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.23);
+    box-shadow: var(--my-box-shadow);
 }
 
 form#register {

@@ -16,23 +16,54 @@ i {
     width: auto;
 }
 
-i#xmark{
+/* i#xmark{
     display: none;
-}
+} */
 
 .menuBar > ul {
     width: 62px;
     background-color: var(--myBlue);
     height: 100vh;
-    /*overflow: hidden;*/
     transition: .8s ease-in-out;
-    overflow-x: auto;
     overflow-x: hidden;
 }
 
-.menuBar > ul:hover {
-    width: 200px
-}
+/*///////////////////////////////////////////////////////////*/
+
+
+ /* Estilo padrão do menu */
+         /* Estilo padrão do menu */
+        .menuBar {
+            overflow: hidden; /* Esconde o conteúdo que excede a largura */
+        }
+
+
+        /* Estilo do <ul> quando expandido */
+        .menuBar > ul.expanded {
+            width: 200px; /* Largura do <ul> quando expandido */
+        }
+        
+        /* Estilo para ocultar o botão de fechar quando o menu está expandido */
+        #xmark {
+            display: none; /* Esconde o ícone de fechar por padrão */
+        }
+
+        /* Mostrar o botão de fechar quando o menu está expandido */
+        .menuBar.expanded #xmark {
+            display: inline; /* Mostra o ícone de fechar */
+        }
+
+        /* Mostrar o botão de abrir quando o menu está recolhido */
+        .menuBar:not(.expanded) #bars {
+            display: inline; /* Mostra o ícone de abrir */
+        }
+
+        /* Esconde o ícone de abrir quando o menu está expandido */
+        .menuBar.expanded #bars {
+            display: none; /* Esconde o ícone de abrir */
+        }
+
+/*///////////////////////////////////////////////////////////*/
 
 #buttonForBar {
     border-bottom: 1px solid var(--myLight);
@@ -68,8 +99,6 @@ i#xmark{
 .menuBar > ul > li a:hover {
     background-color: var(--myLightBlue);
     color: white;
-    /*font-weight: bold;*/
-
 }
 
 .menuBar > ul > li > a > i {

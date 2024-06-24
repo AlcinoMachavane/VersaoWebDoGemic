@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../components/boot/buttons.css">
+    <link rel="stylesheet" href="../../../src/components/table/table.css">
+
+    <link rel="stylesheet" href="../../../src/components/boot/selectedIconSideBar.css">
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dashboardMediaquery.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+    <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+</head>
+<body>
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<menu  id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li><a href="../../views/dashboard/dashboard.html"><i id="dashboard" class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../admin/admin.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+    </ul>
+
+</menu>
+
+<main class="mainContent">
+
+    <nav class="navBar">
+        <span></span>
+        <a href="../admin/userProfile/profile.html"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <!--  Container FOR MAIN CONTENT-->
+    <div class="mainContentJustifierWithoutSubMenu">
+
+        <!-- <div class="arangeSmallContent"> -->
+
+            <div class="loanInformations">
+                <h1 class="paymentTitle">Empréstimos</h1>
+                <fieldset class="titleAndDataContainer">
+                    <legend>Activos</legend>
+                    <p>Homens 55</p>
+                    <p>Mulheres 45</p>
+                    <p>Total 100</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Finalizados</legend>
+                    <p>Homens 55</p>
+                    <p>Mulheres 45</p>
+                    <p>Total 100</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Com atraso</legend>
+                    <p>Homens 55</p>
+                    <p>Mulheres 45</p>
+                    <p>Total 100</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Em risco</legend>
+                    <p>Homens 40</p>
+                    <p>Mulheres 60</p>
+                    <p>Total 100</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Abatidos</legend>
+                    <p>Homens 40</p>
+                    <p>Mulheres 60</p>
+                    <p>Total 100</p>
+                </fieldset>
+            </div>
+
+            <div class="financialInformations">
+                <h1 class="paymentTitle">Finanças</h1>
+                <fieldset class="titleAndDataContainer">
+                    <legend>Valor concedido</legend>
+                    <h2>No mês em curso</h2>
+                    <p>9 746,00</p>
+                    <h2>Ao longo do ano</h2>
+                    <p>103 456,00</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Valor pendente</legend>
+                    <h2>No mês em curso</h2>
+                    <p>9 746,00</p>
+                    <h2>Ao longo do ano</h2>
+                    <p>103 456,00</p>
+                </fieldset>
+            
+                <fieldset class="titleAndDataContainer">
+                    <legend>Valor reembolsado</legend>
+                    <h2>No mês em curso</h2>
+                    <p>9 746,00</p>
+                    <h2>Ao longo do ano</h2>
+                    <p>103 456,00</p>
+                    <h2>De meses anteriores</h2>
+                    <p>103 456,00</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Lucro</legend>
+                    <h2>De juros</h2>
+                    <p>9 746,00</p>
+                    <h2>De Multa</h2>
+                    <p>456,00</p>
+                    <h2>Total</h2>
+                    <p>103 456,00</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataContainer">
+                    <legend>Lucro anual</legend>
+                    <h2>De juros</h2>
+                    <p>9 746,00</p>
+                    <h2>De Multa</h2>
+                    <p>456,00</p>
+                    <h2>Total</h2>
+                    <p>1 103 456,00</p>
+                </fieldset>
+                    </div>
+
+            <div class="acountsInformations">
+
+                <h1 class="paymentTitle">Contas</h1>
+
+                <fieldset class="titleAndDataConteiner">
+                    <legend>M-pesa</legend>
+                    <h2>Saldo</h2>
+                    <p>645 976,84</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataConteiner">
+                    <legend>E-mola</legend>
+                    <h2>Saldo</h2>
+                    <p>945 976,84</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataConteiner">
+                    <legend>M-kesh</legend>
+                    <h2>Saldo</h2>
+                    <p>145 976,84</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataConteiner">
+                    <legend>Absa</legend>
+                    <h2>Saldo</h2>
+                    <p>345 976,84</p>
+                </fieldset>
+
+                <fieldset class="titleAndDataConteiner">
+                    <legend>BCI</legend>
+                    <h2>Saldo</h2>
+                    <p>245 976,84</p>
+                </fieldset>
+            </div>
+        <h1 class="formTitleBottom"></h1>
+
+        <!-- </div> -->
+
+    </div>
+
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+
+</main>
+
+
+<script src="../../components/sideBar/sideBar.js"></script>
+<script src="../../components/sideBar/sideBarMediaquery.js"></script>
+</body>
+</html>

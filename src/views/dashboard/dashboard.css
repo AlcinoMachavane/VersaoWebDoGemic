@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.mainContentJustifierWithoutSubMenu{
+    display: flex;
+    /* justify-content: flex-start; */
+}
+
+.arangeSmallContent{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.loanInformations,.financialInformations,.acountsInformations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: var(--my-box-shadow);
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: white;
+}
+
+h1.paymentTitle{
+    display: flex;
+    flex-basis: 100%;
+    margin: 20px auto;
+    font-size: 14pt;
+    justify-content: center;
+}
+
+.titleAndDataConteiner {
+      display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 400px;
+    min-width: 170px;
+     /* background-color: red; */
+}
+
+fieldset > legend{
+    font-weight: bold;
+}
+
+fieldset > p{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 25px;
+    border: 1px solid lightgreen;
+    color: darkgreen;
+    padding: 5px 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px 0;
+    justify-content: center;
+    height: 30px;
+}
+
+.titleAndDataConteiner > p{
+    display: flex;
+    justify-content: space-around;
+}

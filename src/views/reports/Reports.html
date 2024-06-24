@@ -15,12 +15,16 @@
 
     <link rel="stylesheet" href="reports.css">
     <!--    -->
-    <link rel="stylesheet" href="../../../src/components/boot/buttons.css">
+    <link rel="stylesheet" href="../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../components/boot/set/buttons/buttonsMediaquery.css">
     <link rel="stylesheet" href="../../../src/components/boot/infoTextType.css">
-    <link rel="stylesheet" href="../../../src/components/table/table.css">
+    <link rel="stylesheet" href="../../components/table/table.css">
     <link rel="stylesheet" href="../../../src/components/boot/inputs.css">
+
+    <link rel="stylesheet" href="../../../src/components/boot/selectedIconSideBar.css">
     <!--    -->
-    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
@@ -29,22 +33,26 @@
 </head>
 <body>
 
-<menu class="menuBar sidebar-hidden hide">
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<menu  id="menu" class="menuBar sidebar-hidden">
 
     <ul>
-
-        <li id="buttonForBar" onclick="closeOpen()">
-            <i class="fa-solid fa-bars"></i>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
         </li>
 
-        <li><a href="../../views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li><a href="../admin/Administracao.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../../views/dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../admin/admin.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
         <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
         <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li><a href="../../views/cashFlow/cashFlow.html"><i class="fa-solid fa-cash-register"></i> Caixa</a>
-        </li>
-        <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice" style="color: var(--myLightBlue)"></i> Relatórios</a></li>
-        <li><a href="../../views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+        <li><a href="../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../views/reports/Reports.html"><i id="reports" class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
     </ul>
 </menu>
 
@@ -53,7 +61,7 @@
     <!-- LOGGED NAME AND BUTTON TO PROFILE-->
     <nav class="navBar hide">
         <span></span>
-        <a href="userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+        <a href="../admin/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
                 class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
@@ -61,31 +69,37 @@
     <nav class="subNavBar">
         <div class="mobileDisplay">
 
-            <label for="searchFirstDay">
-                <input type="date" name="searchFirstDay" id="searchFirstDay" value="Data inicial">
-            </label>
+                <!-- <a href="#" class="btn btn-default" id="threeMonths" title="Gerar relatório Trimestral"><i
+                        class="fa-solid fa-file-lines">*</i>
+                </a> -->
 
-            <label for="searchLastDay">
-                <input type="date" name="searchFirstDay" id="searchLastDay" value="Data Final">
-            </label>
+                <div class="chooseDate">
 
-            <div class="justifyButton">
-                <a href="performance/performance.html" class="btn btn-default" id="performance" title="Gerar relatório"><<i
+                    <label class="separate" for="searchFirstDay">
+                        <input type="date" name="searchFirstDay" id="searchFirstDay" value="Data inicial">
+                    </label>
+
+                    <label for="searchLastDay">
+                        <input type="date" name="searchFirstDay" id="searchLastDay" value="Data Final">
+                    </label>
+
+                </div>
+
+                <a href="#" class="btn btn-default" id="monthly" title="Gerar relatório Mensal"><i
                         class="fa-solid fa-file-lines"></i>
                 </a>
 
-                <a href="../userRegister/userRegister.html" class="btn btn-default" id="registerButton"
+                <a href="#" class="btn btn-default" id="registerButton"
                    title="Imprimir relatório"><i class="fa-solid fa-print"></i>
                 </a>
 
-            </div>
         </div>
     </nav>
 
-    <!--  CONTEINER FOR MAIN CONTENT-->
+    <!--  Conteiner FOR MAIN CONTENT-->
     <div class="mainContentJustifier">
 
-        <!--  TABLE CONTEINER-->
+        <!--  TABLE Container-->
         <div class="tableConteiner">
 
             <table  class="display table_on_profile_view" style="width:100%">
@@ -109,16 +123,16 @@
                 <tr>
                     <td>1</td>
                     <td>Jorge Domingos</td>
-                    <td>Gestor</td>
                     <td>2011-04-25</td>
                     <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
-                    <td>2011-04-25</td>
+                    <td>30%</td>
+                    <td>30 000</td>
+                    <td>6000</td>
+                    <td>18 0000</td>
+                    <td>12 000</td>
+                    <td>Pecuária</td>
+                    <td>Mensal</td>
+                    <td>13</td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -152,6 +166,8 @@
 <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
 
+<script src="../../components/sideBar/sideBar.js"></script>
+<script src="../../components/sideBar/sideBarMediaquery.js"></script>
 <script src="../../../src/components/table/table.js"></script>
 <script src="../../components/boot/set/set.js"></script>
 </body>

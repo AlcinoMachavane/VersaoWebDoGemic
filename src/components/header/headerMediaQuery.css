@@ -1,18 +1,20 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 
     .mobileDisplay {
-        height: 50%;
+        /* height: 50%; */
+        /* background-color: blue; */
+        flex-wrap: wrap;
     }
-
 
     .subNavBar {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap;
         height: 120px;
-        justify-content: space-around;
-    }
+        justify-content: space-around; */
+        /* background-color: goldenrod; */
 
+    }
 
     .subNavBar > p {
         flex-basis: 100%;
@@ -24,31 +26,17 @@
         text-align: left;
     }
 
-    .subNavBar > p > input#search {
-        flex-basis: 100%;
-    }
-
-    .subNavBar > button#showPopup {
-        flex-basis: 50%;
-        max-height: 40px;
-        max-width: 200px;
-        margin: 0 10px;
-    }
-
     .subNavBar > button.add {
         flex-basis: 50%;
         height: 40px;
         margin: 0 10px;
     }
 
-    .dropDown {
-
-    }
-
     .subNavBar {
-        padding: 0 20px;
+        /* padding: 0 20px; */
         justify-content: flex-start;
     }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -87,24 +75,11 @@
         margin: 0 !important;
     }
 
-    .subNavBar {
-        /*height: 200px;*/
-    }
 }
 
-
-@media screen and (max-width: 480px) {
-
-}
-
-@media screen and (max-width: 470px) {
-    .dropDown {
-
-    }
-}
 
 @media screen and (max-width: 500px) {
-    #buttonForBarMobile {
-        display: flex;
+    .subNavBar {
+        height: 50px;
     }
 }

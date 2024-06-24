@@ -7,11 +7,11 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #fefefe;
-    margin: auto;
+    margin: 20px 10px 10px 10px;
     border-radius: 10px;
     width: 500px;
     height: auto;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.23);
+    box-shadow: var(--my-box-shadow);
 }
 
 label {
@@ -103,6 +103,7 @@ h1.formTitleBottom {
     flex-basis: 100%;
     flex-wrap: nowrap;
     justify-content: space-around;
+    /*background-color: blue;*/
 }
 
 input[type="text"], input[type="email"],

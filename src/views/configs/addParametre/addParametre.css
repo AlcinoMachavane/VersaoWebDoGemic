@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+
+.formConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: var(--my-box-shadow);
+}
+
+h1,h2{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px 0;
+}
+
+h2{
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+h1.formTitle{
+    font-size: 16pt;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+form.form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.firstAndSecundSide{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.firstSideOfMoviment{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.inputLabel{
+    display: flex;
+}
+
+.inputLabel > input{
+    margin: 0 5px;
+}
+
+.radioInputConteiner > input{
+    display: block !important;
+    max-width: 2px;
+}
+
+
+.titleAndDataConteiner {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.titleAndDataConteiner > label{
+margin-bottom: 10px;
+}
+
+.valueAndTherm{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.valueAndTherm > .titleAndDataConteiner{
+    display: flex;
+    justify-content: center;
+}
+
+.button-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+input[type="text"], input[type="email"],
+input[type="password"], input[type="number"],
+input[type="tel"],
+input[type="search"],input[type="date"],
+select{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.35);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="email"],
+input[type="password"], input[type="number"],
+input[type="tel"],
+input[type="search"],
+select {
+    margin-bottom: 10px;
+}
+
+textarea{
+    padding: 10px;
+    border-radius: 5px;
+    height: 140px;
+}
+

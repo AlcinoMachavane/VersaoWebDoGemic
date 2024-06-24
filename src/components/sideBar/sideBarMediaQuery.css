@@ -1,33 +1,47 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 670px){
 
     .sidebar-hidden {
         display: none;
     }
+
     .menuBar {
         width: 100%;
         position: absolute;
-        justify-content: center;
+        justify-content: flex-start;
         z-index: 3;
-        backdrop-filter: blur(15px);
-        height: auto;
-    }
-
-    .menuBar > ul:hover{
-        border-radius: 0 0 20px 20px;
+        backdrop-filter: blur(10px);
+        height: auto; 
     }
 
     .menuBar > ul{
         height: auto;
-        width: 100%;
+        width: 60%;
+        height: 100vh;
+        padding-bottom: 20px; 
     }
+
 
     i#bars{
         display: none;
     }
 
     i#xmark{
+        /* display: flex; */
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #buttonForBarMobile {
         display: flex;
     }
+}
+
+@media screen and (max-width: 265px) {
+
+ .menuBar > ul{
+        width: 100%; 
+    }
+    
 }

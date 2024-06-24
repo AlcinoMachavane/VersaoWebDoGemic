@@ -7,10 +7,11 @@
     max-width: 600px;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #fefefe;
-    border-radius: 20px;
+    background-color: white;
+    border-radius: 10px;
     margin: 40px auto;
-    overflow: hidden;
+    padding: 10px;
+    overflow: auto;
     box-shadow: var(--my-box-shadow);
 }
 
@@ -20,23 +21,22 @@ form#register {
     flex-wrap: wrap;
     padding: 0 20px;
     justify-content: space-between;
-    /*background-color: #17C653;*/
+
 }
 
  .residenceData {
-     flex-wrap: wrap;
+     flex-wrap: wrap;    
 }
 
-.firstSideOfPaiment {
-
-    /*background-color: red;*/
+.secundSide{
+flex-basis: 50%;
+/* background-color: red;   */
 }
 
-
-.secundSideOfPaiment {
-    /*background-color: pink;*/
+.documentData{
+flex-basis: 50%;
+/* background-color: aqua;     */
 }
-
 
 label {
     display: flex;
@@ -70,5 +70,5 @@ h1.formTitle {
     flex-wrap: nowrap;
     justify-content: space-around;
     text-align: right;
-    margin: 20px 0;
+    margin: 30px 0;
 }

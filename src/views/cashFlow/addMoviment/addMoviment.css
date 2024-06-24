@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+
+.formConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 600px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: var(--my-box-shadow);
+    /*padding: 20px;*/
+}
+
+h1,h2{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px 0;
+}
+
+h1.formTitle{
+    font-size: 16pt;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.formConteiner > form > .firstSideOfMoviment{
+    margin: 0 20px;
+}
+
+form.form{
+    display: flex;
+    flex-wrap: wrap;
+    /*background-color: greenyellow;*/
+}
+
+.firstAndSecundSide{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+div.firstSideOfMoviment{
+    display: flex;
+    flex-wrap: wrap;
+    /*border: 2px solid red;*/
+    /*background-color: black;*/
+    padding: 0 20px;
+}
+
+.titleAndDataConteiner > h3{
+    display: flex;
+    flex-basis: 100%;
+}
+
+.titleAndDataConteiner > p{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+
+.titleAndDataConteiner {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    /*background-color: red;*/
+}
+
+.valueAndTherm{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.valueAndTherm > .titleAndDataConteiner{
+    display: flex;
+    justify-content: center;
+}
+
+.valueAndTherm > .titleAndDataConteiner > label{
+    display: flex;
+    justify-content: center;
+}
+
+.button-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    /*background-color: blue;*/
+    padding: 10px;
+}
+
+
+input[type="text"], input[type="email"],
+input[type="password"], input[type="number"],
+input[type="tel"],
+input[type="search"],input[type="date"],
+select{
+    display: flex;
+    flex-basis: 100%;
+    padding: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.35);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+input[type="text"], input[type="email"],
+input[type="password"], input[type="number"],
+input[type="tel"],
+input[type="search"],
+select {
+    margin-bottom: 10px;
+}
+
+textarea{
+    padding: 10px;
+    border-radius: 5px;
+    /*background-color: #ff9999;*/
+    height: 140px;
+}
+

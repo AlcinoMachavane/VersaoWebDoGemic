@@ -13,6 +13,7 @@
     width: 100%;
     background-color: white;
     height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
 }
 
 .navBar {
@@ -23,6 +24,11 @@
     padding: 0 10px;
 }
 
+.navBar > a > p{
+    display: flex;
+    align-items: center;
+}
+
 #buttonForBarMobile{
     display: none;
     position: absolute;
@@ -31,7 +37,7 @@
 }
 
 .subNavBar{
-    padding: 0 20px;
+    /* padding: 0 20px; */
     margin-top: 10px;
 }
 
@@ -43,15 +49,10 @@
     margin-left: 20px;
     align-items: center;
     height: 100%;
+    min-width: 230px;
 }
 
 .profile {
     align-items: center;
-}
-
-.justifyButton{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 

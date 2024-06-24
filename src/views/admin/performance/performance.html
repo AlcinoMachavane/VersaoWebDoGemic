@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Desempenho</title>
-    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../../src/components/header/header.css">
     <link rel="stylesheet" href="../../../../src/components/sideBar/sideBar.css">
@@ -14,11 +14,17 @@
     <link rel="stylesheet" href="../../../../src/components/table/table.css">
     <link rel="stylesheet" href="../adminMediaQuery.css">
     <link rel="stylesheet" href="../../../../src/components/sideBar/sideBarMediaQuery.css">
-    <link rel="stylesheet" href="../../../../src/components/header/headerMediaQuery.css">
-    <link rel="stylesheet" href="../../../../src/components/boot/graphic.css">
-    <link rel="stylesheet" href="../../../../src/components/boot/buttons.css">
+    <link rel="stylesheet" href="../../../../src/components/boot/set/graphics/graphic.css">
+    <link rel="stylesheet" href="../../../../src/components/boot/set/graphics/graphicMediaquery.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
     <link rel="stylesheet" href="../../../../src/components/boot/inputs.css">
 
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
     <link rel="stylesheet" type="text/css"
@@ -26,44 +32,33 @@
 </head>
 <body>
 
-<!--MENU BUTTON-->
+<!-- MOBILE BUTTON FOR SIDEBAR-->
 <span id="buttonForBarMobile" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
     </span>
 
-<!--SIDEBAR-->
-<aside id="menu" class="menuBar sidebar-hidden">
-    <ul>
+<menu  id="menu" class="menuBar sidebar-hidden">
 
-        <li style="height: 50px;border-bottom: 3px solid var(--myLight); justify-content: center">
-            <span><i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i></span>
+    <ul>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
         </li>
 
-        <li><a href="../../../views/dashboard/Dashboard.html"><i
-                class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li><a href="../Administracao.html"><i
-                class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li><a href="../../clients/Client.html"><i
-                class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li><a href="../../loans/loans.html"><i
-                class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li><a href="../../../views/cashFlow/cashFlow.html"><i
-                class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li><a href="../../../views/reports/Reports.html"><i
-                class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li><a href="../../../views/configs/Configurações.html"><i
-                class="fa-solid fa-gear"></i> Configurações</a></li>
-        <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
-
+        <li><a href="../../../views/dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
     </ul>
-</aside>
-
+</menu>
 <main class="mainContent">
 
     <!--navBar-->
     <nav class="navBar">
-        <a href="../Administracao.html" title="voltar a lista dos usuários"><i
-                class="fa-solid fa-circle-arrow-left"></i></a>
+        <span></span>
         <a href="../userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
@@ -124,16 +119,19 @@
         </div>
 
         <!--GRAPHIC-->
-        <nav class="switch">
-            <button onclick="changeChart(0)" class="switchButton btn btn-default" id="monthly" title="">Valor das vendas</button>
-            <button onclick="changeChart(1)" class="switchButton btn btn-default" id="Yearly">Capital arecadado</button>
-            <button onclick="changeChart(2)" class="switchButton btn btn-default" id="monthlyAnalysis">Capital investido</button>
-        </nav>
-        <div class="chart-container">
-            <canvas id="salesChart" class="first"></canvas>
-            <canvas id="salesChart1"></canvas>
-            <canvas id="salesChart2"></canvas>
-        </div>
+            <nav class="switch">
+                <button onclick="changeChart(0)" class="switchButton btn btn-default" id="monthly" title="">Valor das vendas</button>
+                <button onclick="changeChart(1)" class="switchButton btn btn-default" id="Yearly">Capital arecadado</button>
+                <button onclick="changeChart(2)" class="switchButton btn btn-default" id="monthlyAnalysis">Capital investido</button>
+            </nav>
+        <section class="graphicSection">
+            
+            <div class="chart-conteiner">
+                <canvas id="salesChart" class="first"></canvas>
+                <canvas id="salesChart1"></canvas>
+                <canvas id="salesChart2"></canvas>
+            </div>
+        </section>
 
     </div>
 
@@ -149,7 +147,8 @@
 <script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
 <!---->
 <script src="../../../../src/components/table/table.js"></script>
-<script src="../../../../src/components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
 <script src="graphicPerformance.js"></script>
 
 </body>

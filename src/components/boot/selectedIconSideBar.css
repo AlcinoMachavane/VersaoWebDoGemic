@@ -1,0 +1,5 @@
+@charset "UTF_8";
+
+#admin,#cashFlow,#clients,#dashboard,#loan,#cashFlow,#reports,#about{
+color: var(--myLightBlue) !important;
+}

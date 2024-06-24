@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" href="../../../components/header/header.css">
+    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
+    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/grantLoanForm.css">
+   <link rel="stylesheet" href="../../../components/form/grantLoanFormMediaQuery.css">
+
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+
+</head>
+<body>
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<menu  id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li><a href="../../dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../admin/admin.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../Client.html"><i id="clients" class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+    </ul>
+</menu>
+
+<!--MAIN Conteiner-->
+<main class="mainContent">
+
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+    <nav class="navBar">
+        <span></span>
+        <a href="../../admin/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+                class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <!--  Conteiner FOR MAIN CONTENT-->
+    <div class="mainContentJustifierWithoutSubMenu">
+        <!-- SIGN form-->
+        <div class="formConteiner">
+            <h1 class="formTitle">Cadastro cliente</h1>
+            <form action="#" class="form" id="register">
+<!--                <div class="dataArange">-->
+                    <div class="documentData">
+                        <div class="labelInputConteiner">
+                            <label for="fullName">Nome completo</label>
+                            <input type="text" id="fullName" name="fullName" autofocus>
+                            <div id="fullNameDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="labelInputConteiner">
+                            <h3>Género</h3>
+                            <div class="radioInputConteiner">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Masculino</label>
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Femenino</label>
+                            </div>
+                            <div id="genderDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="labelInputConteiner">
+                            <h3>Estado civil</h3>
+                            <div class="radioInputConteiner">
+                                <input type="radio" id="single" name="maritalStatus">
+                                <label for="single">Solteiro(a)</label>
+                                <input type="radio" id="married" name="maritalStatus">
+                                <label for="married">Casado(a)</label>
+                            </div>
+                            <div id="maritalStatusDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="nowrapElements">
+                            <div class="labelInputConteiner">
+                                <label for="typeOfDocument">Tipo de documento</label>
+                                <select id="typeOfDocument">
+                                    <option></option>
+                                    <option>BI</option>
+                                    <option>Passaporte</option>
+                                </select>
+                                <div id="typeOfDocumentDocumentoFeedback" class="feedback"></div>
+                            </div>
+                        
+
+                            <div class="labelInputConteiner">
+                                <label for="documentNumber">Documento nº</label>
+                                <input type="text" id="documentNumber" name="documentNumber">
+                                <div id="documentNumberDocumentoFeedback" class="feedback"></div>
+                            </div>
+                        </div>
+                        <div class="labelInputConteiner">
+                            <label for="placeOfIssue">Emitido em</label>
+                            <input type="text" id="placeOfIssue" name="placeOfIssue">
+                            <div id="placeOfIssueDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                        <div class="nowrapElements">
+                            <div class="labelInputConteiner">
+                                <label for="dateOfIssue">Data de emissão</label>
+                                <input type="date" id="dateOfIssue" name="dateOfIssue">
+                                <div id="dateOfIssueDocumentoFeedback" class="feedback"></div>
+                            </div>
+
+                            <div class="labelInputConteiner">
+                                <label for="expirationDate">Validade</label>
+                                <input type="date" id="expirationDate" name="expirationDate">
+                                <div id="expirationDateDocumentoFeedback" class="feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="labelInputConteiner">
+                            <label for="NUIT">NUIT</label>
+                            <input type="text" id="NUIT" name="NUIT">
+                            <div id="NUITDocumentoFeedback" class="feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="secundSide">
+                        <div class="residenceData">
+                            <div class="labelInputConteiner">
+                                <label for="naturalness">Naturalidade</label>
+                                <input type="text" id="naturalness" name="naturalness">
+                                <div id="naturalnessDocumentoFeedback" class="feedback"></div>
+                            </div>
+
+                            <div class="labelInputConteiner">
+                                <label for="residence">Residência</label>
+                                <input type="text" id="residence" name="residence">
+                                <div id="residenceDocumentoFeedback" class="feedback"></div>
+                            </div>
+
+                            <div class="labelInputConteiner">
+                                <label for="neighborhood">Bairro</label>
+                                <input type="text" id="neighborhood" name="neighborhood">
+                                <div id="neighborhoodDocumentoFeedback" class="feedback"></div>
+                            </div>
+
+                            <div class="nowrapElements">
+                                <div class="labelInputConteiner">
+                                    <label for="block">Quarteirão</label>
+                                    <input type="text" id="block" name="block">
+                                    <div id="blockDocumentoFeedback" class="feedback"></div>
+                                </div>
+
+                                <div class="labelInputConteiner">
+                                    <label for="houseNumber">Casa nº</label>
+                                    <input type="text" id="houseNumber" name="houseNumber">
+                                    <div id="houseNumberDocumentoFeedback" class="feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="parentsNames">
+                            <div class="labelInputConteiner">
+                                <label for="fathersName">Nome do pai</label>
+                                <input type="text" id="fathersName" name="fathersName">
+                                <div id="fathersNameDocumentoFeedback" class="feedback"></div>
+                            </div>
+
+                            <div class="labelInputConteiner">
+                                <label for="mothersName">Nome da mãe</label>
+                                <input type="text" id="mothersName" name="mothersName">
+                                <div id="mothersNameDocumentoFeedback" class="feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="nowrapElements">
+                            <!-- <div class="contacts"> -->
+                                <div class="labelInputConteiner">
+                                    <label for="contact">Contacto 1</label>
+                                    <input type="tel" id="contact" name="contact">
+                                    <div id="contactDocumentoFeedback" class="feedback"></div>
+                                </div>
+
+                                <div class="labelInputConteiner">
+                                    <label for="optionalContact">Contacto 2</label>
+                                    <input type="tel" id="optionalContact" name="optionalContact">
+                                    <div id="optionalContactDocumentoFeedback" class="feedback"></div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+<!--                </div>-->
+
+                <div class="button-container">
+                    <button class="btn btn-cancel" type="reset">Descartar</button>
+                    <button class="btn btn-success" type="submit">Submeter</button>
+                </div>
+            </form>
+            <h1 class="formTitleBottom"></h1>
+        </div>
+
+    </div>
+
+    <!--  FOOTER-->
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+</main>
+
+
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+</body>
+</html>

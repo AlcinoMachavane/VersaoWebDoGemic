@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 700px){
-    .chart-container {
+    .chart-conteiner {
         width: 800%;
         height: auto;
         padding: 0;

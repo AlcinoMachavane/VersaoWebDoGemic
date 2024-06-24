@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // /////////////////////////////////////////////////////////////////
 
 function changeChart(index) {
-    const charts = document.querySelectorAll('.chart-container canvas');
+    const charts = document.querySelectorAll('.chart-conteiner canvas');
     const buttons = document.querySelectorAll('.switchButton');
 
     // Oculta todas as canvas e remove a classe "active" de todos os botões

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.graphicSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1000px;
+    /* min-width: 1000px;  */
+    background-color: white; 
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: var(--my-box-shadow);
+    overflow-y: auto;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 50px 0 20px 0;
+    /* background-color: aqua; */
+}
+
+.switchButton:not(:last-child){
+    margin-right: 20px;
+}
+
+div.chart-conteiner {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    width: 400%;
+    min-width: 500px;
+    padding: 10px 5px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    max-height: 400px;
+    /* height: 400px; */
+    /* background-color: gold; */
+}
+
+canvas {
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--my-box-shadow);
+    background-color: white;
+    overflow: auto;
+}
+
+
+/*////////////////////////////////////////////////////*/
+
+.switchButton.active,
+.switchButton:hover {
+    /* Adicione seus estilos hover aqui */
+    color: var(--myLightBlue);
+    box-shadow: var(--my-box-shadow);
+    background: white;
+}
+
+

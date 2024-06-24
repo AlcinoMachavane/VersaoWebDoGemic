@@ -11,3 +11,16 @@ window.addEventListener("scroll", function () {
     }
     lastScrollTop = scrollTop;
 })
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+$(function () {
+    $('.buttonForBar').on('click', function () {
+        $('.menuBar').toggleClass('.hideShow');
+        $(this).toggleClass('.hideShow');
+    });
+});
+
+var button = document.getElementsByClassName("buttonForBar");
+var sidebar = document.getElementsByClassName("menuBar");
+var open = document.getElementsByClassName("hideShow");
