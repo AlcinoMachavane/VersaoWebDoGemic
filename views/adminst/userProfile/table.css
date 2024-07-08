@@ -5,13 +5,23 @@ body, main{
     overflow: hidden;
 }
 
-.forScroll{
+.ScrollAllContent{
     display: flex;
     flex-basis: 100%;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 9px;
-    height: calc(100vh - 151px); /**/
+    height: calc(100vh - 151px);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.ScrollTable{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 40px;
     overflow-x: auto;
     overflow-y: auto;
 }
@@ -22,9 +32,7 @@ body, main{
     flex-wrap: wrap;
     align-items: flex-start;
     max-width: 1000px;
-    margin: 10px 10px 50px 10px;
     padding: 10px;
-    /*background-color: red;*/
 }
 
 .tableConteiner > .TableTitle{

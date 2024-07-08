@@ -25,7 +25,6 @@
 <body>
 
 <!-- SIGN MODAL-->
-
 <div id="myModal" class="modal">
     <div class="modal-content">
         <i class="fa-regular cancelButton fa-circle-xmark" id="modalClose"></i>
@@ -117,7 +116,6 @@
 </div>
 
 <!-- FILTER MODAL-->
-
 <form action="#" class="dropDown" id="popupForm">
     <i class="fa-regular cancelButton fa-circle-xmark" id="cancelButton"></i>
     <h1>Opção de filtragem</h1>
@@ -149,13 +147,11 @@
 </form>
 
 <!--MENU BUTTON-->
-
 <span id="buttonForBarMobile" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
     </span>
 
 <!--SIDEBAR-->
-
 <aside id="menu" class="menuBar sidebar-hidden">
     <ul>
 
@@ -182,18 +178,17 @@
     </ul>
 </aside>
 
-<!-- MAIN PRINCIPAL-->
 <main class="topFoot">
 
     <!--TOPBAR-->
-
     <nav class="topBar">
-        <a href="../Administração.html" title="voltar a lista dos usuários"><i class="fa-solid fa-circle-arrow-left"></i></a>
-        <a href="profile.html"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
+        <a href="../Administração.html" title="voltar a lista dos usuários"><i
+                class="fa-solid fa-circle-arrow-left"></i></a>
+        <a href="profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
     <!--MAIN-->
-    <div class="forScroll">
+    <div class="ScrollAllContent">
 
         <!--PROFILEDATA-->
         <section class="profileSection">
@@ -229,7 +224,7 @@
 
                 </div>
 
-<!--                SUMMARY BY USER-->
+                <!--                SUMMARY BY USER-->
                 <div class="sumUp">
                     <div class="sumUpDetails" id="finalized">
                         <h2>Finalizados</h2>
@@ -249,65 +244,67 @@
         </section>
 
         <!--TABLES-->
-        <div class="tableConteiner">
-            <table>
-                <thead>
-                <tr>
-                    <th colspan="5" class="TableTitle"> Lista de empréstimos por usuário</th>
-                </tr>
-                </thead>
-                <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Valor concedido</th>
-                    <th>Prazo</th>
-                    <th>Estado</th>
-                    <th class="actionEye">Visualizar</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="user">
-                    <td>Alcino de Almeida Martins Tsengo</td>
-                    <td>13 700,00</td>
-                    <td>17-09-2024</td>
-                    <td>Em dia</td>
-                    <td class="actionEye" title="Visualisar este empréstimo"><i class="fa-solid fa-eye"></i></td>
-                </tr>
-                <!-- Repita este bloco de tr para cada usuário -->
+        <div class="ScrollTable">
+            <div class="tableConteiner">
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="5" class="TableTitle"> Lista de empréstimos por usuário</th>
+                    </tr>
+                    </thead>
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor concedido</th>
+                        <th>Prazo</th>
+                        <th>Estado</th>
+                        <th class="actionEye">Visualizar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="user">
+                        <td>Alcino de Almeida Martins Tsengo</td>
+                        <td>13 700,00</td>
+                        <td>17-09-2024</td>
+                        <td>Em dia</td>
+                        <td class="actionEye" title="Visualisar este empréstimo"><i class="fa-solid fa-eye"></i></td>
+                    </tr>
+                    <!-- Repita este bloco de tr para cada usuário -->
 
-            </table>
+                </table>
 
-            <table>
-                <thead>
-                <tr>
-                    <th colspan="5" class="TableTitle">Lista de movimentos por usuário</th>
-                </tr>
-                </thead>
-                <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                    <th>Operação</th>
-                    <th>Valor</th>
-                    <!--                    <th class="actionEye">Visualizar</th>-->
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="user">
-                    <td>17-09-2024</td>
-                    <td>Compra de monitor HP 32"</td>
-                    <td>Saida</td>
-                    <td>11 582,00</td>
-                    <!--                    <td class="actionEye"><i class="fa-solid fa-eye"></i></td>-->
-                </tr>
-                <!-- Repita este bloco de tr para cada usuário -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="5" class="TableTitle">Lista de movimentos por usuário</th>
+                    </tr>
+                    </thead>
+                    <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Operação</th>
+                        <th>Valor</th>
+                        <!--                    <th class="actionEye">Visualizar</th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="user">
+                        <td>17-09-2024</td>
+                        <td>Compra de monitor HP 32"</td>
+                        <td>Saida</td>
+                        <td>11 582,00</td>
+                        <!--                    <td class="actionEye"><i class="fa-solid fa-eye"></i></td>-->
+                    </tr>
+                    <!-- Repita este bloco de tr para cada usuário -->
 
-            </table>
+                </table>
+            </div>
         </div>
 
         <!--GRAPHIC-->
         <nav class="switch">
-            <button onclick="changeChart(0)" class="switchButton active" id="monthly">Diário</button>
+            <button onclick="changeChart(0)" class="switchButton active" id="monthly" title="">Diário</button>
             <button onclick="changeChart(1)" class="switchButton" id="Yearly">Mensal</button>
             <button onclick="changeChart(2)" class="switchButton" id="monthlyAnalysis">Por dia</button>
             <button onclick="changeChart(3)" class="switchButton" id="YearlyAnalysis">Por mês</button>
@@ -321,10 +318,11 @@
 
     </div>
 
-<!--    FOOTER-->
+    <!--    FOOTER-->
     <footer>
         <p>&copy;Guizo Informática e Serviços</p>
     </footer>
+
 </main>
 
 <script src="../../../header/filterModal/filterModal.js"></script>

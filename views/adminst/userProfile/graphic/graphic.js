@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var salesData = [1000, 1200, 1500, 1300, 1400, 1600, 1800, 1700, 1900, 2000, 2200, 2500, 1200, 1500, 1300, 1400, 1600, 1800, 1700, 1900, 2000, 2200, 2500, 1200, 1500, 1300, 1400, 1600, 1800, 1700];
+    var salesData = ['18', '22', '11', '5', '1', '12', '27', '20', '25', '9', '17', '4', '19', '30', '14', '3', '7', '28', '2', '24', '26', '16', '6', '8', '13', '21', '15', '23', '29', '10'];
     var months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12','13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'];
 
     var ctx = document.getElementById('salesChart').getContext('2d');
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var salesData = [1000, 1200, 1500, 1300, 1400, 1600, 1800, 1700, 1900, 2000, 2200, 2500];
+    var salesData = ['18', '22', '11', '5', '1', '12', '27', '20', '25', '9', '17', '4', '19', '30', '14', '3', '7', '28', '2', '24', '26', '16', '6', '8', '13', '21', '15', '23', '29', '10'];
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     var ctx = document.getElementById('salesChart1').getContext('2d');
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var salesData = [1000, 1200, 1500, 1300, 1400, 1600, 1800, 1700, 1900, 2000, 2200, 2500, 1200, 1500, 1300, 1400, 1600, 1800, 1700, 1900, 2000, 2200, 2500, 1200, 1500, 1300, 1400, 1600, 1800, 1700];
+    var salesData = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
     var months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12','13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'];
 
     var ctx = document.getElementById('salesChart2').getContext('2d');

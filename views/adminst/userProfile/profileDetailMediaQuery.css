@@ -1,5 +1,40 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 700px){
+    .chart-container {
+        width: 800%;
+        height: auto;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    canvas {
+        border-radius: 10px;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 420px){
+
+    .profileDetails {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .switch{
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+
+    .switchButton{
+        margin: 10px;
+    }
+}
+
+
 @media screen and (max-width: 360px){
 
     .sumUp{
@@ -8,13 +43,5 @@
 
     .sumUpDetails{
         margin-top: 20px;
-    }
-}
-
-@media screen and (max-width: 420px){
-
-    .profileDetails {
-        padding: 20px;
-
     }
 }

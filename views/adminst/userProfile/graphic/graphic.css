@@ -10,13 +10,16 @@
 
 .switchButton {
     justify-content: center;
-    margin-right: 20px;
     padding: 10px;
     height: auto;
     color: var(--myLight);
     font-weight: bold;
     box-shadow: var(--my-box-shadow);
-    /*border: 1px solid var(--myLightBlue);*/
+    width: 100px;
+}
+
+.switchButton:not(:last-child){
+    margin-right: 20px;
 }
 
 .switchButton:hover {
@@ -59,11 +62,8 @@
 
 canvas {
     display: flex;
-    width: 400px;
-    height: 400px;
     border-radius: 20px;
     padding: 10px;
-    /*margin: 10px;*/
     box-shadow: var(--my-box-shadow);
     background-color: white;
 }
