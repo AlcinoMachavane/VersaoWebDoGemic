@@ -28,7 +28,7 @@ ul > li > a > i {
     height: 100vh;
     transition: .8s ease-in-out;
     overflow-x: hidden;
-    border-right: 3px solid var(--myLightBlue);
+    border-right: 2px solid var(--myLightBlue);
     
 }
 
@@ -70,7 +70,7 @@ ul > li > a > i {
 /*///////////////////////////////////////////////////////////*/
 
 #buttonForBar {
-    border-bottom: 1px solid var(--myLightBlue);
+    border-bottom: 2px solid var(--myLightBlue);
     height: 27px !important;
 }
 
