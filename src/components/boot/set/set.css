@@ -133,6 +133,6 @@ i{
     flex-wrap: wrap;
     align-items: center;
     overflow: auto;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 65px);
 }
 

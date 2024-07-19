@@ -6,6 +6,7 @@ footer{
     max-height: 50px;
     height: auto;
     justify-content: center;
+    box-shadow: var(--my-box-shadow);
 }
 
 footer > p{
