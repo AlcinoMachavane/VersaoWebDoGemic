@@ -1,0 +1,76 @@
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto; /* Centraliza a caixa de login */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"]{
+    background: linear-gradient(45deg, #f9f9f9, #f8f8f8);
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    border: 1px solid transparent; /* Definir inicialmente uma borda transparente */
+    background: linear-gradient(45deg, #f9f9f9, #f8f8f8);
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: var(--myLightBlue); /* Alterar a cor da borda ao focar */
+    outline: none;
+}
+
+.login-container > form > label > i {
+    font-size: 8pt;
+}
+
+
+.login-container .feedback {
+    color: red;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid green;
+}
+
+/* Estilos do botão */
+.btn {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+}
+
+.btn-default {
+     background-color: lightblue;
+     color: darkblue;
+ }
+
+.btn-default:hover {
+    background-color: #99ccff;
+    color: blue;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}

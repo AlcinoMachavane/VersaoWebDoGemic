@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/header/headerMediaQuery.css"
+    />
+    <link rel="stylesheet" href="../../components/sideBar/sideBar.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/sideBar/sideBarMediaQuery.css"
+    />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+
+    <link rel="stylesheet" href="../../components/boot/set/set.css" />
+    <link rel="stylesheet" href="../../components/boot/buttons.css" />
+    <link rel="stylesheet" href="../../../src/components/table/table.css" />
+    <link rel="stylesheet" href="../../components/accounts/accounts.css" />
+    <link
+      rel="stylesheet"
+      href="../../../src/components/boot/selectedIconSideBar.css"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="../../assets/graphic/chart.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="dashboardMediaquery.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/07b3a47c42.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- MOBILE BUTTON FOR SIDEBAR-->
+    <span id="buttonForBarMobile" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </span>
+
+    <menu id="menu" class="menuBar sidebar-hidden">
+      <ul>
+        <li id="buttonForBar">
+          <i class="fa-regular fa-circle-xmark" id="xmark"></i
+          ><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li>
+          <a href="../../views/dashboard/dashboard.html"
+            ><i id="dashboard" class="fa-solid fa-chart-line"></i> Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="../admin/admin.html"
+            ><i class="fa-solid fa-user-tie"></i> Administração</a
+          >
+        </li>
+        <li>
+          <a href="../clients/Client.html"
+            ><i class="fa-regular fa-address-card"></i> Clientes</a
+          >
+        </li>
+        <li>
+          <a href="../loans/loans.html"
+            ><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a
+          >
+        </li>
+        <li>
+          <a href="../cashFlow/dailyTransitions.html"
+            ><i class="fa-solid fa-cash-register"></i> Caixa</a
+          >
+        </li>
+        <li>
+          <a href="../../views/reports/Reports.html"
+            ><i class="fa-solid fa-file-invoice"></i> Relatórios</a
+          >
+        </li>
+        <li>
+          <a href="../configs/aboutCompany.html"
+            ><i class="fa-solid fa-briefcase"></i> Acerca</a
+          >
+        </li>
+        <li>
+          <a href="../../../index.html"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
+          >
+        </li>
+      </ul>
+    </menu>
+
+    <main class="mainContent">
+      <nav class="navBar">
+        <span></span>
+        <a href="../admin/userProfile/profile.html"
+          ><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p
+        ></a>
+      </nav>
+
+      <!--  Container FOR MAIN CONTENT-->
+      <div class="mainContentJustifierWithoutSubMenu">
+        <div class="acountsInformations">
+          <!-- <h1 class="acountsTitle">Contas</h1> -->
+
+          <fieldset class="titleAndDataConteiner" id="c0">
+            <legend>M-pesa</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acou1nts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+
+          <fieldset class="titleAndDataConteiner" id="c1">
+            <legend>E-mola</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acounts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+
+          <fieldset class="titleAndDataConteiner" id="c2">
+            <legend>M-kesh</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acounts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+
+          <fieldset class="titleAndDataConteiner" id="c3">
+            <legend>Absa</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acounts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+
+          <fieldset class="titleAndDataConteiner" id="c4">
+            <legend>BCI</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acounts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+
+          <fieldset class="titleAndDataConteiner" id="c5">
+            <legend>BIM</legend>
+            <h2>Nº de conta</h2>
+            <h3>854759375937</h3>
+            <h2>Saldo</h2>
+            <a href="../cashFlow/acounts/transactionsPerAccount.html"
+              ><p>5 645 976,84</p></a
+            >
+          </fieldset>
+        </div>
+
+        <div class="loanInformations">
+          <div class="loanInformationDiv">
+            <fieldset class="titleAndDataContainer">
+              <legend>Em curso</legend>
+              <p>Homens 55</p>
+              <p>Mulheres 45</p>
+              <p>Total 100</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Finalizados</legend>
+              <p>Homens 55</p>
+              <p>Mulheres 45</p>
+              <p>Total 100</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Em atraso</legend>
+              <p>Homens 55</p>
+              <p>Mulheres 45</p>
+              <p>Total 100</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Em risco</legend>
+              <p>Homens 40</p>
+              <p>Mulheres 60</p>
+              <p>Total 100</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Abatidos</legend>
+              <p>Homens 40</p>
+              <p>Mulheres 60</p>
+              <p>Total 100</p>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <!-- <h1 class="loansTitle">Empréstimos</h1> -->
+          <div class="loanInformationsMainContent">
+            <div class="loanInformationDivGraphic">
+              <div class="graphicSide">
+                <div class="chart-conteiner">
+                  <canvas id="salesChart" class="first"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <div class="loanInformationDiv">
+            <fieldset class="titleAndDataContainer">
+              <legend>Total concedido</legend>
+              <p>55 000,98</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Total esperado</legend>
+              <p>55 000,98</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Total recebido</legend>
+              <p>55 000,98</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Total pendente</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <!-- <h1 class="loansTitle">Capital</h1> -->
+          <div class="loanInformationsMainContent">
+            <div class="loanInformationDivGraphic">
+              <div class="graphicSide">
+                <div class="chart-conteiner">
+                  <canvas id="default" class="first"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <div class="loanInformationDiv">
+            <fieldset class="titleAndDataContainer">
+              <legend>Capital recebido</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Capital esperado</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Capital pendente</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <!-- <h1 class="loansTitle">Capital</h1> -->
+          <div class="loanInformationsMainContent">
+            <div class="loanInformationDivGraphic">
+              <div class="graphicSide">
+                <div class="chart-conteiner">
+                  <canvas id="capitalChart" class="first"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <div class="loanInformationDiv">
+            <fieldset class="titleAndDataContainer">
+              <legend>Lucro recebido</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Lucro esperado</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+
+            <fieldset class="titleAndDataContainer">
+              <legend>Lucro pendente</legend>
+              <p>64 000,00</p>
+              <p>80%</p>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="loanInformations">
+          <!-- <h1 class="loansTitle">Capital</h1> -->
+          <div class="loanInformationsMainContent">
+            <div class="loanInformationDivGraphic">
+              <div class="graphicSide">
+                <div class="chart-conteiner">
+                  <canvas id="lucroChart" class="first"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+      </footer>
+    </main>
+
+    <script src="graphic/graphic.js"></script>
+    <script src="../../components/sideBar/sideBar.js"></script>
+    <script src="../../components/sideBar/sideBarMediaquery.js"></script>
+  </body>
+</html>

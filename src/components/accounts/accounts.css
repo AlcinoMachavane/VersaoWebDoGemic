@@ -1,0 +1,83 @@
+.acountsInformations,
+.loanInformations,
+.financialInformations,
+.titleAndDataConteiner,
+.acountsInformations > .acountsTitle,
+.titleAndDataConteiner > a,
+.loanInformations > h1,
+.loanInformationDiv,
+.loanInformationDivGraphic,
+.loanInformationsMainContent {
+  display: flex;
+}
+
+.acountsInformations,
+.loanInformations,
+.financialInformations {
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 40px 20px;
+  overflow: auto;
+}
+
+.acountsTitle,
+.loansTitle {
+  padding: 10px;
+  font-size: 14pt;
+  border-radius: 10px;
+  flex-basis: 100%;
+}
+
+.titleAndDataConteiner,
+.titleAndDataConteiner > h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  margin: 10px;
+  color: #636363;
+  flex-basis: 100%;
+}
+
+.titleAndDataConteiner {
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex-basis: calc(16.6% - 70px);
+  border-radius: 10px;
+  border: none;
+  max-width: 340px;
+  min-width: 180px;
+  margin: 5px;
+  box-shadow: var(--my-box-shadow);
+}
+
+#c0 { border-bottom: 8px solid #F08080; }
+#c1 { border-bottom: 8px solid lightblue; }
+#c2 { border-bottom: 8px solid lightsalmon; }
+#c3 { border-bottom: 8px solid lightgreen; }
+#c4 { border-bottom: 8px solid lightseagreen; }
+#c5 { border-bottom: 8px solid lightsteelblue; }
+#c6 { border-bottom: 8px solid lightcoral; }
+#c7 { border-bottom: 8px solid lightgoldenrodyellow; }
+#c8 { border-bottom: 8px solid lightcyan; }
+#c9 { border-bottom: 8px solid lightgray; }
+  
+
+.titleAndDataConteiner > legend {
+  font-weight: bold;
+}
+
+.titleAndDataConteiner > a {
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  padding: 5px;
+  border-radius: 25px;
+  margin: 5px;
+  border: 1px solid lightgreen;
+  color: darkgreen;
+}

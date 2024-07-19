@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="shortcut icon"
+      href="../../../assets/icons/favicon_gemic_app.png"
+      type="image/x-icon"
+    />
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" href="../../../components/header/header.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/header/headerMediaQuery.css"
+    />
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/sideBar/sideBarMediaQuery.css"
+    />
+    <link rel="stylesheet" href="../../../components/footer/footer.css" />
+
+    <link rel="stylesheet" href="../../../components/boot/set/set.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/boot/set/buttons/buttons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../components/boot/set/buttons/buttonsMediaquery.css"
+    />
+    <link rel="stylesheet" href="../../../components/boot/inputs.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/form/clientRegisterFormNew.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../components/form/grantLoanFormMediaQuery.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../../components/boot/selectedIconSideBar.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+  </head>
+  <body>
+    <!-- MOBILE BUTTON FOR SIDEBAR-->
+    <span id="buttonForBarMobile" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </span>
+
+    <menu id="menu" class="menuBar sidebar-hidden">
+      <ul>
+        <li id="buttonForBar">
+          <i class="fa-regular fa-circle-xmark" id="xmark"></i
+          ><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li>
+          <a class="menu-button" href="../../dashboard/dashboard.html"
+            ><i class="fa-solid fa-chart-line"></i> Dashboard</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../admin/admin.html"
+            ><i class="fa-solid fa-user-tie"></i> Administração</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../Client.html"
+            ><i id="clients" class="fa-regular fa-address-card"></i>
+            mutuário(cliente)</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../loans/loans.html"
+            ><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../cashFlow/dailyTransitions.html"
+            ><i class="fa-solid fa-cash-register"></i> Caixa</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../reports/Reports.html"
+            ><i class="fa-solid fa-file-invoice"></i> Relatórios</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../configs/aboutCompany.html"
+            ><i class="fa-solid fa-briefcase"></i> Acerca</a
+          >
+        </li>
+        <li>
+          <a class="menu-button" href="../../../../index.html"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
+          >
+        </li>
+      </ul>
+    </menu>
+
+    <!--MAIN Conteiner-->
+    <main class="mainContent">
+      <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+      <nav class="navBar">
+        <span></span>
+        <a href="../../admin/userProfile/profile.html" title="Ver meu perfil"
+          ><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p
+        ></a>
+      </nav>
+
+      <!--  Conteiner FOR MAIN CONTENT-->
+      <div class="mainContentJustifierWithoutSubMenu">
+        <!-- SIGN form-->
+        <!-- <div class="formConteiner"> -->
+        <form action="#" class="form" id="register">
+          <h1 class="formTitle">Cadastro mutuário(cliente)</h1>
+          <!--                <div class="dataArange">-->
+          <div class="documentData">
+            <div class="labelInputConteiner">
+              <label for="fullName">Nome completo</label>
+              <input type="text" id="fullName" name="fullName" autofocus />
+              <div id="fullNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <h3>Género</h3>
+              <div class="radioInputConteiner">
+                <input type="radio" id="male" name="gender" />
+                <label for="male">Masculino</label>
+                <input type="radio" id="female" name="gender" />
+                <label for="female">Femenino</label>
+              </div>
+              <div id="genderDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <h3>Estado civil</h3>
+              <div class="radioInputConteiner">
+                <input type="radio" id="single" name="maritalStatus" />
+                <label for="single">Solteiro(a)</label>
+                <input type="radio" id="married" name="maritalStatus" />
+                <label for="married">Casado(a)</label>
+              </div>
+              <div id="maritalStatusDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <!-- <div class="nowrapElements"> -->
+            <div class="labelInputConteiner">
+              <label for="typeOfDocument">Tipo de documento</label>
+              <select id="typeOfDocument">
+                <option value="vazio"></option>
+                <option value="BI">BI</option>
+                <option value="Passaporte">Passaporte</option>
+                <option value="Passaporte">Cartão de eleitor</option>
+                <option value="Passaporte">carta de condução</option>
+              </select>
+              <div id="typeOfDocumentDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <label for="documentNumber">Documento nº</label>
+              <input type="text" id="documentNumber" name="documentNumber" />
+              <div id="documentNumberDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+            <!-- </div> -->
+            <div class="labelInputConteiner">
+              <label for="placeOfIssue">Emitido em</label>
+              <input type="text" id="placeOfIssue" name="placeOfIssue" />
+              <div id="placeOfIssueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="nowrapElements">
+              <div class="labelInputConteiner">
+                <label for="dateOfIssue">Data de emissão</label>
+                <input type="date" id="dateOfIssue" name="dateOfIssue" />
+                <div id="dateOfIssueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="labelInputConteiner">
+                <label for="expirationDate">Validade</label>
+                <input type="date" id="expirationDate" name="expirationDate" />
+                <div id="expirationDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <label for="NUIT">NUIT</label>
+              <input type="text" id="NUIT" name="NUIT" />
+              <div id="NUITDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <label for="sourceOfIncome">Fonte de renda</label>
+              <select name="sourceOfIncome" id="sourceOfIncome">
+                <option value="vazio"></option>
+                <option value="Salário de Emprego Formal">
+                  Salário de Emprego Formal
+                </option>
+                <option value="Pequenos Negócios">Pequenos Negócios</option>
+                <option value="Agricultura Familiar">
+                  Agricultura Familiar
+                </option>
+                <option value="Artesanato">Artesanato</option>
+                <option value="Serviços Autônomos">Serviços Autônomos</option>
+                <option value="Pensões de Reforma">Pensões de Reforma</option>
+                <option value="Subsídios de Assistência Social">
+                  Subsídios de Assistência Social
+                </option>
+                <option value="Juros e Dividendos">Juros e Dividendos</option>
+                <option value="Aluguel de Imóveis">Aluguel de Imóveis</option>
+                <option value="Propriedades e Terras">
+                  Propriedades e Terras
+                </option>
+                <option value="Trabalho Freelancer">Trabalho Freelancer</option>
+                <option value="Trabalho Remoto">Trabalho Remoto</option>
+                <option value="Produção Agrícola">Produção Agrícola</option>
+                <option value="Pecuária">Pecuária</option>
+                <option value="Pensão de Alimentos">Pensão de Alimentos</option>
+                <option value="Outras Fontes">Outras Fontes</option>
+              </select>
+
+              <div id="sourceOfIncomeDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+          </div>
+
+          <div class="secundSide">
+            <div class="residenceData">
+              <div class="labelInputConteiner">
+                <label for="locationOfActivity">Local de exercício da atividade</label>
+                <input type="text" id="locationOfActivity" name="locationOfActivity" />
+                <div id="locationOfActivityDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="labelInputConteiner">
+                <label for="naturalness">Naturalidade</label>
+                <input type="text" id="naturalness" name="naturalness" />
+                <div id="naturalnessDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="labelInputConteiner">
+                <label for="residence">Residência</label>
+                <input type="text" id="residence" name="residence" />
+                <div id="residenceDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="labelInputConteiner">
+                <label for="neighborhood">Bairro</label>
+                <input type="text" id="neighborhood" name="neighborhood" />
+                <div id="neighborhoodDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="nowrapElements">
+                <div class="labelInputConteiner">
+                  <label for="block">Quarteirão</label>
+                  <input type="text" id="block" name="block" />
+                  <div id="blockDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                  </div>
+                </div>
+
+                <div class="labelInputConteiner">
+                  <label for="houseNumber">Casa nº</label>
+                  <input type="text" id="houseNumber" name="houseNumber" />
+                  <div id="houseNumberDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="parentsNames">
+              <div class="labelInputConteiner">
+                <label for="fathersName">Nome do pai</label>
+                <input type="text" id="fathersName" name="fathersName" />
+                <div id="fathersNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+
+              <div class="labelInputConteiner">
+                <label for="mothersName">Nome da mãe</label>
+                <input type="text" id="mothersName" name="mothersName" />
+                <div id="mothersNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="nowrapElements"> -->
+            <!-- <div class="contacts"> -->
+            <div class="labelInputConteiner">
+              <label for="countryCode">Código do País:</label>
+              <select id="countryCode" name="countryCode" class="select2">
+                <option value="+258">Moçambique (+258)</option>
+                <option value="+27">África do Sul (+27)</option>
+                <option value="+55">Brasil (+55)</option>
+                <option value="+351">Portugal (+351)</option>
+                <option value="+244">Angola (+244)</option>
+                <option value="+238">Cabo Verde (+238)</option>
+                <option value="+245">Guiné-Bissau (+245)</option>
+                <option value="+239">São Tomé e Príncipe (+239)</option>
+                <option value="+1">Estados Unidos (+1)</option>
+                <option value="+44">Reino Unido (+44)</option>
+                <option value="+33">França (+33)</option>
+                <option value="+49">Alemanha (+49)</option>
+                <option value="+39">Itália (+39)</option>
+                <option value="+34">Espanha (+34)</option>
+                <option value="+1">Canadá (+1)</option>
+                <option value="+61">Austrália (+61)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+81">Japão (+81)</option>
+                <option value="+91">Índia (+91)</option>
+                <option value="+7">Rússia (+7)</option>
+              </select>
+              <div id="countryCodeDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+
+            <div class="labelInputConteiner">
+              <label for="optionalContact">Contacto</label>
+              <input type="tel" id="optionalContact" name="optionalContact" />
+              <div id="optionalContactDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button class="btn btn-cancel" type="reset">Descartar</button>
+            <button class="btn btn-success" type="submit">Submeter</button>
+          </div>
+        </form>
+        <h1 class="formTitleBottom"></h1>
+        <!-- </div> -->
+      </div>
+
+      <!--  FOOTER-->
+      <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+      </footer>
+    </main>
+
+    <script src="../../../components/sideBar/sideBar.js"></script>
+    <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+
+    <!-- Inicializa a funcionalidade de seleção aprimorada com Select2 para possibilitar pesquisa no dropdowns -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".select2").select2();
+      });
+    </script> -->
+  </body>
+</html>

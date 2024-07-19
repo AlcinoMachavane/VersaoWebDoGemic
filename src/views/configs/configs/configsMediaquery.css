@@ -1,0 +1,8 @@
+@charset "UTF_8";
+
+@media screen and (max-width: 600px) {
+    
+    .contentDivisor{
+    flex-basis: 100%;
+    }
+}

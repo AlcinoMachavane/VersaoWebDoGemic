@@ -1,0 +1,14 @@
+@charset "UTF_8";
+
+.selected{
+
+    background-color: var(--myLightBlue);
+    color: white !important;
+
+    & i{
+        color: white;
+    }
+
+}
+
+
