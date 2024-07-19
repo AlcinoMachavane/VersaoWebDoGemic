@@ -1,7 +1,4 @@
-
 const mediaQuery = window.matchMedia('(max-width: 670px)');
-
-
 
 function toggleMenu() {
     var menu = document.getElementById("menu");
@@ -20,3 +17,12 @@ menuItems.forEach(function(item) {
     item.addEventListener("click", closeOpen); // Adicionar evento de clique a cada item do menu para fechar o menu
 });
 
+// Adicionar evento de mudança de tamanho de janela
+mediaQuery.addEventListener('change', function() {
+    var menu = document.getElementById("menu");
+    if (mediaQuery.matches) { // Se a largura da janela for menor ou igual a 670px
+        menu.classList.add("sidebar-hidden"); // Ocultar o menu por padrão em telas menores
+    } else {
+        menu.classList.remove("sidebar-hidden"); // Mostrar o menu por padrão em telas maiores
+    }
+});

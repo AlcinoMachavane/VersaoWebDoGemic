@@ -39,7 +39,7 @@
 
     #buttonForBarMobile > i {
         font-size: 14pt;
-        color: whitesmoke;
+        color: var(--myLightBlue);
     }
 }
 

@@ -23,7 +23,7 @@
     justify-content: space-between;
     padding: 0 10px;
     /* background-color: #3a92c2; */
-    background-image: linear-gradient(to right, #0E1C2B, #3a92c2, #fff, #fff, #fff);
+    background-color: #fff;
     height: 30px !important;
 }
 
@@ -32,6 +32,8 @@
 .navBar > a > p{
     display: flex;
     align-items: center;
+    color: var(--myLightBlue);
+    font-weight: bold;
 }
 
 .navBar > a > p > i {
@@ -47,7 +49,7 @@
 
 .subNavBar{
     
-    border-bottom: 1px solid var(--myLightBlue);
+    /* border-bottom: 1px solid var(--myLightBlue); */
     margin-top: 10px;
 }
 
