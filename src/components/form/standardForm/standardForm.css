@@ -1,0 +1,101 @@
+
+.formConteiner{
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    border-radius: 10px;
+    box-shadow: var(--my-box-shadow);
+    margin: 20px auto;
+
+}
+
+.formTitle{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+    font-size: 13pt;
+}
+
+.standardForm{
+    padding: 0 10px;
+
+}
+
+.forInputsConteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.forInputs{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.standardFormLabel{
+    margin-bottom: 5px;
+
+}
+
+.standardFormInput{
+
+}
+
+.feedback{
+    max-width: 200px;
+}
+
+.button-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: right;
+    margin: 30px 0;
+}
+
+
+@media (max-width: 460px) {
+
+    
+    .formConteiner{
+        flex-basis: 100%;
+    }
+
+    .forInputsConteiner{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="color"],
+    input[type="datetime-local"],
+    input[type="file"],
+    input[type="hidden"],
+    input[type="image"],
+    input[type="month"],
+    input[type="range"],
+    input[type="reset"],
+    input[type="search"],
+    input[type="submit"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    input[type="checkbox"],
+    input[type="radio"],
+    textarea,
+    select {
+        display: flex;
+        min-width: 400px;
+        width: 100%;
+
+    }
+}

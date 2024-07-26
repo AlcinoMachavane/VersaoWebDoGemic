@@ -45,10 +45,10 @@
     position: absolute;
     padding-left: 10px;
     padding-top: 5px;
+    /* background-color: red; */
 }
 
 .subNavBar{
-    
     /* border-bottom: 1px solid var(--myLightBlue); */
     margin-top: 10px;
 }

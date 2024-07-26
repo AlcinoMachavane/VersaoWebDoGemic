@@ -25,6 +25,11 @@
       rel="stylesheet"
       href="src/assets/fontawesome-free-6.5.1-web/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="src/components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="src/components/inputs/standardInputs/inputs.css">
+    <link rel="stylesheet" href="src/components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="src/components/boot/set/buttons/buttonsMediaquery.css">
   </head>
   <body>
     <!-- MOBILE BUTTON FOR SIDEBAR-->
@@ -93,6 +98,57 @@
 
       <!--  Conteiner FOR MAIN CONTENT-->
       <div class="mainContentJustifierWithoutSubMenu">
+
+        <!--  FORM CONTAINER-->
+        <div class="formConteiner">
+          <h1 class="formTitle">Formulario de teste</h1>
+        <form action="#" class="standardForm">
+          <div class="forInputsConteiner">
+
+            <div class="forInputs">
+              <label class="standardFormLabel" for="email">Email:</label>
+              <input class="standardFormInput" type="email" id="email" name="email" autofocus />
+              <div id="emailFeedback" class="feedback"></div>
+            </div>
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="password">Senha:</label>
+              <input class="standardFormInput" type="password" id="password" name="password"/>
+              <div id="passwordFeedback" class="feedback">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            
+            <!-- <div class="forInputs">
+              <label class="standardFormLabel" for="confirmPassword">Confirmar senha:</label>
+              <input class="standardFormInput" type="password" id="confirmPassword" name="confirmPassword"/>
+              <div id="confirmPasswordFeedback" class="feedback"></div>
+            </div> -->
+
+          </div>
+
+          <div class="forInputsConteiner">
+
+            <div class="forInputs">
+              <label class="standardFormLabel" for="tel">Contacto:</label>
+              <input class="standardFormInput" type="tel" id="tel" name="tel"/>
+              <div id="telFeedback" class="feedback">Este input nao pode estar vazio</div>
+            </div>
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="optionalTel">Senha:</label>
+              <input class="standardFormInput" type="tel" id="optionalTel" name="optionalTel"/>
+              <div id="optionalTelFeedback" class="feedback"></div>
+            </div>
+
+          </div>
+
+          <div class="button-container">
+            <button class="btn btn-cancel" type="reset">Descartar</button>
+            <button class="btn btn-success" type="submit">Submeter</button>
+        </div>
+
+        </form>
+      </div>
+
         <span class="emptView"></span>
       </div>
 
