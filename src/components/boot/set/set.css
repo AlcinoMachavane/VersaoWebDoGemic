@@ -95,7 +95,7 @@ main{
     text-decoration: none;
     transition: .3s ease-in-out;
     scroll-behavior: smooth;
-    font-size: 11pt;
+    font-size: 10pt;
     font-family: Quattrocento Sans, sans-serif;
 }
 
@@ -109,6 +109,11 @@ i{
     cursor: pointer;
     transition: .3s ease-in-out;
 
+}
+
+input{
+    
+    border: 1px solid whitesmoke;
 }
 
 /*//////////////////////////////////// MAIN CONTET DIAGRAMER /////////////////////////////////////////*/
