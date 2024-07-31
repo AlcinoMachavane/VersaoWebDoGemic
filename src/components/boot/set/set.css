@@ -2,7 +2,7 @@
 
 html{
     overflow: hidden;
-    color: #636B7E;
+    /* color: #636B7E; */
 }
 
 input:focus {
@@ -29,25 +29,31 @@ input:focus {
 overflow: hidden;
 }
 
-.feedback{
-    color: lightcoral;
-    text-align: justify;
-    padding: 10px;
-    /* border-right: 2px solid red; */
-    border-bottom-right-radius: 10px;
-}
-
-
 /* FONTE */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); */
-
-
-@font-face {
-    font-family: 'QuattrocentoSans-Regular';
-    src: url('../../assets/Quattrocento_Sans0/QuattrocentoSans-Regular.ttf') format('woff');
-    /* Adicione formatos adicionais conforme necessário */
-}
+.quattrocento-sans-regular {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .quattrocento-sans-bold {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .quattrocento-sans-regular-italic {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .quattrocento-sans-bold-italic {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
 
 
 /* /////////////////////////////////////////////// ///////*/
@@ -89,8 +95,8 @@ main{
     text-decoration: none;
     transition: .3s ease-in-out;
     scroll-behavior: smooth;
-    font-family: Quicksand, sans-serif;
-    font-size: 10pt;
+    font-size: 11pt;
+    font-family: Quattrocento Sans, sans-serif;
 }
 
 a{

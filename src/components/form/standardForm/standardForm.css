@@ -1,3 +1,5 @@
+@charset "UTF_8";
+
 
 .formConteiner{
     background-color: white;
@@ -8,6 +10,18 @@
 
 }
 
+.standardForm{
+    padding: 20px 10px 10px 10px;
+}
+
+.feedback{
+    color: lightcoral;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.2em;
+    border-bottom-right-radius: 10px;
+}
+
 .formTitle{
     text-align: center;
     padding: 10px 0;
@@ -15,9 +29,27 @@
     font-size: 13pt;
 }
 
-.standardForm{
-    padding: 0 10px;
+.standardFormSubtitle{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
 
+.standardFormDescription{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(207, 207, 207, 0.281);
+}
+
+.highlightedText{
+    font-weight: bold;
+}
+
+.suggestionOfPurpose{
+    padding: 10px 0;
 }
 
 .forInputsConteiner{
@@ -31,19 +63,22 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    flex-basis: 100%;
 }
 
 .standardFormLabel{
     margin-bottom: 5px;
-
-}
-
-.standardFormInput{
-
+    /* word-wrap: break-word;
+    max-width: 200px; */
 }
 
 .feedback{
     max-width: 200px;
+}
+
+.fullWidthFeedback{
+    max-width: 400px!important;
+
 }
 
 .button-container{
@@ -53,49 +88,4 @@
     justify-content: space-around;
     text-align: right;
     margin: 30px 0;
-}
-
-
-@media (max-width: 460px) {
-
-    
-    .formConteiner{
-        flex-basis: 100%;
-    }
-
-    .forInputsConteiner{
-        display: flex;
-        flex-direction: column;
-    
-    }
-
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="color"],
-    input[type="datetime-local"],
-    input[type="file"],
-    input[type="hidden"],
-    input[type="image"],
-    input[type="month"],
-    input[type="range"],
-    input[type="reset"],
-    input[type="search"],
-    input[type="submit"],
-    input[type="time"],
-    input[type="url"],
-    input[type="week"],
-    input[type="checkbox"],
-    input[type="radio"],
-    textarea,
-    select {
-        display: flex;
-        min-width: 400px;
-        width: 100%;
-
-    }
 }

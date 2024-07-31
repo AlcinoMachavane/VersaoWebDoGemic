@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-<!--    <link rel="stylesheet" href="../../components/form/simpleForm.css">-->
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+   <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+   <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
@@ -67,34 +69,39 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Adicionar movimento</h1>
-            <form action="#" class="form" id="register">
-<div class="firstAndSecundSide">
-                <div class="firstSideOfMoviment">
+            <form action="#" class="standardForm">
+                
+          <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <h2>Movimento</h2>
+                    <div class="forInputs">
+                        <h2 class="standardFormSubtitle">Movimento</h2>
                         <div class="radioInputConteiner">
-                            <input type="radio" id="income" name="typeOfTransaction">
-                            <label for="income">Entradas</label>
-
-                            <input type="radio" id="expenses" name="typeOfTransaction">
-                            <label for="expenses">Saídas</label>
+                            
+                            <input class="standardFormInput" type="radio" id="income" name="typeOfTransaction">
+                            <label class="standardFormLabel" for="income">Entradas</label>
+                        
+                            <input class="standardFormInput" type="radio" id="expenses" name="typeOfTransaction">
+                            <label class="standardFormLabel" for="expenses">Saídas</label>
+                        
                         </div>
                         
-                        <div id="typeOfTransactionDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                        <div id="typeOfTransactionDocumentoFeedback" class="feedback">
                         </div>
 
                     </div>
 
-                    <div class="titleAndDataConteiner">
-                        <label for="transactionDate">Data da transação</label>
-                        <input type="date" id="transactionDate" name="transactionDate">
-                        <div id="transactionDateDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="transactionDate">Data da transação</label>
+                        <input class="standardFormInput" type="date" id="transactionDate" name="transactionDate">
+                        <div id="transactionDateDateDocumentoFeedback" class="feedback">
                         </div>
                     </div>
+                </div>
+                
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="paymentMethod">Método de pagamento</label>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="paymentMethod">Método de pagamento</label>
                         <select name="paymentMethod" id="paymentMethod">
                             <option value="Ultimo login"></option>
                             <option value="Estado">e-Mola</option>
@@ -103,28 +110,29 @@
                             <option value="Estado">Caixa</option>
                             <option value="Estado">Banco</option>
                         </select>
-                        <div id="paymentMethodDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                        <div id="paymentMethodDocumentoFeedback" class="feedback">
                         </div>
 
                     </div>
 
-                    <div class="titleAndDataConteiner">
-                        <label for="typeOfAcount">Tipo de conta</label>
-                        <select name="acount" id="typeOfAcount">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="typeOfAcount">Tipo de conta</label>
+                        <select name="typeOfAcount" id="typeOfAcount">
                             <option value="Ultimo login"></option>
                             <option value="Estado">Investimento</option>
                             <option value="Estado">Despesas fixas</option>
                             <option value="Estado">Entradas não operacionais</option>
                             <option value="Estado">Saídas não operacionais</option>
                         </select>
-                        <div id="typeOfAcountDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                        <div id="typeOfAcountDocumentoFeedback" class="feedback">
                         </div>
                     </div>
+                    
                 </div>
-
-                <div class="firstSideOfMoviment">
-                    <div class="titleAndDataConteiner">
-                        <label for="accountToDebit">Conta a debitar</label>
+                
+                <div class="forInputsConteiner">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="accountToDebit">Conta a debitar</label>
                         <select name="acount" id="accountToDebit">
                         <option value="Estado"></option>
                             <option value="Ultimo login">Selecione a descrição do pagamento</option>
@@ -132,32 +140,34 @@
                             <option value="Estado">Pagamento de salário</option>
                             <option value="Estado">Investimento de captal externo</option>
                         </select>
-                        <div id="accountToDebitDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                        <div id="accountToDebitDocumentoFeedback" class="feedback">
                         </div>
                     </div>
 
-                    <div class="titleAndDataConteiner">
-                        <label for="value">Valor</label>
-                        <input type="text" id="value" name="value">
-                        <div id="valueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
-                        </div>
-                    </div>
-
-                    <div class="titleAndDataConteiner">
-                        <label for="description">Descrição</label>
-                        <textarea id="description" name="description"></textarea>
-                        <div id="descriptionDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="value">Valor</label>
+                        <input class="standardFormInput" type="text" id="value" name="value">
+                        <div id="valueDocumentoFeedback" class="feedback">
                         </div>
                     </div>
                 </div>
-</div>
+                
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="description">Descrição</label>
+                        <textarea id="description" name="description"></textarea>
+                        <div id="descriptionDocumentoFeedback" class="feedback fullWidthFeedback">
+                        </div>
+                    </div>
+                    
+                </div>
 
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>
                 </div>
             </form>
-            <h1 class="formTitleBottom"></h1>
         </div>
 
     </div>

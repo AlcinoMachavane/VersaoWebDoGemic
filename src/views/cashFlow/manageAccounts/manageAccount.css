@@ -113,36 +113,6 @@ margin-bottom: 10px;
     justify-content: center;
 }
 
-.button-container{
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-}
-
-input[type="text"], input[type="email"],
-input[type="password"], input[type="number"],
-input[type="tel"],
-input[type="search"],input[type="date"],
-select{
-    display: flex;
-    flex-basis: 100%;
-    padding: 10px;
-    border: 1px solid rgba(204, 204, 204, 0.35);
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-input[type="text"], input[type="email"],
-input[type="password"], input[type="number"],
-input[type="tel"],
-input[type="search"],
-select {
-    margin-bottom: 10px;
-}
-
 textarea{
 display: flex;
 flex-basis: 100%;

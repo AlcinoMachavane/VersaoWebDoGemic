@@ -17,14 +17,16 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <!--    <link rel="stylesheet" href="../../components/form/simpleForm.css">-->
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+       <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+       <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="addAcount.css">
+
 
 </head>
 <body>
@@ -67,34 +69,30 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Adicionar Conta</h1>
-            <form action="#" class="form" id="register">
-                <div class="firstAndSecundSide">
-                    <div class="firstSideOfMoviment">
+            <form action="#" class="standardForm">
 
-                    <div class="titleAndDataConteiner">
-
+                    <div class="forInputsConteiner">
+                        <div class="forInputs">
                             <label for="description">Descrição</label>
-                            <input type="text" id="description" name="description">
-                            <div id="descriptionDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                            <input type="text" id="description" name="description" autofocus>
+                            <div id="descriptionDocumentoFeedback" class="feedback">
                             </div>
                         </div>
+                        </div>
 
-                        <div class="titleAndDataConteiner">
+                        <div class="forInputsConteiner">
+                            <div class="forInputs">
                             <label for="acountNumber">Número de conta</label>
                             <input type="text" id="acountNumber" name="acountNumber">
-                            <div id="acountNumberDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                            <div id="acountNumberDocumentoFeedback" class="feedback">
                             </div>
                         </div>
-                    </div>
-
+                        </div>
                     <div class="button-container">
                         <button class="btn btn-cancel" type="reset">Descartar</button>
                         <button class="btn btn-success" type="submit">Submeter</button>
-                    </div>
-                </div>
+                        </div>
             </form>
-
-            <h1 class="formTitleBottom"></h1>
         </div>
 
     </div>

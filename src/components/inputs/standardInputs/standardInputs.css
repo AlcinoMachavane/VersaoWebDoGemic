@@ -1,3 +1,5 @@
+@charset "UTF_8";
+
 
 input[type="text"],
 input[type="email"],
@@ -18,13 +20,13 @@ input[type="submit"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[type="checkbox"],
-input[type="radio"],
+/* input[type="checkbox"], */
+/* input[type="radio"], */
 textarea,
 select {
     min-width: 200px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid rgba(128, 128, 128, 0.281);
     margin-bottom: 5px;
     box-sizing: border-box;
@@ -42,4 +44,16 @@ select {
     appearance: none;
     background-clip: padding-box;
 
+}
+
+.radioInputConteiner > .standardFormLabel:not(:last-child){
+    margin-right: 40px;
+
+}
+
+.joinContent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: aqua;
 }

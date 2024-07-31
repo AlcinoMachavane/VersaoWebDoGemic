@@ -1,0 +1,12 @@
+@charset "UTF_8";
+
+@media (max-width: 560px) {
+  .formConteiner {
+    flex-basis: 100%;
+  }
+
+  .forInputsConteiner {
+    display: flex;
+    flex-direction: column;
+  }
+}
