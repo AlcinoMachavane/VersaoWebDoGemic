@@ -8,6 +8,7 @@
 
     <title>Conceder empréstimo</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -17,11 +18,12 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
-    <link rel="stylesheet" href="grantLoan.css">
-    <link rel="stylesheet" href="grantLoanMediaquery.css">
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
 <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
@@ -67,12 +69,12 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Conceder empréstimo</h1>
-            <form action="#" class="form" id="register">
+            <form action="#" class="standardForm">
 
-                <!-- <div class="firstSideOfPaiment"> -->
+                <div class="forInputsConteiner">
 
-                    <div class="loanLabelInputConteiner">
-                        <label for="clientName">Nome</label>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="clientName">Nome</label>
                         <select name="clientName" id="clientName">
                             <option value="Ultimo login"></option>
                             <option value="Estado">Judite da Maura</option>
@@ -82,39 +84,43 @@
                             <option value="Estado">Felisberto Timóteo Dengo</option>
                             <option value="Estado">Jonas Baltazar</option>
                         </select>
-                        <!-- <div id="clientNameDocumentoFeedback" class="feedback">Lorem dddddddddris itaque ipsam incidunt doloribus nisi!</div> -->
+                        <div id="clientNameDocumentoFeedback" class="feedback"></div>
                     </div>
 
-                        <div class="loanLabelInputConteiner">
-                            <label for="witnessName">Testemunha</label>
-                            <input type="text" id="witnessName" name="witnessName">
-                            <div id="witnessNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="witnessName">Testemunha</label>
+                            <input class="standardFormInput" type="text" id="witnessName" name="witnessName">
+                            <div id="witnessNameDocumentoFeedback" class="feedback"></div>
                         </div>
+                    </div>
 
-                    <div class="nowrapElements">
-                        <div class="loanLabelInputConteiner">
-                            <label for="concessionDate">Data de concessão</label>
-                            <input type="date" id="concessionDate" name="concessionDate">
-                            <div id="concessionDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                    <div class="forInputsConteiner">
+
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="concessionDate">Data de concessão</label>
+                            <input class="standardFormInput" type="date" id="concessionDate" name="concessionDate">
+                            <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                         </div>
                    
 
-                        <div class="loanLabelInputConteiner">
-                            <label for="loansFees">Juros(%)</label>
-                            <input type="text" id="loansFees" name="loansFees">
-                            <!-- <div id="loansFeesDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div> -->
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="loansFees">Juros(%)</label>
+                            <input class="standardFormInput" type="text" id="loansFees" name="loansFees">
+                            <!-- <div id="loansFeesDocumentoFeedback" class="feedback"></div> -->
                         </div>
                     </div>
 
-                    <div class="loanLabelInputConteiner">
-                        <label for="loanValue">Valor concedido</label>
-                        <input type="text" id="loanValue" name="loanValue">
-                        <div id="loanValueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                    <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="loanValue">Valor concedido</label>
+                        <input class="standardFormInput" type="text" id="loanValue" name="loanValue">
+                        <div id="loanValueDocumentoFeedback" class="feedback"></div>
                     </div>
                 
 
-                        <div class="loanLabelInputConteiner">
-                            <label for="loanGoal">Finalidade</label>
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="loanGoal">Finalidade</label>
                             <select name="loanGoal" id="loanGoal">
                                 <option value="Ultimo login"></option>
                                 <option value="Estado">Agricultura</option>
@@ -127,26 +133,31 @@
                                 <option value="Estado">Compra de automóvel</option>
                                 <option value="Estado">Outros</option>
                             </select>
-                            <div id="loanGoalDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                            <div id="loanGoalDocumentoFeedback" class="feedback"></div>
                         </div>
 
-                        <div class="nowrapElements">
-                        <div class="loanLabelInputConteiner">
-                            <label for="proceduralComission">comissão processual</label>
-                            <input type="text" id="proceduralComission" name="proceduralComission">
-                            <div id="proceduralComissionDocumentoFeedback" class="feedback">Lorem dddddddddris itaque ipsam incidunt doloribus nisi!</div>
                         </div>
 
-                            <div class="loanLabelInputConteiner">
-                                <label for="comission">Comissão</label>
-                                <input type="text" id="comission" name="comission">
-                                <div id="comissionDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                        <div class="forInputsConteiner">
+                        
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="proceduralComission">comissão processual</label>
+                            <input class="standardFormInput" type="text" id="proceduralComission" name="proceduralComission">
+                            <div id="proceduralComissionDocumentoFeedback" class="feedback"></div>
+                        </div>
+
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="comission">Comissão</label>
+                                <input class="standardFormInput" type="text" id="comission" name="comission">
+                                <div id="comissionDocumentoFeedback" class="feedback"></div>
                             </div>
 
                         </div>
 
-                            <div class="loanLabelInputConteiner">
-                                <label for="loanFrequency">Periodicidade</label>
+                        <div class="forInputsConteiner">
+
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="loanFrequency">Periodicidade</label>
                                 <select name="loanFrequency" id="loanFrequency">
                                     <option value="Ultimo login"></option>
                                     <option value="Estado">Diário</option>
@@ -156,13 +167,13 @@
                                     <option value="Estado">Semestral</option>
                                     <option value="Estado">Anual</option>
                                 </select>
-                                <div id="loanFrequencyDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                                <div id="loanFrequencyDocumentoFeedback" class="feedback"></div>
                             </div>
                         
 
-                        <div class="nowrapElements">
-                            <div class="loanLabelInputConteiner">
-                                <label for="numOfInstallments">Numero de prestações</label>
+                        
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="numOfInstallments">Numero de prestações</label>
                                 <select name="loanFrequency" id="numOfInstallments">
                                     <option></option>
                                     <option>1</option>
@@ -238,11 +249,14 @@
                                     <option>71</option>
                                     <option>72</option>
                                 </select>
-                                <div id="numOfInstallmentsDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                                <div id="numOfInstallmentsDocumentoFeedback" class="feedback"></div>
                             </div>
 
-                            <div class="loanLabelInputConteiner">
-                                <label for="autoInstallmentsValue">Parcelas</label>
+                            </div>
+
+                            <div class="forInputsConteiner">
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="autoInstallmentsValue">Parcelas</label>
                                 <select name="autoInstallmentsValue" id="autoInstallmentsValue">
                                     <option value="Parcelas"></option>
                                     <option>12 000,00</option>
@@ -255,30 +269,23 @@
                                     <option>12 000,00</option>
                                     <option>12 000,00</option>
                                 </select>
-                                <div id="autoInstallmentsValueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                                <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
                             </div>
+                            
+                    <div class="forInputs">
+                        <h2 class="">Valor total:&nbsp;&nbsp;</h2>
+                        <h3 id="autoTotalValue">9 746,00</h3>
+                        <h2 class="">Prazo:&nbsp;&nbsp;</h2>
+                        <h3 id="autoTherm">10/08/2024</h3>
+                    </div>
                         </div>
-
-                <div class="valueAndTherm">
-
-                    <div class="loanLabelInputConteiner">
-                        <label for="autoTotalValue">Valor total:&nbsp;&nbsp;</label>
-                        <span id="autoTotalValue">9 746,00</span>
-                    </div>
-
-                    <div class="loanLabelInputConteiner">
-                        <label for="autoTherm">Prazo:&nbsp;&nbsp;</label>
-                        <span id="autoTherm">10/08/2024</span>
-                    </div>
-
-                </div>
 
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>
                 </div>
             </form>
-            <h1 class="formTitleBottom"></h1>
+            
         </div>
 
     </div>

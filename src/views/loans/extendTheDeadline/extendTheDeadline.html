@@ -8,6 +8,7 @@
 
     <title>Extender o prazo</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -17,8 +18,10 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <link rel="stylesheet" href="../../../components/form/simpleForm.css">
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../../src/components/boot/selectedIconSideBar.css">
 
@@ -67,18 +70,20 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Extender o prazo</h1>
-            <form action="#" class="form" id="register">
+            <form action="#" class="standardForm">
 
-                <div class="firstSideOfPaiment">
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="newDate">Nova data</label>
-                        <input type="date" id="newDate" name="newDate">
-                        <div id="newDateDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="newDate">Nova data</label>
+                        <input class="standardFormInput" type="date" id="newDate" name="newDate">
+                        <div id="newDateDateDocumentoFeedback" class="feedback"></div>
                     </div>
+                </div>
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="autoInstallmentsValue">Parcelas</label>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="autoInstallmentsValue">Parcelas</label>
                         <select name="autoInstallmentsValue" id="autoInstallmentsValue">
                             <option value="Parcelas"></option>
                             <option>12 000,00</option>
@@ -91,24 +96,25 @@
                             <option>12 000,00</option>
                             <option>12 000,00</option>
                         </select>
-                        <div id="autoInstallmentsValueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                        <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
                     </div>
-
-                    <div class="titleAndDataConteiner">
-                        <label for="observation">Observação</label>
-                        <textarea id="observation" name="observation"></textarea>
-                        <div id="observationDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
-                    </div>
-
                 </div>
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="observation">Observação</label>
+                        <textarea id="observation" name="observation"></textarea>
+                        <div id="observationDocumentoFeedback" class="feedback"></div>
+                    </div>
+                </div>
+
+                
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>
                 </div>
             </form>
-            <h1 class="formTitleBottom"></h1>
         </div>
-
     </div>
 
     <!--  FOOTER-->

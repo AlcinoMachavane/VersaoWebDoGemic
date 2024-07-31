@@ -8,6 +8,7 @@
 
     <title>Pagamentos</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -17,8 +18,10 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <link rel="stylesheet" href="../../../components/form/simpleForm.css">
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
@@ -67,23 +70,29 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Fazer pagamento</h1>
-            <form action="#" class="form" id="register">
+            <form action="#" class="standardForm">
 
-                <div class="firstSideOfPaiment">
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
+                    <div class="forInputs">
                         <h2>Nome do cliente</h2>
                         <p>Jeremias Francisco Tadeu</p>
                     </div>
+                </div>
+                
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="concessionDate">Data de pagamento</label>
-                        <input type="date" id="concessionDate" name="concessionDate">
-                        <div id="concessionDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="concessionDate">Data de pagamento</label>
+                        <input class="standardFormInput" type="date" id="concessionDate" name="concessionDate" autofocus>
+                        <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                     </div>
+                </div>
+                
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="acount">Conta</label>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="acount">Conta</label>
                         <select name="acount" id="acount">
                             <option value="Ultimo login"></option>
                             <option value="Estado">e-Mola</option>
@@ -92,22 +101,25 @@
                             <option value="Estado">Caixa</option>
                             <option value="Estado">Banco</option>
                         </select>
-                        <div id="acountDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                        <div id="acountDocumentoFeedback" class="feedback"></div>
                     </div>
+                </div>
+                
+                <div class="forInputsConteiner">
 
-                    <div class="titleAndDataConteiner">
-                        <label for="loanValue">Valor do pagamento</label>
-                        <input type="text" id="loanValue" name="loanValue">
-                        <div id="loanValueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="loanValue">Valor do pagamento</label>
+                        <input class="standardFormInput" type="text" id="loanValue" name="loanValue">
+                        <div id="loanValueDocumentoFeedback" class="feedback"></div>
                     </div>
                 </div>
 
-                <div class="button-conteiner">
+                <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>
                 </div>
             </form>
-            <h1 class="formTitleBottom"></h1>
+            
         </div>
 
     </div>

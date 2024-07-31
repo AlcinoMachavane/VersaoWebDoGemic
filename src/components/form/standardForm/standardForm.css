@@ -32,6 +32,7 @@
 .standardFormSubtitle{
     font-size: 12px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .standardFormDescription{
@@ -68,6 +69,7 @@
 
 .standardFormLabel{
     margin-bottom: 5px;
+    line-height: 1.2em;
     /* word-wrap: break-word;
     max-width: 200px; */
 }

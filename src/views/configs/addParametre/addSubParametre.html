@@ -8,6 +8,7 @@
 
     <title>Adicionar Categoria</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -17,8 +18,10 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <!--    <link rel="stylesheet" href="../../components/form/simpleForm.css">-->
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+ <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+ <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
@@ -82,27 +85,27 @@
     <div class="mainContentJustifier">
         <!-- SIGN form-->
         <div class="formConteiner">
-            <h1 class="formTitle">Adicionar Sub-categoria</h1>
-            <form action="#" class="form" id="register">
+            <h1 class="formTitle">Adicionar Categoria</h1>
+            <form action="#" class="standardForm">
                 <div class="firstAndSecundSide">
-                    <div class="firstSideOfMoviment">
+                    <div class="forInputsConteiner">
 
-                        <div class="titleAndDataConteiner">
-                            <label for="category">Categoria</label>
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="category">Categoria</label>
                             <select name="category" id="category">
                                 <option value="Ultimo login"></option>
                                 <option value="Estado">Entradas Operacionais</option>
                                 <option value="Estado">Despesas</option>
                                 <option value="Estado">Custos</option>
                             </select>
-                            <div id="categoryDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                            <div id="categoryDocumentoFeedback" class="feedback"></div>
 
                         </div>
 
-                        <div class="titleAndDataConteiner">
-                            <label for="subCategory">Subcategoria</label>
-                            <input type="text" id="subCategory" name="subCategory">
-                            <div id="subCategoryDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.</div>
+                        <div class="forInputs">
+                            <label class="standardFormLabel" for="subCategory">Subcategoria</label>
+                            <input class="standardFormInput" type="text" id="subCategory" name="subCategory">
+                            <div id="subCategoryDocumentoFeedback" class="feedback"></div>
                         </div>
                     </div>
 
@@ -112,8 +115,6 @@
                     </div>
                 </div>
             </form>
-
-            <h1 class="formTitleBottom"></h1>
         </div>
 
     </div>

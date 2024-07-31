@@ -2,64 +2,30 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-    <link
-      rel="shortcut icon"
-      href="../../../assets/icons/favicon_gemic_app.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon"/>
     <title>Cadastrar mutuário</title>
-
     <link rel="stylesheet" href="../../../components/header/header.css" />
-    <link
-      rel="stylesheet"
-      href="../../../components/header/headerMediaQuery.css"
-    />
+    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css" />
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css" />
-    <link
-      rel="stylesheet"
-      href="../../../components/sideBar/sideBarMediaQuery.css"
-    />
+    <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css"/>
     <link rel="stylesheet" href="../../../components/footer/footer.css" />
 
     <link rel="stylesheet" href="../../../components/boot/set/set.css" />
-    <link
-      rel="stylesheet"
-      href="../../../components/boot/set/buttons/buttons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../../components/boot/set/buttons/buttonsMediaquery.css"
-    />
-    <link rel="stylesheet" href="../../../components/boot/inputs.css" />
-    <link
-      rel="stylesheet"
-      href="../../../components/form/clientRegisterFormNew.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../../components/form/grantLoanFormMediaQuery.css"
-    />
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css"/>
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css"/>
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css"/>
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css"/>
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css"/>
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css"/>
 
-    <link
-      rel="stylesheet"
-      href="../../../components/boot/selectedIconSideBar.css"
-    />
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css"/>
 
-    <link
-      rel="stylesheet"
-      href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css"/>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 
     <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
   </head>
@@ -133,45 +99,49 @@
       <!--  Conteiner FOR MAIN CONTENT-->
       <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
-        <!-- <div class="formConteiner"> -->
-        <form action="#" class="form" id="register">
+        <div class="formConteiner">
           <h1 class="formTitle">Cadastro mutuário(cliente)</h1>
-          <!--                <div class="dataArange">-->
-          <div class="documentData">
-            <div class="labelInputConteiner">
-              <label for="fullName">Nome completo</label>
-              <input type="text" id="fullName" name="fullName" autofocus />
-              <div id="fullNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+        <form action="#" class="standardForm">
+
+          <div class="forInputsConteiner">
+          
+            <div class="forInputs">
+              <label class="standardFormLabel" for="fullName">Nome completo</label>
+              <input class="standardFormInput" type="text" id="fullName" name="fullName" autofocus />
+              <div id="fullNameDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="labelInputConteiner">
-              <h3>Género</h3>
+            <div class="forInputs">
+              <h2 class="standardFormSubtitle">Género</h2>
               <div class="radioInputConteiner">
-                <input type="radio" id="male" name="gender" />
-                <label for="male">Masculino</label>
-                <input type="radio" id="female" name="gender" />
-                <label for="female">Femenino</label>
+                <input class="standardFormInput" type="radio" id="male" name="gender" />
+                <label class="standardFormLabel" for="male">Masculino</label>
+                <input class="standardFormInput" type="radio" id="female" name="gender" />
+                <label class="standardFormLabel" for="female">Femenino</label>
               </div>
-              <div id="genderDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div id="genderDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="labelInputConteiner">
-              <h3>Estado civil</h3>
+          </div>
+
+          <div class="forInputsConteiner">
+
+            <div class="forInputs">
+              <h2 class="standardFormSubtitle">Estado civil</h2>
               <div class="radioInputConteiner">
-                <input type="radio" id="single" name="maritalStatus" />
-                <label for="single">Solteiro(a)</label>
-                <input type="radio" id="married" name="maritalStatus" />
-                <label for="married">Casado(a)</label>
+                <input class="standardFormInput" type="radio" id="single" name="maritalStatus" />
+                <label class="standardFormLabel" for="single">Solteiro(a)</label>
+                <input class="standardFormInput" type="radio" id="married" name="maritalStatus" />
+                <label class="standardFormLabel" for="married">Casado(a)</label>
               </div>
-              <div id="maritalStatusDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div id="maritalStatusDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <!-- <div class="nowrapElements"> -->
-            <div class="labelInputConteiner">
-              <label for="typeOfDocument">Tipo de documento</label>
+            <div class="forInputs">
+              <label class="standardFormLabel" for="typeOfDocument">Tipo de documento</label>
               <select id="typeOfDocument">
                 <option value="vazio"></option>
                 <option value="BI">BI</option>
@@ -179,49 +149,59 @@
                 <option value="Passaporte">Cartão de eleitor</option>
                 <option value="Passaporte">carta de condução</option>
               </select>
-              <div id="typeOfDocumentDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div id="typeOfDocumentDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="labelInputConteiner">
-              <label for="documentNumber">Documento nº</label>
-              <input type="text" id="documentNumber" name="documentNumber" />
-              <div id="documentNumberDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+          </div>
+
+          <div class="forInputsConteiner">
+
+            <div class="forInputs">
+              <label class="standardFormLabel" for="documentNumber">Documento nº</label>
+              <input class="standardFormInput" type="text" id="documentNumber" name="documentNumber" />
+              <div id="documentNumberDocumentoFeedback" class="feedback">
               </div>
             </div>
-            <!-- </div> -->
-            <div class="labelInputConteiner">
-              <label for="placeOfIssue">Emitido em</label>
-              <input type="text" id="placeOfIssue" name="placeOfIssue" />
-              <div id="placeOfIssueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="placeOfIssue">Emitido em</label>
+              <input class="standardFormInput" type="text" id="placeOfIssue" name="placeOfIssue" />
+              <div id="placeOfIssueDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="nowrapElements">
-              <div class="labelInputConteiner">
-                <label for="dateOfIssue">Data de emissão</label>
-                <input type="date" id="dateOfIssue" name="dateOfIssue" />
-                <div id="dateOfIssueDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+          </div>
+
+          <div class="forInputsConteiner">
+            
+              <div class="forInputs">
+                <label class="standardFormLabel" for="dateOfIssue">Data de emissão</label>
+                <input class="standardFormInput" type="date" id="dateOfIssue" name="dateOfIssue" />
+                <div id="dateOfIssueDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="labelInputConteiner">
-                <label for="expirationDate">Validade</label>
-                <input type="date" id="expirationDate" name="expirationDate" />
-                <div id="expirationDateDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div class="forInputs">
+                <label class="standardFormLabel" for="expirationDate">Validade</label>
+                <input class="standardFormInput" type="date" id="expirationDate" name="expirationDate" />
+                <div id="expirationDateDocumentoFeedback" class="feedback">
                 </div>
               </div>
+
             </div>
 
-            <div class="labelInputConteiner">
-              <label for="NUIT">NUIT</label>
-              <input type="text" id="NUIT" name="NUIT" />
-              <div id="NUITDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+            <div class="forInputsConteiner">
+
+            <div class="forInputs">
+              <label class="standardFormLabel" for="NUIT">NUIT</label>
+              <input class="standardFormInput" type="text" id="NUIT" name="NUIT" />
+              <div id="NUITDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="labelInputConteiner">
-              <label for="sourceOfIncome">Fonte de renda</label>
+            <div class="forInputs">
+              <label class="standardFormLabel" for="sourceOfIncome">Fonte de renda</label>
               <select name="sourceOfIncome" id="sourceOfIncome">
                 <option value="vazio"></option>
                 <option value="Salário de Emprego Formal">
@@ -250,78 +230,88 @@
                 <option value="Outras Fontes">Outras Fontes</option>
               </select>
 
-              <div id="sourceOfIncomeDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div id="sourceOfIncomeDocumentoFeedback" class="feedback">
               </div>
             </div>
+
           </div>
 
-          <div class="secundSide">
-            <div class="residenceData">
-              <div class="labelInputConteiner">
-                <label for="locationOfActivity">Local de exercício da atividade</label>
-                <input type="text" id="locationOfActivity" name="locationOfActivity" />
-                <div id="locationOfActivityDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+          <div class="forInputsConteiner">
+
+              <div class="forInputs">
+                <label class="standardFormLabel" for="locationOfActivity">Local de atividade</label>
+                <input class="standardFormInput" type="text" id="locationOfActivity" name="locationOfActivity" />
+                <div id="locationOfActivityDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="labelInputConteiner">
-                <label for="naturalness">Naturalidade</label>
-                <input type="text" id="naturalness" name="naturalness" />
-                <div id="naturalnessDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div class="forInputs">
+                <label class="standardFormLabel" for="naturalness">Naturalidade</label>
+                <input class="standardFormInput" type="text" id="naturalness" name="naturalness" />
+                <div id="naturalnessDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="labelInputConteiner">
-                <label for="residence">Residência</label>
-                <input type="text" id="residence" name="residence" />
-                <div id="residenceDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+            </div>
+
+            <div class="forInputsConteiner">
+
+              <div class="forInputs">
+                <label class="standardFormLabel" for="residence">Residência</label>
+                <input class="standardFormInput" type="text" id="residence" name="residence" />
+                <div id="residenceDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="labelInputConteiner">
-                <label for="neighborhood">Bairro</label>
-                <input type="text" id="neighborhood" name="neighborhood" />
-                <div id="neighborhoodDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div class="forInputs">
+                <label class="standardFormLabel" for="neighborhood">Bairro</label>
+                <input class="standardFormInput" type="text" id="neighborhood" name="neighborhood" />
+                <div id="neighborhoodDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="nowrapElements">
-                <div class="labelInputConteiner">
-                  <label for="block">Quarteirão</label>
-                  <input type="text" id="block" name="block" />
-                  <div id="blockDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+            </div>
+
+            <div class="forInputsConteiner">
+              
+                <div class="forInputs">
+                  <label class="standardFormLabel" for="block">Quarteirão</label>
+                  <input class="standardFormInput" type="text" id="block" name="block" />
+                  <div id="blockDocumentoFeedback" class="feedback">
                   </div>
                 </div>
 
-                <div class="labelInputConteiner">
-                  <label for="houseNumber">Casa nº</label>
-                  <input type="text" id="houseNumber" name="houseNumber" />
-                  <div id="houseNumberDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+                <div class="forInputs">
+                  <label class="standardFormLabel" for="houseNumber">Casa nº</label>
+                  <input class="standardFormInput" type="text" id="houseNumber" name="houseNumber" />
+                  <div id="houseNumberDocumentoFeedback" class="feedback">
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="parentsNames">
-              <div class="labelInputConteiner">
-                <label for="fathersName">Nome do pai</label>
-                <input type="text" id="fathersName" name="fathersName" />
-                <div id="fathersNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              </div>
+
+              <div class="forInputsConteiner">
+            
+              <div class="forInputs">
+                <label class="standardFormLabel" for="fathersName">Nome do pai</label>
+                <input class="standardFormInput" type="text" id="fathersName" name="fathersName" />
+                <div id="fathersNameDocumentoFeedback" class="feedback">
                 </div>
               </div>
 
-              <div class="labelInputConteiner">
-                <label for="mothersName">Nome da mãe</label>
-                <input type="text" id="mothersName" name="mothersName" />
-                <div id="mothersNameDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div class="forInputs">
+                <label class="standardFormLabel" for="mothersName">Nome da mãe</label>
+                <input class="standardFormInput" type="text" id="mothersName" name="mothersName" />
+                <div id="mothersNameDocumentoFeedback" class="feedback">
                 </div>
               </div>
+
             </div>
 
-            <!-- <div class="nowrapElements"> -->
-            <!-- <div class="contacts"> -->
-            <div class="labelInputConteiner">
-              <label for="countryCode">Código do País:</label>
+            <div class="forInputsConteiner">
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="countryCode">Código do País:</label>
               <select id="countryCode" name="countryCode" class="select2">
                 <option value="+258">Moçambique (+258)</option>
                 <option value="+27">África do Sul (+27)</option>
@@ -344,26 +334,27 @@
                 <option value="+91">Índia (+91)</option>
                 <option value="+7">Rússia (+7)</option>
               </select>
-              <div id="countryCodeDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+              <div id="countryCodeDocumentoFeedback" class="feedback">
               </div>
             </div>
 
-            <div class="labelInputConteiner">
-              <label for="optionalContact">Contacto</label>
-              <input type="tel" id="optionalContact" name="optionalContact" />
-              <div id="optionalContactDocumentoFeedback" class="feedback">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic minima inventore sunt.
+            <div class="forInputs">
+              <label class="standardFormLabel" for="optionalContact">Contacto</label>
+              <input class="standardFormInput" type="tel" id="optionalContact" name="optionalContact" />
+              <div id="optionalContactDocumentoFeedback" class="feedback">
               </div>
             </div>
+
           </div>
+          
 
           <div class="button-container">
             <button class="btn btn-cancel" type="reset">Descartar</button>
             <button class="btn btn-success" type="submit">Submeter</button>
           </div>
-        </form>
-        <h1 class="formTitleBottom"></h1>
-        <!-- </div> -->
-      </div>
+        </form>    
+      </div> 
+    </div> 
 
       <!--  FOOTER-->
       <footer>
