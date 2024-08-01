@@ -127,7 +127,6 @@ input{
     overflow-y: auto;
     align-items: flex-start;
     justify-content: center;
-    /*background-color: gold;*/
 }
 
 .mainContentJustifier{

@@ -35,4 +35,15 @@
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        
+        // ... (código anterior)
+
+// Adiciona evento de clique no documento
+document.addEventListener('click', function(event) {
+    // Verifica se o elemento clicado é diferente da <ul> e de seus filhos
+    if (!event.target.closest('.menuBar > ul')) {
+      // Remove a classe 'expanded' da <ul>
+      var menuList = document.querySelector('.menuBar > ul');
+      menuList.classList.remove('expanded');
+    }
+  });
+  

@@ -71,7 +71,7 @@ ul > li > a > i {
 
 #buttonForBar {
     border-bottom: 2px solid var(--myLightBlue);
-    height: 27px !important;
+    height: 32px !important;
 }
 
 #buttonForBar > i {
