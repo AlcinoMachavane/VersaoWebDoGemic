@@ -1,0 +1,93 @@
+@charset "UTF_8";
+
+
+.formConteiner{
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    border-radius: 10px;
+    box-shadow: var(--my-box-shadow);
+    margin: 20px auto;
+
+}
+
+.standardForm{
+    padding: 20px 10px 10px 10px;
+}
+
+.feedback{
+    color: lightcoral;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.2em;
+    border-bottom-right-radius: 10px;
+}
+
+.formTitle{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+    font-size: 13pt;
+}
+
+.standardFormSubtitle{
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.standardFormDescription{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(207, 207, 207, 0.281);
+}
+
+.highlightedText{
+    font-weight: bold;
+}
+
+.suggestionOfPurpose{
+    padding: 10px 0;
+}
+
+.forInputsConteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.forInputs{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.standardFormLabel{
+    margin-bottom: 5px;
+    line-height: 1.2em;
+    /* word-wrap: break-word;
+    max-width: 200px; */
+}
+
+.feedback{
+    max-width: 200px;
+}
+
+.fullWidthFeedback{
+    max-width: 400px!important;
+
+}
+
+.button-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: right;
+    margin: 30px 0;
+}

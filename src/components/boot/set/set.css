@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+html{
+    overflow: hidden;
+    /* color: #636B7E; */
+}
+
+input:focus {
+    border: 2px solid var(--myLightBlue); /* Altere as propriedades da borda conforme necessário */
+    outline: none; /* Remove o contorno padrão */
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /*background-color: rgba(30, 107, 215, 0.15);*/
+    background-color: rgba(30, 107, 215, 0.08);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*background-color: rgba(62, 151, 255, 0.75);*/
+    background-color: rgba(62, 151, 255, 0.15);
+    border-radius: 5px;
+}
+
+.formConteiner{
+overflow: hidden;
+}
+
+/* FONTE */
+.quattrocento-sans-regular {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .quattrocento-sans-bold {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .quattrocento-sans-regular-italic {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .quattrocento-sans-bold-italic {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+
+/* /////////////////////////////////////////////// ///////*/
+
+body{
+    background-color: whitesmoke;
+    overflow: auto;
+}
+
+main{
+    overflow: auto;
+}
+
+/**/
+
+*[value]{
+    color: var(--myLight);
+}
+
+
+
+:root{
+    --myBlack: #161616;
+    --myLight: #636B7E;
+    /* --myBlue: #202B46; */
+    --myBlue: #0E1C2B;
+    --myLightBlue: #3A93C2;
+    --myLightBlueButton: #E9F3FF;
+    --myLightBlueOpac: rgba(0, 0, 255, 0.15);
+    --my-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+
+*{
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    scroll-behavior: smooth;
+    font-size: 10pt;
+    font-family: Quattrocento Sans, sans-serif;
+}
+
+a{
+    color: var(--myLight);
+}
+
+i{
+    color: var(--myLightBlue);
+    font-size: 14pt;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+
+input{
+    
+    border: 1px solid whitesmoke;
+}
+
+/*//////////////////////////////////// MAIN CONTET DIAGRAMER /////////////////////////////////////////*/
+
+.mainContentJustifier, .mainContentJustifierWithoutSubMenu{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin: 0 9px;
+    overflow-x: auto;
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.mainContentJustifier{
+    height: calc(100vh - 130px);
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .mainContentJustifier{
+    justify-content: flex-start;
+}
+}
+
+.mainContentJustifierWithoutSubMenu{
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: auto;
+    height: calc(100vh - 55px);
+}
+

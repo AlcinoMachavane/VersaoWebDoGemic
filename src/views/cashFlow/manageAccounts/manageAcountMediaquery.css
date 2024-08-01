@@ -1,0 +1,32 @@
+@charset "UTF_8";
+
+@media screen and (max-width: 385px) {
+    .nowrapElements > .titleAndDataConteiner > input, select{
+    max-width: 130px;
+    }
+
+    textarea{
+    margin: 0 10px;
+
+    max-width: 260px;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    .nowrapElements > .titleAndDataConteiner > input, select{
+    max-width: 100px;
+    }
+
+    textarea{
+    margin: 0 10px;
+
+    max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .formConteiner{
+    overflow: auto;
+    }
+}

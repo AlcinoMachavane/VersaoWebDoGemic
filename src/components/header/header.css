@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.mainContent {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar, .subNavBar {
+    width: 100%;
+    background-color: white;
+    height: 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+}
+
+.navBar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    /* background-color: #3a92c2; */
+    background-color: #fff;
+    height: 37px !important;
+}
+
+/* #3A93C2 */
+
+.navBar > a > p{
+    display: flex;
+    align-items: center;
+    color: var(--myLightBlue);
+    font-weight: bold;
+}
+
+.navBar > a > p > i {
+    margin-left: 5px;
+}
+
+#buttonForBarMobile{
+    display: none;
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 5px;
+    /* background-color: red; */
+}
+
+.subNavBar{
+    /* border-bottom: 1px solid var(--myLightBlue); */
+    margin-top: 10px;
+}
+
+
+.mobileDisplay{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    margin-left: 20px;
+    align-items: center;
+    height: 100%;
+    min-width: 230px;
+}
+
+.profile {
+    align-items: center;
+}
+

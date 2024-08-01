@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Configurações</title>
+
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../components/header/header.css">
+    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
+
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+
+</head>
+<body>
+
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<menu  id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li><a href="../../dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../admin/admin.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+    </ul>
+</menu>
+
+<main class="mainContent">
+
+    <nav class="navBar hide">
+        <span></span>
+        <a href="../../admin/userProfile/profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+                class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <nav class="subNavBar">
+
+        <div class="mobileDisplay">
+
+
+                <a href="../parametrization/parametrisation.html" class="btn btn-default" id="parametrisationButton"
+                   title="Parametrização"><i class="fa-solid fa-sitemap"></i>
+                </a>
+
+                <a href="configs.html" class="btn btn-default" id="configsButton"
+                   title="Configurações">
+                                       <i id="about" class="fa-solid fa-gear"></i>
+                </a>
+
+
+        </div>
+    </nav>
+
+
+    <!--  Conteiner FOR MAIN CONTENT-->
+    <div class="mainContentJustifier">
+        <!-- SIGN form-->
+        <div class="formConteiner">
+            <h1 class="formTitle">Configurações</h1>
+            <form action="#" class="standardForm">
+                <h2 class="standardFormSubtitle">Dados da empresa</h2>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="LoanName">Nome</label>
+                        <input class="standardFormInput" type="text" name="LoanName" id="LoanName" autofocus>
+                        <div id="fullNameDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="NUIT">NUIT</label>
+                        <input class="standardFormInput" type="text" id="NUIT" name="NUIT">
+                        <div id="NUITDateDocumentoFeedback" class="feedback"></div>
+                    </div>
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="startOfActivity">Início de actividade</label>
+                        <input class="standardFormInput" type="date" id="startOfActivity" name="startOfActivity">
+                        <div id="startOfActivityDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="startingCapital">Capital inicial</label>
+                        <input class="standardFormInput" type="text" id="startingCapital" name="startingCapital">
+                        <div id="startingCapitalDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="province">Província</label>
+                        <select name="province" id="province">
+                            <option></option>
+                            <option>Cabo Delgado</option>
+                            <option>Gaza</option>
+                            <option>Inhambane</option>
+                            <option>Manica</option>
+                            <option>Maputo (Cidade)</option>
+                            <option>Maputo (Província)</option>
+                            <option>Nampula</option>
+                            <option>Niassa</option>
+                            <option>Sofala</option>
+                            <option>Tete</option>
+                            <option>Zambézia</option>
+                        </select>
+                        <div id="loanGoalDocumentoFeedback" class="feedback"></div>
+                    </div>
+                
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="address">Endereço</label>
+                        <input class="standardFormInput" type="text" id="address" name="address">
+                        <div id="addressDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="contact">Contacto</label>
+                        <input class="standardFormInput" type="tel" name="contact" id="contact">
+                        <div id="contactDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="secondContact">Contacto</label>
+                        <input class="standardFormInput" type="tel" name="secondContact" id="secondContact">
+                        <div id="secondContactDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="email">E-mail</label>
+                        <input class="standardFormInput" type="number" id="email" name="email">
+                        <div id="emailDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="ownerName">Nome do proprietário</label>
+                        <input class="standardFormInput" type="text" id="ownerName" name="ownerName">
+                        <div id="ownerNameDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                </div>
+
+                <h2 class="standardFormSubtitle">Prefências</h2>
+
+                <div class="forInputsConteiner">
+                    
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="ownerName">Cálculo de prestações</label>
+                        <select name="province" id="typeOfInstallments">
+                            <option></option>
+                            <option>(Capital/Número de prestações)+Percentagem (de juros) do valor remanescente</option>
+                            <option>(Capital + Juros)/Numero de prestações</option>
+                            <option>(Capital + Juros)+25%</option>
+                        </select>
+
+                        <div id="typeOfInstallmentsDocumentoFeedback" class="feedback"></div>
+                    </div>
+                    
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="percentOfCommission">Juros de mora(%)</label>
+                        <input class="standardFormInput" type="text" name="percentOfCommission" id="percentOfCommission">
+                        <div id="percentOfCommissionDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    </div>
+                    <div class="button-container">
+                        <button class="btn btn-cancel" type="reset">Descartar</button>
+                        <button class="btn btn-success" type="submit">Submeter</button>
+                    </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+
+</main>
+
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+</body>
+</html>

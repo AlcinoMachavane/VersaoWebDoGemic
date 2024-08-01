@@ -1,55 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
-    <link rel="stylesheet" href="set.css">
-    <link rel="stylesheet" href="header/header.css">
-    <link rel="stylesheet" href="sideBar/sideBar.css">
-    <link rel="stylesheet" href="footer/footer.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<menu class="menuBar sidebar-hidden hide">
+    <title>Home</title>
 
-    <ul>
+    <link rel="stylesheet" href="src/components/boot/set/set.css" />
+    <link rel="stylesheet" href="src/components/header/header.css" />
+    <link rel="stylesheet" href="src/components/sideBar/sideBar.css" />
+    <link
+      rel="stylesheet"
+      href="src/components/sideBar/sideBarMediaQuery.css"
+    />
+    <link rel="stylesheet" href="src/components/footer/footer.css" />
 
-        <li id="buttonForBar" onclick="closeOpen()">
+    <link rel="stylesheet" href="src/components/boot/selectedIconSideBar.css" />
 
-            <i class="fa-solid fa-bars"></i>
+    <link
+      rel="stylesheet"
+      href="src/assets/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="src/components/form/standardForm/standardForm.css">
+    <link rel="stylesheet" href="src/components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="src/components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="src/components/inputs/standardInputs/standardInputsMediaquery.css">
+    <link rel="stylesheet" href="src/components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="src/components/boot/set/buttons/buttonsMediaquery.css">
+  </head>
+  <body>
+    <!-- MOBILE BUTTON FOR SIDEBAR-->
+    <span id="buttonForBarMobile" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </span>
+
+    <menu id="menu" class="menuBar sidebar-hidden">
+      <ul>
+        <li id="buttonForBar">
+          <i class="fa-regular fa-circle-xmark" id="xmark"></i
+          ><i class="fa-solid fa-bars" id="bars"></i>
         </li>
 
-        <li><a href="views/dashboard/Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-        <li><a href="views/adminst/Administração.html"><i class="fa-solid fa-user-tie"></i> Administração</a></li>
-        <li><a href="views/clients/Clientes.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
-        <li><a href="views/loans/Empréstimos.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-        <li><a href="views/cashFlow/Fluxo%20de%20caixa.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
-        <li><a href="views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-        <li><a href="views/configs/Configurações.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
-    </ul>
-</menu>
+        <li>
+          <a href="src/views/dashboard/dashboard.html"
+            ><i class="fa-solid fa-chart-line"></i> Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="src/views/admin/admin.html"
+            ><i class="fa-solid fa-user-tie"></i> Administração</a
+          >
+        </li>
+        <li>
+          <a href="src/views/clients/Client.html"
+            ><i class="fa-regular fa-address-card"></i> Clientes</a
+          >
+        </li>
+        <li>
+          <a href="src/views/loans/loans.html"
+            ><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a
+          >
+          
+        </li>
+        <li>
+          <a href="src/views/cashFlow/dailyTransitions.html"
+            ><i class="fa-solid fa-cash-register"></i> Caixa</a
+          >
+        </li>
+        <li>
+          <a href="src/views/reports/Reports.html"
+            ><i class="fa-solid fa-file-invoice"></i> Relatórios</a
+          >
+        </li>
+        <li>
+          <a href="src/views/configs/aboutCompany.html"
+            ><i class="fa-solid fa-briefcase"></i> Acerca</a
+          >
+        </li>
+        <li>
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
+          >
+        </li>
+      </ul>
+    </menu>
 
-<main class="topFoot">
+    <main class="mainContent">
+      <nav class="navBar hide">
+        <span></span>
+        <a href="views/admin/userProfile/profile.html" title="Ver meu perfil"
+          ><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p
+        ></a>
+      </nav>
 
-    <nav class="topBar">
-        <p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p>
-    </nav>
+      <!--  Conteiner FOR MAIN CONTENT-->
+      <div class="mainContentJustifierWithoutSubMenu">
 
+        <!--  FORM CONTAINER-->
+        <div class="formConteiner">
+          <h1 class="formTitle">Formulario de teste</h1>
+        <form action="#" class="standardForm">
+          <div class="forInputsConteiner">
 
-    <div id="content" style="justify-content: center; align-items: center; margin: auto; font-size: 100pt">
-        <h1>Esta é a pagina Home!</h1>
-    </div>
+            <div class="forInputs">
+              <label class="standardFormLabel" for="email">Email:</label>
+              <input class="standardFormInput" type="email" id="email" name="email" autofocus />
+              <div id="emailDocumentoFeedback" class="feedback"></div>
+            </div>
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="password">Senha:</label>
+              <input class="standardFormInput" type="password" id="password" name="password"/>
+              <div id="passwordDocumentoFeedback" class="feedback"></div>
+            </div>
+          </div>
 
+          <div class="forInputsConteiner">
 
-    <footer>
+            <div class="forInputs">
+              <label class="standardFormLabel" for="tel">Contacto:</label>
+              <input class="standardFormInput" type="tel" id="tel" name="tel"/>
+              <div id="telDocumentoFeedback" class="feedback">Este input nao pode estar vazio</div>
+            </div>
+            
+            <div class="forInputs">
+              <label class="standardFormLabel" for="optionalTel">Senha:</label>
+              <input class="standardFormInput" type="tel" id="optionalTel" name="optionalTel"/>
+              <div id="optionalTelDocumentoFeedback" class="feedback"></div>
+            </div>
+
+          </div>
+
+          <div class="button-container">
+            <button class="btn btn-cancel" type="reset">Descartar</button>
+            <button class="btn btn-success" type="submit">Submeter</button>
+        </div>
+
+        </form>
+      </div>
+
+        <span class="emptView"></span>
+      </div>
+
+      <footer>
         <p>&copy;Guizo Informática e Serviços</p>
-    </footer>
+      </footer>
+    </main>
 
-</main>
-<script src="render/render.js"></script>
-</body>
+    <script src="src/components/sideBar/sideBar.js"></script>
+    <script src="src/components/sideBar/sideBarMediaQuery.js"></script>
+  </body>
 </html>

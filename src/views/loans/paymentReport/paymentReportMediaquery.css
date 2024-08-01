@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 650px) {
+  .paymentDataConteiner {
+    max-width: 620px;
+  }
+
+  .arangeSmallContent {
+    justify-content: flex-start;
+    overflow: auto;
+  }
+
+  .dataRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  fieldset {
+    display: flex;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .paymentDataConteiner {
+        width: 90%;
+      }
+  }

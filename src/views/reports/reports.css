@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+
+
+.subNavBar > .mobileDisplay > .chooseDate{
+display: flex;
+height: 40px;
+flex-wrap: nowrap;
+align-items: center;
+/* background-color: gold; */
+}
+
+.subNavBar > .mobileDisplay > .chooseDate > .separate{
+    margin: 0 20px;
+}
+
+.subNavBar > .mobileDisplay > .chooseDate > label > input{
+padding: 5px;
+border-radius: 5px;
+}
+
+
+@media screen and (max-width: 510px) {
+    .subNavBar > .mobileDisplay > .chooseDate{
+        height: 50px;
+        flex-basis: 50%;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .subNavBar > .mobileDisplay > .chooseDate > .separate{
+        margin: 0;
+    }
+
+.subNavBar > .mobileDisplay > .chooseDate > label > input{
+        padding: 2px;
+        border-radius: 5px;
+        margin: 0;
+    }
+}

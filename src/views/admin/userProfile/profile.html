@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Perfil</title>
+
+    <link rel="stylesheet" href="../../../../src/components/header/header.css">
+    <link rel="stylesheet" href="../../../../src/components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../../../src/components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../../src/components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../../../src/components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../../../src/components/table/table.css">
+    <link rel="stylesheet" href="../../../../src/components/boot/set/graphics/graphic.css">
+     <link rel="stylesheet" href="../../../../src/components/boot/set/graphics/graphicMediaquery.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
+    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+
+    <link rel="stylesheet" href="profileDetails.css">
+    <link rel="stylesheet" href="profileDetailMediaQuery.css">
+
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
+
+</head>
+<body>
+
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+<menu  id="menu" class="menuBar sidebar-hidden">
+
+    <ul>
+        <li id="buttonForBar">
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
+        </li>
+
+        <li><a href="../../../views/dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="../../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
+        <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+        <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+        <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+        <li><a href="../../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+        <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+    </ul>
+</menu>
+
+<main class="mainContent">
+
+    <!--navBar-->
+    <nav class="navBar">
+        <span></span>
+        <a href="profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+    <!-- SUB NAVBAR-->
+    <nav class="subNavBar">
+        <div class="mobileDisplay">
+            <!--            <button id="showPopup" type="button" value="Filtrar"><i class="fa-solid fa-filter"></i>Filtrar</button>-->
+                <a href="../editUser/editUser.html" class="btn btn-default" id="editButton" title="Editar perfil"><i
+                        class="fa-solid fa-pen-to-square"></i></a>
+                <a href="../changePassword/change_password.html" class="btn btn-default"
+                   id="changePasswordButton" title="Mudar senha"><i class="fa-solid fa-key"></i></a>
+        
+        </div>
+    </nav>
+
+    <!--MAIN-->
+    <!--    <div class="ScrollAllContent">-->
+
+
+    <div class="mainContentJustifier">
+
+        <!--PROFILEDATA-->
+        <section class="profileSection">
+
+            <article class="profileDetails">
+
+                <div class="personalInformation">
+
+                    <div class="profileName">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <h1>Helder Juliao Biza</h1>
+                    </div>
+
+                    <div class="details" id="UserName">
+                        <h2>E-mail</h2>
+                        <p>helderbiza@gmail.com</p>
+                    </div>
+
+                    <div class="details" id="contact">
+                        <h2>Contacto</h2>
+                        <p>879 999 999</p>
+                        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                        <p>1234 567 890</p>
+                    </div>
+
+                    <div class="details" id="position">
+                        <h2>Cargo</h2>
+                        <p>Gestor de credito</p>
+                    </div>
+
+                    <div class="details" id="status">
+                        <h2>Estado</h2>
+                        <p>Ativo</p>
+                    </div>
+
+                </div>
+
+                <!--                SUMMARY BY USER-->
+                <div class="justifyProfileSectionDetails">
+                                    <div class="sumUp">
+                                        <div class="sumUpDetails" id="finalized">
+                                            <h2>Finalizados</h2>
+                                            <h3>76<i class="fa-solid fa-up-long"></i><!--<i class="fa-solid fa-down-long"></i>--></h3>
+                                        </div>
+                                        <div class="sumUpDetails" id="ongoing">
+                                            <h2>Em curso</h2>
+                                            <h3>31<!--<i class="fa-solid fa-up-long"></i>--><i class="fa-solid fa-down-long"></i></h3>
+                                        </div>
+                                        <div class="sumUpDetails" id="shot-down">
+                                            <h2>Abatidos</h2>
+                                            <h3>9<i class="fa-solid fa-up-long"></i><!--<i class="fa-solid fa-down-long"></i>--></h3>
+                                        </div>
+                                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--  TABLE Conteiner-->
+        <div class="tableConteiner">
+            <table  class="display table_on_profile_view" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor concedido</th>
+                    <th>Prazo</th>
+                    <th>Estado</th>
+                    <th class="action">Visualizar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Alcino de Almeida Martins Tsengo</td>
+                    <td>13 700,00</td>
+                    <td>17-09-2024</td>
+                    <td>Em dia</td>
+                    <td class="action" title="Visualisar este empréstimo"><a href="#"> <i
+                            class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                <!-- Repita este bloco de tr para cada usuário -->
+                <tfoot>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor concedido</th>
+                    <th>Prazo</th>
+                    <th>Estado</th>
+                    <!--                        <th>Estado</th>-->
+                    <th style="display: none"></th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!--GRAPHIC-->
+        <nav class="switch">
+            <button onclick="changeChart(0)" class="switchButton btn btn-default" id="monthly" title="">Diário</button>
+            <button onclick="changeChart(1)" class="switchButton btn btn-default" id="Yearly">Mensal</button>
+            <button onclick="changeChart(2)" class="switchButton btn btn-default" id="monthlyAnalysis">Por dia</button>
+            <button onclick="changeChart(3)" class="switchButton btn btn-default" id="YearlyAnalysis">Por mês</button>
+        </nav>
+
+        <section class="graphicSection">
+            <div class="chart-conteiner">
+                <canvas id="salesChart" class="first"></canvas>
+                <canvas id="salesChart1"></canvas>
+                <canvas id="salesChart2"></canvas>
+                <canvas id="salesChart3"></canvas>
+            </div>
+        </section>
+    </div>
+
+
+    <!--    </div>-->
+
+    <!--    FOOTER-->
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
+
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="graphic/graphic.js"></script>
+<script src="../../../../src/components/table/table.js"></script>
+
+</body>
+</html>
