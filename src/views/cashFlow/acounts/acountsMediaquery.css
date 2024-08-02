@@ -1,126 +1,56 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1220px) {
 
-.acountsTitle, .loanInformations > h1{
-    text-align: center;
-}
-
-.loanInformationDiv > .titleAndDataContainer{
-    flex-basis: 100%;
-}
-    
+    .acountsInformations > .titleAndDataConteiner{
+        flex-basis: 100%;
+    }
+  
 }
 
 @media screen and (max-width: 1200px) {
 
-.loanInformationDivGraphic > .graphicSide{
-max-height: none;
-}
-
-.loanInformationsMainContent{
- max-height: none;
-}
-
-.loanInformationsMainContent{
-flex-wrap: wrap;
-overflow: auto;
-}
-
-.loanInformationDivGraphic, .loanInformationDiv{
-flex-basis: 100%;
-}
-    
 }
 
 @media screen and (max-width: 1115px) {
 
-.loanInformationDivGraphic{
-max-width: 900px;
-}
+    .acountsInformations > .titleAndDataConteiner{
+        flex-basis: 30%;
+    }
+
 }
 
 @media screen and (max-width: 1090px) {
 
-.loanInformationDiv > .titleAndDataContainer{
-flex-basis: calc(25% - 20px);
-}
-}
-
-@media screen and (max-width: 800px) {
-
-.loanInformationDiv > .titleAndDataContainer{
-justify-content: space-around;
-flex-basis: calc(33.3% - 20px)
-}
-
-.loanInformationDivGraphic{
-max-width: 500px;
-}
-}
-
-@media screen and (max-width: 700px) {
-
-.loanInformationDivGraphic{
-max-width: 400px;
-}
-}
-
-@media screen and (max-width: 600px) {
-
-.loanInformationDivGraphic{
-max-width: 300px;
-}
-}
-
-@media screen and (max-width: 540px) {
-
-.loanInformationDivGraphic{
-max-width: 200px;
-}
-}
-
-@media screen and (max-width: 400px) {
-
-.loanInformationDivGraphic{
-max-width: 120px;
-}
 }
 
 @media screen and (max-width: 1000px) {
 
-.loanInformationDivGraphic{
-max-width: 800px;
-}
 }
 
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 800px) {
 
-.titleAndDataConteiner{
-    /* background-color: red; */
-    flex-basis: calc(33.3% - 70px);
-    margin: 5px;
-}
-    
 }
 
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 700px) {
 
-.acountsInformations,.loanInformations,.financialInformations{
-    /* background-color: green; */
-    margin: 20px 0;
 }
 
-.titleAndDataConteiner{
-    /* background-color: red; */
-    flex-basis: 100%;
-    margin: 5px;
+@media screen and (max-width: 600px) {
+
 }
-    
+
+@media screen and (max-width: 540px) {
+
+}
+
+@media screen and (max-width: 456px) {
+
+    .acountsInformations > .titleAndDataConteiner{
+        flex-basis: 100%;
+    }
 }
 
 @media screen and (max-width: 400px) {
-.loanInformationDiv > .titleAndDataContainer{
-flex-basis: 100%;
-}
+
 }

@@ -15,13 +15,13 @@
 .loanInformations,
 .financialInformations {
   flex-basis: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: 1200px;
   border-radius: 10px;
   padding: 5px;
   margin: 40px 20px;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .acountsTitle,

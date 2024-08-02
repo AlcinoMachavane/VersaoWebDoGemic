@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
+    <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
+
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
 <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
@@ -74,22 +76,31 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="clientName">Nome</label>
-                        <select name="clientName" id="clientName">
-                            <option value="Ultimo login"></option>
-                            <option value="Estado">Judite da Maura</option>
-                            <option value="Estado">Carlos Felisberto</option>
-                            <option value="Estado">Paula Jonas Batista</option>
-                            <option value="Estado">Maura Januário</option>
-                            <option value="Estado">Felisberto Timóteo Dengo</option>
-                            <option value="Estado">Jonas Baltazar</option>
-                        </select>
+                        <label class="standardFormLabel" for="clientSearch">Nome</label>
+                        <input type="text" id="clientSearch" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li data-value="Judite da Maura">Judite da Maura</li>
+                            <li data-value="Carlos Felisberto">Carlos Felisberto</li>
+                            <li data-value="Paula Jonas Batista">Paula Jonas Batista</li>
+                            <li data-value="Maura Januário">Maura Januário</li>
+                            <li data-value="Felisberto Timóteo Dengo">Felisberto Timóteo Dengo</li>
+                            <li data-value="Jonas Baltazar">Jonas Baltazar</li>
+                        </ul>
                         <div id="clientNameDocumentoFeedback" class="feedback"></div>
                     </div>
+                    
 
                         <div class="forInputs">
-                            <label class="standardFormLabel" for="witnessName">Testemunha</label>
-                            <input class="standardFormInput" type="text" id="witnessName" name="witnessName">
+                            <label class="standardFormLabel" for="witnessSearch">Avalista(Testemunha)</label>
+                            <input type="text" id="witnessSearch" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                            <ul class="dropdown hidden">
+                                <li data-value="Judite da Maura">Maura Felisberto</li>
+                                <li data-value="Carlos Felisberto"> Batista Carlos</li>
+                                <li data-value="Paula Jonas Batista">Paula  Felisberto</li>
+                                <li data-value="Maura Januário">Judite Januário</li>
+                                <li data-value="Felisberto Timóteo Dengo">Maura Judite Timóteo</li>
+                                <li data-value="Jonas Baltazar">Dengo Jonas Baltazar</li>
+                            </ul>
                             <div id="witnessNameDocumentoFeedback" class="feedback"></div>
                         </div>
                     </div>
@@ -106,7 +117,7 @@
                         <div class="forInputs">
                             <label class="standardFormLabel" for="loansFees">Juros(%)</label>
                             <input class="standardFormInput" type="text" id="loansFees" name="loansFees">
-                            <!-- <div id="loansFeesDocumentoFeedback" class="feedback"></div> -->
+                            <div id="loansFeesDocumentoFeedback" class="feedback"></div>
                         </div>
                     </div>
 
@@ -272,13 +283,20 @@
                                 <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
                             </div>
                             
-                    <div class="forInputs">
-                        <h2 class="">Valor total:&nbsp;&nbsp;</h2>
-                        <h3 id="autoTotalValue">9 746,00</h3>
-                        <h2 class="">Prazo:&nbsp;&nbsp;</h2>
-                        <h3 id="autoTherm">10/08/2024</h3>
-                    </div>
+                    <div class="forInputs joinDataConteiner">
+                        <div class="joinData">
+                            <h2 class="">Valor total</h2>
+                            <p id="autoTotalValue">9 746,00</p>
                         </div>
+                        
+                        <div class="joinData">
+                            <h2 class="">Prazo</h2>
+                            <p id="autoTherm">10/08/2024</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                        
 
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
@@ -298,5 +316,6 @@
 
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
 </body>
 </html>
