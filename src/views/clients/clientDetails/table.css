@@ -5,10 +5,27 @@ body, main{
     overflow: hidden;
 }
 
+<<<<<<< HEAD:views/adminst/userProfile/table.css
+.ScrollAllContent{
+=======
+.ScrollTable{
+>>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/table.css
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+<<<<<<< HEAD:views/adminst/userProfile/table.css
+    margin: 0 9px;
+    height: calc(100vh - 151px);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 .ScrollTable{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+=======
+>>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/table.css
     height: auto;
     margin-bottom: 40px;
     overflow-x: auto;

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 700px){
+    .forScroll{
+        height: calc(100vh - 250px)!important;
+        /*height: auto;*/
+    }
+}
+
+@media screen and (max-width: 470px){
+    /*.forScroll{*/
+    /*    height: calc(100vh - 50px); !**!*/
+    /*}*/
+}

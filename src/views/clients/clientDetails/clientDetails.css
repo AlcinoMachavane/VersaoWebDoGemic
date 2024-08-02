@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
+<<<<<<< HEAD:views/adminst/userProfile/profileDetails.css
+body{
+    overflow: auto;
+}
+=======
 /*body{*/
 /*    overflow: auto;*/
 /*}*/
+>>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/clientDetails.css
 
 .profileSection {
     display: flex;

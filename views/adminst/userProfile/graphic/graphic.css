@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 0;
+}
+
+.switchButton {
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+    color: var(--myLight);
+    font-weight: bold;
+    box-shadow: var(--my-box-shadow);
+    width: 100px;
+}
+
+.switchButton:not(:last-child){
+    margin-right: 20px;
+}
+
+.switchButton:hover {
+    color: var(--myLightBlue);
+    box-shadow: var(--my-box-shadow);
+    background: white;
+    /*background-color: var(--myLightBlueButton);*/
+}
+
+.fa-eye{
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
+
+    color: var(--myLightBlue);
+    background-color: var(--myLightBlueButton);
+    font-weight: bold;
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid transparent;
+}
+
+.fa-eye:hover{
+    /*color: white;*/
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid var(--myLightBlue);
+}
+
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    width: 400%;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+canvas {
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: var(--my-box-shadow);
+    background-color: white;
+}
+
+
+/*////////////////////////////////////////////////////*/
+
+
+
