@@ -47,8 +47,16 @@
 }
 
 .invitationLink{
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     background-color: whitesmoke;
     border-radius: 5px;
     color: blue;
+    cursor: pointer;
+}
+
+.invitationLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }

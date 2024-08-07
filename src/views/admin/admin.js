@@ -20,3 +20,24 @@
             modal.style.display = "none";
         }
     }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const invitationLink = document.getElementById('link-to-copy');
+
+    invitationLink.addEventListener('click', () => {
+        // Cria um elemento de input temporário para usar a funcionalidade de copiar
+        const tempInput = document.createElement('input');
+        document.body.appendChild(tempInput);
+        tempInput.value = invitationLink.textContent;
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        // Opcional: Feedback para o usuário
+        alert('Link copiado para a área de transferência!');
+    });
+});
+
