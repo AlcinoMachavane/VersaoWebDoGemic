@@ -8,6 +8,7 @@
 
     <title>Gerir contas</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -17,15 +18,16 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <!--    <link rel="stylesheet" href="../../components/form/simpleForm.css">-->
-    <link rel="stylesheet" href="../../../components/boot/inputs.css">
+       <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
+       <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
+
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="manageAccount.css">
-    <link rel="stylesheet" href="manageAcountMediaquery.css">
 
 </head>
 <body>
@@ -68,16 +70,14 @@
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Efectuar tansferência</h1>
-            <form action="#" class="form" id="register">
-                <div class="firstAndSecundSide">
-                    <div class="firstSideOfMoviment">
+            <form action="#" class="standardForm">
 
-                        <h2 class="formTitle">Efectuar uma transação</h2>
+                        <h2 class="standardFormSubtitle">Efectuar uma transação</h2>
 
-                        <div class="nowrapElements">
+                        <div class="forInputsConteiner">
 
-                            <div class="titleAndDataConteiner">
-                                <label for="balanceFrom">A partir de:</label>
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="balanceFrom">A partir de *</label>
                                 <select name="balanceFrom" id="balanceFrom">
                                     <option value="Ultimo login"></option>
                                     <option value="Estado">Caixa</option>
@@ -87,8 +87,8 @@
                                 <div id="balanceFromDocumentoFeedback" class="feedback"></div>
                             </div>
 
-                            <div class="titleAndDataConteiner">
-                                <label for="balanceTo">Para:</label>
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="balanceTo">Para *</label>
                                 <select name="balanceTo" id="balanceTo">
                                     <option value="Ultimo login"></option>
                                     <option value="Estado">Caixa</option>
@@ -100,23 +100,25 @@
 
                         </div>
 
-                        <div class="nowrapElements">
+                        <div class="forInputsConteiner">
 
-                            <div class="titleAndDataConteiner">
-                                <label for="Balance">Valor</label>
-                                <input type="text" id="Balance" name="Balance">
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="Balance">Valor *</label>
+                                <input class="standardFormInput" type="text" id="Balance" name="Balance">
                                 <div id="BalanceDocumentoFeedback" class="feedback"></div>
                             </div>
 
-                            <div class="titleAndDataConteiner">
-                                <label for="commission">Comissão (%)</label>
-                                <input type="text" id="commission" name="commission">
+                            <div class="forInputs">
+                                <label class="standardFormLabel" for="commission">Comissão</label>
+                                <input class="standardFormInput" type="text" id="commission" name="commission">
                                 <div id="commissionDocumentoFeedback" class="feedback"></div>
                             </div>
                         </div>
 
-                        <div class="titleAndDataConteiner">
-                            <label id="forTextArea" for="observation">Observação</label>
+                        <div class="forInputsConteiner">
+
+                        <div class="forInputs">
+                            <label class="standardFormLabel" id="forTextArea" for="observation">Observação</label>
                             <textarea type="text" id="observation" name="observation"></textarea>
                             <div id="observationDocumentoFeedback" class="feedback"></div>
                         </div>
@@ -126,10 +128,8 @@
                         <button class="btn btn-cancel" type="reset">Descartar</button>
                         <button class="btn btn-success" type="submit">Submeter</button>
                     </div>
-                </div>
             </form>
 
-            <h1 class="formTitleBottom"></h1>
         </div>
 
     </div>

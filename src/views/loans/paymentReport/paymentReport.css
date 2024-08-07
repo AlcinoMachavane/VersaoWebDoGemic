@@ -6,9 +6,10 @@
   /* background-color: blueviolet; */
 }
 
-/* .justifyItems{
-  background-color: #161616;
-} */
+.justifyItems{
+  display: flex;
+  flex-direction: column;
+} 
 
 .paymentDataConteiner {
   display: flex;
@@ -105,7 +106,6 @@ h2 {
   margin: 20px auto;
 }
 
-div.dt-search {
-  display: none;
-  background-color: black !important;
-}
+
+
+

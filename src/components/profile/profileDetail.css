@@ -1,14 +1,9 @@
 @charset "UTF-8";
 
-<<<<<<< HEAD:views/adminst/userProfile/profileDetails.css
-body{
+/* Remova as linhas de conflito do Git */
+body {
     overflow: auto;
 }
-=======
-/*body{*/
-/*    overflow: auto;*/
-/*}*/
->>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/clientDetails.css
 
 .profileSection {
     display: flex;
@@ -21,7 +16,7 @@ body{
     display: flex;
     flex-basis: 100%;
     max-width: 600px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 40px;
@@ -33,6 +28,7 @@ body{
 }
 
 .profileDetails:hover {
+    /* Se a altura variável não for usada, remova este comentário */
     /*height: 450px;*/
 }
 
@@ -44,6 +40,8 @@ body{
     font-weight: bold;
     box-shadow: var(--my-box-shadow);
     border: 1px solid transparent;
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar por cima */
+    transition: border-color 0.3s ease; /* Transição suave para a borda */
 }
 
 .profileDetails > button:hover {
@@ -51,7 +49,7 @@ body{
     border: 1px solid var(--myLightBlue);
 }
 
-.profileDetails > button > i{
+.profileDetails > button > i {
     color: var(--myLightBlue);
 }
 
@@ -62,10 +60,11 @@ body{
     flex-wrap: wrap;
 }
 
-.personalInformation, .details, .details {
+.personalInformation, .details {
     border-bottom: 1px dashed var(--myLightBlueButton);
 }
 
+/* Se não houver necessidade, remova a classe .personalInformation vazia */
 .personalInformation {
     /*background-color: cadetblue;*/
 }
@@ -103,10 +102,6 @@ body{
 
 .sumUp > div.sumUpDetails > h3 > .fa-down-long {
     color: orangered;
-}
-
-.personalInformation {
-
 }
 
 #detailsTopic > h2 {

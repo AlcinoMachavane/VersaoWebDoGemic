@@ -1,0 +1,16 @@
+@charset "UTF_8";
+
+table > tfoot > tr > th > select{
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
     <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
  <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+ <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
  <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
@@ -91,19 +92,22 @@
                     <div class="forInputsConteiner">
 
                         <div class="forInputs">
-                            <label class="standardFormLabel" for="category">Categoria</label>
-                            <select name="category" id="category">
-                                <option value="Ultimo login"></option>
-                                <option value="Estado">Entradas Operacionais</option>
-                                <option value="Estado">Despesas</option>
-                                <option value="Estado">Custos</option>
-                            </select>
+                            <label class="standardFormLabel" for="category">Categoria *</label>
+                            <input type="text" id="category" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                            <ul class="dropdown hidden">
+                                <li value="Ultimo login"></li>
+                                <li value="Estado">Entradas Operacionais</li>
+                                <li value="Estado">Despesas</li>
+                                <li value="Estado">Custos</li>
+                            </ul>
                             <div id="categoryDocumentoFeedback" class="feedback"></div>
 
                         </div>
+                    </div>
+                    <div class="forInputsConteiner">
 
                         <div class="forInputs">
-                            <label class="standardFormLabel" for="subCategory">Subcategoria</label>
+                            <label class="standardFormLabel" for="subCategory">Subcategoria *</label>
                             <input class="standardFormInput" type="text" id="subCategory" name="subCategory">
                             <div id="subCategoryDocumentoFeedback" class="feedback"></div>
                         </div>
@@ -127,5 +131,6 @@
 
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
 </body>
 </html>

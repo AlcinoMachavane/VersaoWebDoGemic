@@ -8,6 +8,7 @@
 
     <title>Editar</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -77,13 +78,13 @@
                 <div class="forInputsConteiner">
 
                 <div class="forInputs">
-                    <label class="standardFormLabel" for="fullName">Nome completo</label>
+                    <label class="standardFormLabel" for="fullName">Nome completo *</label>
                     <input class="standardFormInput" type="text" id="fullName" name="fullName" autofocus>
                     <div id="fullNameDocumentoFeedback" class="feedback"></div>
                 </div>
 
                 <div class="forInputs">
-                    <label class="standardFormLabel" for="email">E-mail</label>
+                    <label class="standardFormLabel" for="email">E-mail *</label>
                     <input class="standardFormInput" type="email" id="email" name="email">
                     <div id="emailDocumentoFeedback" class="feedback"></div>
                 </div>
@@ -92,7 +93,7 @@
 
             <div class="forInputsConteiner">
                 <div class="forInputs">
-                    <h2 class="standardFormSubtitle">Género</h2>
+                    <h2 class="standardFormSubtitle">Género *</h2>
                     <div class="radioInputConteiner">
                         <input class="standardFormInput" type="radio" id="male" name="gender">
                         <label class="standardFormLabel" for="male">Masculino</label>
@@ -103,7 +104,7 @@
                 </div>
 
                 <div class="forInputs">
-                    <label class="standardFormLabel" for="contact">Contacto</label>
+                    <label class="standardFormLabel" for="contact">Contacto *</label>
                     <input class="standardFormInput" type="tel" id="contact" name="contact">
                     <div id="contactDocumentoFeedback" class="feedback"></div>
                 </div>
@@ -113,12 +114,7 @@
                 <div class="forInputsConteiner">
 
                 <div class="forInputs">
-                    <label class="standardFormLabel" for="residence">Moradia</label>
-                    <input class="standardFormInput" type="text" id="residence" name="residence">
-                    <div id="residenceDocumentoFeedback" class="feedback"></div>
-                </div>
-                <div class="forInputs">
-                    <h2 class="standardFormSubtitle">Estado</h2>
+                    <h2 class="standardFormSubtitle">Estado *</h2>
                     <div class="radioInputConteiner">
                         <input class="standardFormInput" type="radio" id="active" name="status">
                         <label class="standardFormLabel" for="active">Activo</label>
@@ -127,11 +123,17 @@
                     </div>
                     <div id="statusDocumentoFeedback" class="feedback"></div>
                 </div>
+                
+                <div class="forInputs">
+                    <label class="standardFormLabel" for="optionalContact">Contacto2</label>
+                    <input class="standardFormInput" type="tel" id="optionalContact" name="optionalContact">
+                    <div id="optionalContactDocumentoFeedback" class="feedback"></div>
+                </div>
 
                 
             </div>
 
-            <h2 class="standardFormDescription">Cargo</h2>
+            <h2 class="standardFormDescription">Cargo *</h2>
 
                 <div class="forInputs checkbox_and_radio_style">
                     <div class="checkboxConteiner">

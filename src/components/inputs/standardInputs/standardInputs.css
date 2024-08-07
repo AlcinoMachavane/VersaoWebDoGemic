@@ -46,9 +46,22 @@ select {
 
 }
 
+.radioInputConteiner{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .radioInputConteiner > .standardFormLabel:not(:last-child){
     margin-right: 20px;
 
+}
+
+.radioInputConteiner > .standardFormInput{
+    margin: 5px;
 }
 
 .joinContent{

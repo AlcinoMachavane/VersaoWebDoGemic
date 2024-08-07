@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
     <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
@@ -83,7 +84,7 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="concessionDate">Data de pagamento</label>
+                        <label class="standardFormLabel" for="concessionDate">Data de pagamento *</label>
                         <input class="standardFormInput" type="date" id="concessionDate" name="concessionDate" autofocus>
                         <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -92,15 +93,16 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="acount">Conta</label>
-                        <select name="acount" id="acount">
-                            <option value="Ultimo login"></option>
-                            <option value="Estado">e-Mola</option>
-                            <option value="Estado">m-pesa</option>
-                            <option value="Estado">m-Kesh</option>
-                            <option value="Estado">Caixa</option>
-                            <option value="Estado">Banco</option>
-                        </select>
+                        <label class="standardFormLabel" for="acount">Conta *</label>
+                        <input type="text" id="acount" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li value="Ultimo login"></li>
+                            <li value="Estado">e-Mola</li>
+                            <li value="Estado">m-pesa</li>
+                            <li value="Estado">m-Kesh</li>
+                            <li value="Estado">Caixa</li>
+                            <li value="Estado">Banco</li>
+                        </ul>
                         <div id="acountDocumentoFeedback" class="feedback"></div>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="loanValue">Valor do pagamento</label>
+                        <label class="standardFormLabel" for="loanValue">Valor do pagamento *</label>
                         <input class="standardFormInput" type="text" id="loanValue" name="loanValue">
                         <div id="loanValueDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -132,5 +134,6 @@
 
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
 </body>
 </html>

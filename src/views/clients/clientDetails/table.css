@@ -1,47 +1,36 @@
 @charset "UTF-8";
 
+.justifyItems{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-direction: column;
+  } 
 
-body, main{
+body, main {
     overflow: hidden;
 }
 
-<<<<<<< HEAD:views/adminst/userProfile/table.css
-.ScrollAllContent{
-=======
-.ScrollTable{
->>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/table.css
+.ScrollTable {
     display: flex;
+    flex-basis: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-<<<<<<< HEAD:views/adminst/userProfile/table.css
-    margin: 0 9px;
-    height: calc(100vh - 151px);
-    overflow-x: auto;
-    overflow-y: auto;
-}
-
-.ScrollTable{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-=======
->>>>>>> 7045193a6e827fac820c14beffea285c748072a8:src/views/clients/clientDetails/table.css
     height: auto;
     margin-bottom: 40px;
     overflow-x: auto;
     overflow-y: auto;
 }
 
-.tableConteiner{
+.tableConteiner {
     display: flex;
-    /* flex-basis: 100%; */
     flex-wrap: wrap;
     align-items: flex-start;
     max-width: 1000px;
     padding: 10px;
 }
 
-.tableConteiner > .TableTitle{
+.tableConteiner > .TableTitle {
     background-color: var(--myLight);
 }
 
@@ -56,22 +45,18 @@ table {
     box-shadow: var(--my-box-shadow);
 }
 
-thead, tbody{
-}
-
-
 th, td {
-    /*min-width: 170px;*/
     padding: 8px;
     border: 1px solid var(--myLightBlueButton);
     text-align: center;
+    vertical-align: middle; /* Centraliza verticalmente */
 }
 
-td.action, th.action{
+td.action, th.action {
     text-align: center;
 }
 
-td.action > .fa-eye{
+td.action > .fa-eye {
     border-radius: 50%;
     padding: 10px;
     height: auto;
@@ -82,7 +67,7 @@ td.action > .fa-eye{
     border: 1px solid transparent;
 }
 
-td.action > .fa-eye:hover{
+td.action > .fa-eye:hover {
     box-shadow: var(--my-box-shadow);
     border: 1px solid var(--myLightBlue);
 }
@@ -91,9 +76,10 @@ th {
     color: var(--myLight);
     background-color: white;
 }
-/*.fa-circle-user {*/
-/*    color: blue; !* ou qualquer outra cor que você deseje *!*/
-/*}*/
-/*.fa-ellipsis-vertical {*/
-/*    color: gray; !* ou qualquer outra cor que você deseje *!*/
-/*}*/
+
+.table-caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+}

@@ -8,6 +8,7 @@
 
     <title>Adicionar movimento</title>
 
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
     <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css">
     <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
@@ -20,9 +21,10 @@
    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
-    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+    <link rel="stylesheet" href="../../../components/boot/uledIconSideBar.css">
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
@@ -74,7 +76,7 @@
           <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <h2 class="standardFormSubtitle">Movimento</h2>
+                        <h2 class="standardFormSubtitle">Movimento *</h2>
                         <div class="radioInputConteiner">
                             
                             <input class="standardFormInput" type="radio" id="income" name="typeOfTransaction">
@@ -91,7 +93,7 @@
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="transactionDate">Data da transação</label>
+                        <label class="standardFormLabel" for="transactionDate">Data da transação *</label>
                         <input class="standardFormInput" type="date" id="transactionDate" name="transactionDate">
                         <div id="transactionDateDateDocumentoFeedback" class="feedback">
                         </div>
@@ -101,29 +103,31 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="paymentMethod">Método de pagamento</label>
-                        <select name="paymentMethod" id="paymentMethod">
-                            <option value="Ultimo login"></option>
-                            <option value="Estado">e-Mola</option>
-                            <option value="Estado">m-pesa</option>
-                            <option value="Estado">m-Kesh</option>
-                            <option value="Estado">Caixa</option>
-                            <option value="Estado">Banco</option>
-                        </select>
+                        <label class="standardFormLabel" for="paymentMethod">Método de pagamento *</label>
+                         <input type="text" id="paymentMethod" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>e-Mola</li>
+                            <li>m-pesa</li>
+                            <li>m-Kesh</li>
+                            <li>Caixa</li>
+                            <li>Banco</li>
+                        </ul>
                         <div id="paymentMethodDocumentoFeedback" class="feedback">
                         </div>
 
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="typeOfAcount">Tipo de conta</label>
-                        <select name="typeOfAcount" id="typeOfAcount">
-                            <option value="Ultimo login"></option>
-                            <option value="Estado">Investimento</option>
-                            <option value="Estado">Despesas fixas</option>
-                            <option value="Estado">Entradas não operacionais</option>
-                            <option value="Estado">Saídas não operacionais</option>
-                        </select>
+                        <label class="standardFormLabel" for="typeOfAcount">Tipo de conta *</label>
+                         <input type="text" id="typeOfAcount" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>Investimento</li>
+                            <li>Despesas fixas</li>
+                            <li>Entradas não operacionais</li>
+                            <li>Saídas não operacionais</li>
+                        </ul>
                         <div id="typeOfAcountDocumentoFeedback" class="feedback">
                         </div>
                     </div>
@@ -132,20 +136,20 @@
                 
                 <div class="forInputsConteiner">
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="accountToDebit">Conta a debitar</label>
-                        <select name="acount" id="accountToDebit">
-                        <option value="Estado"></option>
-                            <option value="Ultimo login">Selecione a descrição do pagamento</option>
-                            <option value="Estado">Pagamento de renda</option>
-                            <option value="Estado">Pagamento de salário</option>
-                            <option value="Estado">Investimento de captal externo</option>
-                        </select>
+                        <label class="standardFormLabel" for="accountToDebit">Conta a debitar *</label>
+                         <input type="text" id="accountToDebit" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>Pagamento de renda</li>
+                            <li>Pagamento de salário</li>
+                            <li>Investimento de captal externo</li>
+                        </ul>
                         <div id="accountToDebitDocumentoFeedback" class="feedback">
                         </div>
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="value">Valor</label>
+                        <label class="standardFormLabel" for="value">Valor *</label>
                         <input class="standardFormInput" type="text" id="value" name="value">
                         <div id="valueDocumentoFeedback" class="feedback">
                         </div>
@@ -155,7 +159,7 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="description">Descrição</label>
+                        <label class="standardFormLabel" for="description">Observação *</label>
                         <textarea id="description" name="description"></textarea>
                         <div id="descriptionDocumentoFeedback" class="feedback fullWidthFeedback">
                         </div>
@@ -181,5 +185,6 @@
 
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
 </body>
 </html>

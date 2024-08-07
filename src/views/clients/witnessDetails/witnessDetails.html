@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Detalhes do mutuário(cliente)</title>
+    <title>Detalhes do avalista (testemunha)</title>
 
     <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-    <link rel="stylesheet" href="../../../components/inputs/tableInputs/tableInputs.css">
+    <link rel="stylesheet" href="../../../components/boot/inputs.css">
     <link rel="stylesheet" href="../../../components/form/clientRegisterForm.css">
     <link rel="stylesheet" href="../../../components/table/table.css">
 
@@ -70,18 +70,16 @@
     <!--subNavBar-->
     <nav class="subNavBar">
         <div class="mobileDisplay">
-                <a href="../clientRegister/clientRegister.html" class="btn btn-default" id="registerButton" title="Editar dados do cliente"><i class="fa-solid fa-pen-to-square"></i>
-                </a>
-                <a href="../witnessDetails/witnessRegister/witnessRegister.html" class="btn btn-default" id="witnessRegisterButton" title="Adicionar avalista">+&nbsp;<i class="fa-solid fa-circle-user"></i>
-                </a>
-            </div>
+            
+                <a href="witnessRegister/witnessRegister.html" class="btn btn-default" id="registerButton" title="Editar dados do avalista"><i class="fa-solid fa-pen-to-square"></i>
+                </a>            
+        </div>
     </nav>
 
     <!--MAIN-->
     <div class="mainContentJustifier">
 
         <!--CLIENTPROFILEDATA-->
-        <div class="justifyItems">
         <section class="profileSection">
             <article class="profileDetails">
 
@@ -202,88 +200,6 @@
                 </div>
             </article>
         </section>
-
-        <!--TABLES-->
-        <div class="ScrollTable">
-            <div class="tableConteiner">
-                <table  class="display table_on_profile_view" style="width:100%">
-                    <caption class="table-caption">Lista de empréstimos</caption>
-                    <thead>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Nome</th>
-                        <th>Morada</th>
-                        <th>Data de concessão</th>
-                        <th>Prazo</th>
-                        <th>Estado</th>
-                        <th class="actionEye">Visualizar</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="user">
-                        <td>1</td>
-                        <td>13 700,00</td>
-                        <td>6 100,00</td>
-                        <td>17-09-2024</td>
-                        <td>17-12-2024</td>
-                        <td>Em curso</td>
-                        <td class="actionEye" title="Visualisar este empréstimo"><a href="../../loans/paymentReport/paymentReport.html"><i class="fa-solid fa-eye"></i></a></td>
-                    </tr>
-                    <!-- Repita este bloco de tr para cada usuário -->
-                    <tfoot>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Nome</th>
-                        <th>Morada</th>
-                        <th>Data de concessão</th>
-                        <th>Prazo</th>
-                        <th>Estado</th>
-                        <!--                    <th></th>-->
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
-
-        <div class="ScrollTable">
-            <div class="tableConteiner">
-                
-                <table  class="display secund_table_on_profile_view" style="width:100%">
-                    <caption class="table-caption">Lista de avalistas</caption>
-                    <thead>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Nome</th>
-                        <th>Morada</th>
-                        <th>Contacto</th>
-                        <th>Estado</th>
-                        <th class="actionEye">Visualizar</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="user">
-                        <td>1</td>
-                        <td>Cardoso Muzine</td>
-                        <td>Boane, Maputo</td>
-                        <td>874 007 783</td>
-                        <td>Activo</td>
-                        <td class="actionEye" title="Visualisar detalhes do avalista"><a href="../witnessDetails/witnessDetails.html"><i class="fa-solid fa-eye"></i></a></td>
-                    </tr>
-                    <!-- Repita este bloco de tr para cada usuário -->
-                    <tfoot>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Nome</th>
-                        <th>Morada</th>
-                        <th>Contacto</th>
-                        <th>Estado</th>
-                        <!--                    <th></th>-->
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
-    </div>
     </div>
 
     <!--    FOOTER-->

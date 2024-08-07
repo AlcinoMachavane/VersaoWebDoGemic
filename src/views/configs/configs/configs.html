@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
     <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
+    <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
 
     <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
@@ -92,13 +93,13 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="LoanName">Nome</label>
+                        <label class="standardFormLabel" for="LoanName">Nome da empresa *</label>
                         <input class="standardFormInput" type="text" name="LoanName" id="LoanName" autofocus>
                         <div id="fullNameDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="NUIT">NUIT</label>
+                        <label class="standardFormLabel" for="NUIT">NUIT *</label>
                         <input class="standardFormInput" type="text" id="NUIT" name="NUIT">
                         <div id="NUITDateDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -107,13 +108,13 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="startOfActivity">Início de actividade</label>
+                        <label class="standardFormLabel" for="startOfActivity">Início de actividade *</label>
                         <input class="standardFormInput" type="date" id="startOfActivity" name="startOfActivity">
                         <div id="startOfActivityDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="startingCapital">Capital inicial</label>
+                        <label class="standardFormLabel" for="startingCapital">Capital inicial *</label>
                         <input class="standardFormInput" type="text" id="startingCapital" name="startingCapital">
                         <div id="startingCapitalDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -123,28 +124,29 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="province">Província</label>
-                        <select name="province" id="province">
-                            <option></option>
-                            <option>Cabo Delgado</option>
-                            <option>Gaza</option>
-                            <option>Inhambane</option>
-                            <option>Manica</option>
-                            <option>Maputo (Cidade)</option>
-                            <option>Maputo (Província)</option>
-                            <option>Nampula</option>
-                            <option>Niassa</option>
-                            <option>Sofala</option>
-                            <option>Tete</option>
-                            <option>Zambézia</option>
-                        </select>
+                        <label class="standardFormLabel" for="province">Província *</label>
+                        <input type="text" id="province" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>Cabo Delgado</li>
+                            <li>Gaza</li>
+                            <li>Inhambane</li>
+                            <li>Manica</li>
+                            <li>Maputo (Cidade)</li>
+                            <li>Maputo (Província)</li>
+                            <li>Nampula</li>
+                            <li>Niassa</li>
+                            <li>Sofala</li>
+                            <li>Tete</li>
+                            <li>Zambézia</li>
+                        </ul>
                         <div id="loanGoalDocumentoFeedback" class="feedback"></div>
                     </div>
                 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="address">Endereço</label>
-                        <input class="standardFormInput" type="text" id="address" name="address">
-                        <div id="addressDocumentoFeedback" class="feedback"></div>
+                        <label class="standardFormLabel" for="district">Distrito *</label>
+                        <input class="standardFormInput" type="text" id="district" name="district">
+                        <div id="districtDocumentoFeedback" class="feedback"></div>
                     </div>
 
                 </div>
@@ -152,15 +154,15 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="contact">Contacto</label>
+                        <label class="standardFormLabel" for="contact">Contacto *</label>
                         <input class="standardFormInput" type="tel" name="contact" id="contact">
                         <div id="contactDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="secondContact">Contacto</label>
-                        <input class="standardFormInput" type="tel" name="secondContact" id="secondContact">
-                        <div id="secondContactDocumentoFeedback" class="feedback"></div>
+                        <label class="standardFormLabel" for="lialContact">Contacto 2</label>
+                        <input class="standardFormInput" type="tel" name="lialContact" id="lialContact">
+                        <div id="lialContactDocumentoFeedback" class="feedback"></div>
                     </div>
 
                 </div>
@@ -168,13 +170,13 @@
                 <div class="forInputsConteiner">
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="email">E-mail</label>
-                        <input class="standardFormInput" type="number" id="email" name="email">
+                        <label class="standardFormLabel" for="email">E-mail *</label>
+                        <input class="standardFormInput" type="email" id="email" name="email">
                         <div id="emailDocumentoFeedback" class="feedback"></div>
                     </div>
 
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="ownerName">Nome do proprietário</label>
+                        <label class="standardFormLabel" for="ownerName">Nome do proprietário *</label>
                         <input class="standardFormInput" type="text" id="ownerName" name="ownerName">
                         <div id="ownerNameDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -186,19 +188,14 @@
                 <div class="forInputsConteiner">
                     
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="ownerName">Cálculo de prestações</label>
-                        <select name="province" id="typeOfInstallments">
-                            <option></option>
-                            <option>(Capital/Número de prestações)+Percentagem (de juros) do valor remanescente</option>
-                            <option>(Capital + Juros)/Numero de prestações</option>
-                            <option>(Capital + Juros)+25%</option>
-                        </select>
+                        <label class="standardFormLabel" for="daysToApplyFine">Dias de aplicação das multas *</label>
+                        <input class="daysToApplyFineFormInput" type="text" name="daysToApplyFine" id="daysToApplyFine">
 
                         <div id="typeOfInstallmentsDocumentoFeedback" class="feedback"></div>
                     </div>
                     
                     <div class="forInputs">
-                        <label class="standardFormLabel" for="percentOfCommission">Juros de mora(%)</label>
+                        <label class="standardFormLabel" for="percentOfCommission">Percentagem da multa *</label>
                         <input class="standardFormInput" type="text" name="percentOfCommission" id="percentOfCommission">
                         <div id="percentOfCommissionDocumentoFeedback" class="feedback"></div>
                     </div>
@@ -222,5 +219,6 @@
 
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
 </body>
 </html>

@@ -51,6 +51,10 @@
 
 }
 
+.personalInformation > .profileName > i.fa-circle-user{
+    padding: 10px;
+}
+
 .profileName {
     align-items: center;
 }

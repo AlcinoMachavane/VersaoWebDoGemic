@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.justifyItems{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-direction: column;
+  } 
+
 .fa-angles-down{
 font-size: 10pt;
 }
@@ -36,7 +43,7 @@ border-radius: 5px;
 /* estilos da tabela */
 .styled-table {
     border-collapse: collapse;
-    margin: 25px 0 80px 0;
+    margin: 25px auto;
     border-radius: 10px;
     min-width: 400px;
     box-shadow: var(--my-box-shadow);
@@ -95,19 +102,21 @@ background-color: #dddddd;
 
 /* ??????????????????????????????????????????? GRAPHIC ??????????????????????????????????????????????? */
 
-.loanInformationDivGraphic {
+.cashflowformationDivGraphic {
+display: flex;
   flex-basis: calc(65% - 5px);
+  justify-content: center;
 }
 
-.loanInformationDivGraphic > .graphicSide {
-  width: 100%;
+.cashflowformationDivGraphic > .graphicSide {
+  width: 70%;
   padding: 5px;
 }
 
-.loanInformationDivGraphic > .graphicSide > .chart-conteiner {
+.cashflowformationDivGraphic > .graphicSide > .chart-conteiner {
   border-radius: 10px;
   background-color: white;
-  margin: auto !important;
+  margin: 10px auto !important;
   margin: 10px;
   padding: 10px;
   box-shadow: var(--my-box-shadow);
