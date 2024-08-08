@@ -45,6 +45,12 @@ max-width: 900px;
 .loanInformationDiv > .titleAndDataContainer{
 flex-basis: calc(25% - 20px);
 }
+
+/* .loanInformationDiv{
+    flex-direction: column;
+    background-color: brown;
+
+} */
 }
 
 @media screen and (max-width: 800px) {

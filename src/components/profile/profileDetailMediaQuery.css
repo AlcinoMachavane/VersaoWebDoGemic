@@ -15,6 +15,13 @@
 }
 
 
+@media screen and (max-width: 700px){
+.groupContent{
+    flex-wrap: wrap;
+}
+}
+
+
 @media screen and (max-width: 420px){
 
     .profileDetails {

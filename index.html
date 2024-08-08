@@ -25,13 +25,10 @@
       rel="stylesheet"
       href="src/assets/fontawesome-free-6.5.1-web/css/all.min.css"
     />
+    <link rel="stylesheet" href="index.css">
 
-    <link rel="stylesheet" href="src/components/form/standardForm/standardForm.css">
-    <link rel="stylesheet" href="src/components/form/standardForm/standardFormMediaquery.css">
-    <link rel="stylesheet" href="src/components/inputs/standardInputs/standardInputs.css">
     <link rel="stylesheet" href="src/components/inputs/standardInputs/standardInputsMediaquery.css">
-    <link rel="stylesheet" href="src/components/boot/set/buttons/buttons.css">
-    <link rel="stylesheet" href="src/components/boot/set/buttons/buttonsMediaquery.css">
+    
   </head>
   <body>
     <!-- MOBILE BUTTON FOR SIDEBAR-->
@@ -82,6 +79,8 @@
             ><i class="fa-solid fa-briefcase"></i> Acerca</a
           >
         </li>
+        <li><a href="src/views/clientFinance/clientFinance.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
+        <li><a href="src/views/finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
         <li>
           <a href="index.html"
             ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
@@ -101,50 +100,15 @@
       <!--  Conteiner FOR MAIN CONTENT-->
       <div class="mainContentJustifierWithoutSubMenu">
 
-        <!--  FORM CONTAINER-->
-        <div class="formConteiner">
-          <h1 class="formTitle">Formulario de teste</h1>
-        <form action="#" class="standardForm">
-          <div class="forInputsConteiner">
+        <section class="infoSection">
+          <article class="articleSection">
+            <h1 class="infoTitle">Qualquer novidade informaremos aqui</h1>
+            <p class="infoParagraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga rem reiciendis dolorem corrupti, ab nostrum blanditiis quam facere nihil voluptates, rerum enim fugiat. Maiores, ex quo totam laboriosam excepturi voluptatum.</p>
+            <h2 class="infoCaption">Primeiro assunto</h2>
+            <p class="infoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, vel repellendus. Quidem, veniam quo! Necessitatibus, earum doloribus? Culpa, quo nisi repudiandae debitis inventore, magnam tenetur, vitae perspiciatis labore vel?</p>
+          </article>
+        </section>
 
-            <div class="forInputs">
-              <label class="standardFormLabel" for="email">Email:</label>
-              <input class="standardFormInput" type="email" id="email" name="email" autofocus />
-              <div id="emailDocumentoFeedback" class="feedback"></div>
-            </div>
-            
-            <div class="forInputs">
-              <label class="standardFormLabel" for="password">Senha:</label>
-              <input class="standardFormInput" type="password" id="password" name="password"/>
-              <div id="passwordDocumentoFeedback" class="feedback"></div>
-            </div>
-          </div>
-
-          <div class="forInputsConteiner">
-
-            <div class="forInputs">
-              <label class="standardFormLabel" for="tel">Contacto:</label>
-              <input class="standardFormInput" type="tel" id="tel" name="tel"/>
-              <div id="telDocumentoFeedback" class="feedback">Este input nao pode estar vazio</div>
-            </div>
-            
-            <div class="forInputs">
-              <label class="standardFormLabel" for="optionalTel">Senha:</label>
-              <input class="standardFormInput" type="tel" id="optionalTel" name="optionalTel"/>
-              <div id="optionalTelDocumentoFeedback" class="feedback"></div>
-            </div>
-
-          </div>
-
-          <div class="button-container">
-            <button class="btn btn-cancel" type="reset">Descartar</button>
-            <button class="btn btn-success" type="submit">Submeter</button>
-        </div>
-
-        </form>
-      </div>
-
-        <span class="emptView"></span>
       </div>
 
       <footer>

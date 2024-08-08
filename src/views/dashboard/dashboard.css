@@ -32,14 +32,9 @@
 }
 
 .loanInformationDiv {
-  /* background-color: white; */
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  /* border-radius: 10px; */
-  /* margin: 10px; */
-  /* padding: 10px 0; */
-  /* box-shadow: var(--my-box-shadow); */
-  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .loanInformationDiv > .titleAndDataContainer {

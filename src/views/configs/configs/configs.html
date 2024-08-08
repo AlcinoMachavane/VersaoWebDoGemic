@@ -51,6 +51,8 @@
         <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
         <li><a href="../../reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
         <li><a href="../aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+        <li><a href="../../clientFinance/clientFinance.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
+        <li><a href="../../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
         <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
     </ul>
 </menu>
@@ -153,17 +155,24 @@
 
                 <div class="forInputsConteiner">
 
-                    <div class="forInputs">
-                        <label class="standardFormLabel" for="contact">Contacto *</label>
-                        <input class="standardFormInput" type="tel" name="contact" id="contact">
-                        <div id="contactDocumentoFeedback" class="feedback"></div>
-                    </div>
-
-                    <div class="forInputs">
-                        <label class="standardFormLabel" for="lialContact">Contacto 2</label>
-                        <input class="standardFormInput" type="tel" name="lialContact" id="lialContact">
-                        <div id="lialContactDocumentoFeedback" class="feedback"></div>
-                    </div>
+                     <!-- Container para entrada de contato -->
+              <div class="forInputs">
+                <div class="contact-input-container">
+                    <label for="contactInput" class="form-label">Adicionar Contato</label>
+                    <input type="text" id="contactInput" class="standardFormInput" placeholder="Digite o número de contato">
+                    <button id="addContactButton" class="btn btn-default form-button"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            
+              <div class="forInputs">
+                <!-- Div para mostrar a lista de contatos -->
+                <h2>Lista de contactos</h2>
+                <div class="contacts-list" id="contactsList">
+                    <ul id="contactsUl">
+                        <!-- Os contatos adicionados serão exibidos aqui -->
+                    </ul>
+                </div>
+              </div>
 
                 </div>
 
@@ -220,5 +229,7 @@
 <script src="../../../components/sideBar/sideBar.js"></script>
 <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
 <script src="../../../components/inputs/searchTools/searchTools.js"></script>
+
+<script src="../../../components/inputs/multItemsInput/multItemsInput.js"></script>
 </body>
 </html>

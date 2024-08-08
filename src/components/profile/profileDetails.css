@@ -7,6 +7,13 @@
     margin-top: 30px;
 }
 
+.groupContent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
 .profileDetails {
     display: flex;
     flex-basis: 100%;
@@ -36,6 +43,7 @@
 
 .details {
     padding: 5px;
+    margin: 5px 10px;
     border-radius: 10px;
     border: 1px dashed var(--myLightBlueButton);
 }
@@ -52,7 +60,7 @@
 
 }
 
-.personalInformation > .profileName > i.fa-circle-user{
+.profileName > i.fa-circle-user{
     padding: 10px;
 }
 

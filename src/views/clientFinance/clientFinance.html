@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Perfil</title>
+    <title>Historico de pagamentos</title>
 
     <link rel="shortcut icon" href="../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../components/header/header.css">
@@ -22,12 +22,12 @@
     <link rel="stylesheet" href="../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../components/boot/set/buttons/buttonsMediaquery.css">
     <link rel="stylesheet" href="../../components/boot/inputs.css">
-
+    <link rel="stylesheet" href="../../components/boot/infoTextType.css">
     <link rel="stylesheet" href="../../components/boot/selectedIconSideBar.css">
 
 
-    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
-<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+    <!-- <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css"> -->
+   <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
@@ -48,15 +48,15 @@
                 <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
             </li>
     
-            <li><a href="../../views/dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-            <li><a href="../../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
-            <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
-            <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
-            <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
-            <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
-            <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
-            <!-- <li><a href="../../index.html"><i class="fa-solid fa-building"></i>Empresas</a></li> -->
-            <li><a href="../../listofPostingValues/listofPostingValues.html"><i class="fa-solid fa-coins"></i>Finanças</a></li>
+            <li><a href="../dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
+            <li><a href="../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+            <li><a href="../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+            <li><a href="../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+            <li><a href="../reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+            <li><a href="../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+            <li><a href="../clientFinance/clientFinance.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
+            <li><a href="../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
             <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
         </ul>
     </menu>
@@ -83,9 +83,9 @@
                         <th>Nº</th>
                         <th>Data de pagamento</th>
                         <th>Prazo de licença</th>
-                        <!-- <th>Licença</th> -->
                         <th>Valor pago</th>
                         <th>Conta</th>
+                        <th>Estado</th>
                     </tr>
                     </thead>
                     
@@ -94,51 +94,11 @@
                         <th>1</th>
                         <th>10/07/2024</th>
                         <th>10/07/2024</th>
-                        <!-- <th>Semestral</th> -->
                         <th>4,800.00</th>
                         <th>E-mola</th>
+                        <th class="info-text">Activo</th>
                     </tr>
-    
-                    <tr>
-                        <th>1</th>
-                        <th>10/07/2024</th>
-                        <th>10/07/2024</th>
-                        <!-- <th>Semestral</th> -->
-                        <th>4,800.00</th>
-                        <th>E-mola</th>
-                    </tr>
-    
-                    <tr>
-                        <th>1</th>
-                        <th>10/07/2024</th>
-                        <th>10/07/2024</th>
-                        <!-- <th>Semestral</th> -->
-                        <th>4,800.00</th>
-                        <th>E-mola</th>
-                    </tr>
-    
-                    <tr>
-                        <th>1</th>
-                        <th>10/07/2024</th>
-                        <th>10/07/2024</th>
-                        <!-- <th>Simestral</th> -->
-                        <th>4,800.00</th>
-                        <th>E-mola</th>
-                    </tr>
-                        <tr>
-                            <th>1</th>
-                            <th>10/07/2024</th>
-                            <th>10/07/2024</th>
-                            <!-- <th>Semestral</th> -->
-                            <th>4,800.00</th>
-                            <th>E-mola</th>
-                        </tr>
-                        <th>1</th>
-                        <th>10/07/2024</th>
-                        <th>10/07/2024</th>
-                        <!-- <th>Semestral</th> -->
-                        <th>4,800.00</th>
-                        <th>E-mola</th>
+                   
                     </tbody>
                 </table>
             </div>

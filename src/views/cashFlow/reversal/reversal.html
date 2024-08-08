@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Adicionar Conta</title>
+    <title>Estornar</title>
 
     <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../components/header/header.css">
@@ -71,26 +71,39 @@
     <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
-            <h1 class="formTitle">Adicionar Conta</h1>
+            <h1 class="formTitle">Estorno</h1>
             <form action="#" class="standardForm">
+                <h2 class="standardFormSubtitle">Valor do movimento</h2>
+                <p class="infoParagraph">20 000</p>
+
+                <div class="forInputsConteiner">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="reversalDate">Data do estorno *</label>
+                        <input class="standardFormInput" type="date" id="reversalDate" name="reversalDate" autofocus>
+                        <div id="reversalDateDocumentoFeedback" class="feedback"></div>
+                    </div>
+                    
+                </div>
+
+                <div class="forInputsConteiner">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="reversalAmount">Valor do estorno *</label>
+                        <input class="standardFormInput" type="text" id="reversalAmount" name="reversalAmount" step="0.01" min="0" placeholder="0.00">
+                        <div id="reversalAmountDocumentoFeedback" class="feedback"></div>
+                    </div>
+                </div>
+                
 
                     <div class="forInputsConteiner">
                         <div class="forInputs">
-                            <label class="standardFormLabel" for="description">Descrição *</label>
-                            <input class="standardFormInput" type="text" id="description" name="description" autofocus>
-                            <div id="descriptionDocumentoFeedback" class="feedback">
-                            </div>
+                            <label class="standardFormLabel" for="reasonForReversal">Motivo do estorno *</label>
+                            <textarea class="standardFormInput" id="reasonForReversal" name="reasonForReversal" autofocus></textarea>
+                            <div id="reasonForReversalDocumentoFeedback" class="feedback"></div>
                         </div>
-                        </div>
+                        
+                    </div>
 
-                        <div class="forInputsConteiner">
-                            <div class="forInputs">
-                            <label class="standardFormLabel" for="acountNumber">Número de conta *</label>
-                            <input class="standardFormInput" type="text" id="acountNumber" name="acountNumber">
-                            <div id="acountNumberDocumentoFeedback" class="feedback">
-                            </div>
-                        </div>
-                        </div>
+                       
                     <div class="button-container">
                         <button class="btn btn-cancel" type="reset">Descartar</button>
                         <button class="btn btn-success" type="submit">Submeter</button>

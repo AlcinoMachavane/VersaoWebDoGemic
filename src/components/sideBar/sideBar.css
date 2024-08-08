@@ -29,6 +29,7 @@ ul > li > a > i {
     transition: .8s ease-in-out;
     overflow-x: hidden;
     border-right: 2px solid var(--myLightBlue);
+    z-index: 1;
     
 }
 
