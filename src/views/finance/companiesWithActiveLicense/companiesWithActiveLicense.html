@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Licença em vigor</title>
+    
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../../components/header/header.css">
+     <!-- <link rel="stylesheet" href="../../../src/components/header/headerMediaQuery.css"> -->
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../../components/footer/footer.css">
+    <!--    -->
+    <link rel="stylesheet" href="listofPostingValuesMediaQuery.css">
+    <!--    -->
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
+    <link rel="stylesheet" href="../../../components/boot/infoTextType.css">
+    <link rel="stylesheet" href="../../../components/table/table.css">
+    <link rel="stylesheet" href="../../../components/inputs/tableInputs/tableInputs.css">
+    <link rel="stylesheet" href="../../../components/boot/selectedIconSideBar.css">
+    <!--    -->
+    <!-- <link rel="stylesheet" href="../assets/fontawesome-free-6.5.1-web/css/all.min.css"> -->
+   <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
+
+</head>
+<body>
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+    <menu id="menu" class="menuBar sidebar-hidden">
+        <ul>
+            <li id="buttonForBar">
+                <i class="fa-regular fa-circle-xmark" id="xmark"></i>
+                <i class="fa-solid fa-bars" id="bars"></i>
+            </li>
+            <li><a href="../../dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="../../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
+            <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+            <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+            <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+            <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+            <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
+            <li><a href="../companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+        </ul>
+    </menu>
+
+<!--MAIN Conteiner-->
+<main class="mainContent">
+
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+    <nav class="navBar hide">
+        <span></span>
+        <a href="company_history/company_history.html" title="Ver meu perfil"><p>Ola Brian Smith <i
+                class="fa-solid fa-circle-user"></i></p></a>
+    </nav>
+
+        <!-- SUB NAVBAR-->
+     <nav class="subNavBar">
+        <div class="mobileDisplay">
+            <!-- <div class="justifyButton"> -->
+
+                <a href="companiesWithActiveLicense.html" class="btn btn-default" id="companiesWithActiveLicense"
+                title="Licença em vigor"><i class="fa-solid fa-money-check-dollar"></i>
+             </a>
+
+                <a href="../registeredCompanies/registeredCompanies.html" class="btn btn-default" id="registeredCompanies"
+                   title="Lista de empresas cadastradas"><i class="fa-solid fa-building"></i>
+                </a>
+                
+                
+            <!-- </div> -->
+        </div>
+    </nav>
+
+    <!--  Conteiner FOR MAIN CONTENT-->
+    <div class="mainContentJustifier">
+
+        <!--  TABLE Conteiner-->
+        <div class="tableConteiner">
+            <table class="display table_on_profile_view" style="width:100%">
+                <thead>
+                    <tr>
+                    <th>Nº</th>
+                    <th>Nome da Empresa</th>
+                    <th>Nome do Administrador Sénior</th>
+                    <th>Valor pago</th>
+                    <th>Conta</th>
+                    <th>Data de pagamento</th>
+                    <th>prazo de licença</th>
+                    <th>Estado</th>
+                    <th class="action">Ações</th>
+                </tr>
+                </thead>
+                
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juntos Microcrédito</td>
+                    <th>Arnaldo Osvaldo</th>
+                    <th>1000.00</th>
+                    <th>M-pesa</th>
+                    <td>2011-04-25</td>
+                    <td>2011-04-25</td>
+                    <td class="info-text-without-backgroud">Ativo</td>
+                    <td class="actionEye" title="Visualizar histórico">
+                        <a href="../payment/payment.html"  title="Fazer pagamento"><i class="fa-solid fa-money-bill-wave"></i></a>
+                        <a href="../paymentHistory/paymentHistory.html"> <i
+                            class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nome da Empresa</th>
+                    <th>Nome do Administrador Sénior</th>
+                    <th>Valor pago</th>
+                    <th>Conta</th>
+                    <th>Data de pagamento</th>
+                    <th>prazo da licença</th>
+                    <th>Estado</th>
+                    <!-- <th class="action">Ações</th> -->
+                    <!--                    <th></th>-->
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+    </div>
+
+    <!--  FOOTER-->
+    <footer>
+        <p>&copy;Guizo Informática e Serviços</p>
+    </footer>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
+
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/table/table.js"></script>
+<script src="../../../components/boot/set/set.js"></script>
+
+
+</body>
+</html>
+

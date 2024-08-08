@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Perfil</title>
+
+    <link rel="shortcut icon" href="../../assets/icons/favicon_gemic_app.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/headerMediaQuery.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBar.css">
+    <link rel="stylesheet" href="../../components/sideBar/sideBarMediaQuery.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+
+    <link rel="stylesheet" href="../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../components/table/table.css">
+    <link rel="stylesheet" href="../../components/boot/set/graphics/graphic.css">
+     <link rel="stylesheet" href="../../components/boot/set/graphics/graphicMediaquery.css">
+    <link rel="stylesheet" href="../../components/boot/set/buttons/buttons.css">
+    <link rel="stylesheet" href="../../components/boot/set/buttons/buttonsMediaquery.css">
+    <link rel="stylesheet" href="../../components/boot/inputs.css">
+
+    <link rel="stylesheet" href="../../components/boot/selectedIconSideBar.css">
+
+
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css">
+
+</head>
+<body>
+
+
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+
+    <menu  id="menu" class="menuBar sidebar-hidden">
+
+        <ul>
+            <li id="buttonForBar">
+                <i class="fa-regular fa-circle-xmark" id="xmark"></i><i class="fa-solid fa-bars" id="bars"></i>
+            </li>
+    
+            <li><a href="../../views/dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="../../admin/admin.html"><i id="admin" class="fa-solid fa-user-tie"></i> Administração</a></li>
+            <li><a href="../../clients/Client.html"><i class="fa-regular fa-address-card"></i> Clientes</a></li>
+            <li><a href="../../loans/loans.html"><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a></li>
+            <li><a href="../../cashFlow/dailyTransitions.html"><i class="fa-solid fa-cash-register"></i> Caixa</a></li>
+            <li><a href="../../views/reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
+            <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
+            <!-- <li><a href="../../index.html"><i class="fa-solid fa-building"></i>Empresas</a></li> -->
+            <li><a href="../../listofPostingValues/listofPostingValues.html"><i class="fa-solid fa-coins"></i>Finanças</a></li>
+            <li><a href="../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+        </ul>
+    </menu>
+
+    <main class="mainContent">
+
+        <!--navBar-->
+        <nav class="navBar">
+            <span></span>
+            <a href="profile.html" title="Ver meu perfil"><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p></a>
+        </nav>
+    
+        <!--MAIN-->
+        <!--    <div class="ScrollAllContent">-->
+    
+    
+        <div class="mainContentJustifierWithoutSubMenu">
+
+             <!--  Conteiner FOR MAIN CONTENT-->
+            <div class="tableConteiner">
+                <table class="display table_on_profile_view" style="width:100%">
+                    <thead>
+                        <tr>
+                        <th>Nº</th>
+                        <th>Data de pagamento</th>
+                        <th>Prazo de licença</th>
+                        <!-- <th>Licença</th> -->
+                        <th>Valor pago</th>
+                        <th>Conta</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <th>10/07/2024</th>
+                        <th>10/07/2024</th>
+                        <!-- <th>Semestral</th> -->
+                        <th>4,800.00</th>
+                        <th>E-mola</th>
+                    </tr>
+    
+                    <tr>
+                        <th>1</th>
+                        <th>10/07/2024</th>
+                        <th>10/07/2024</th>
+                        <!-- <th>Semestral</th> -->
+                        <th>4,800.00</th>
+                        <th>E-mola</th>
+                    </tr>
+    
+                    <tr>
+                        <th>1</th>
+                        <th>10/07/2024</th>
+                        <th>10/07/2024</th>
+                        <!-- <th>Semestral</th> -->
+                        <th>4,800.00</th>
+                        <th>E-mola</th>
+                    </tr>
+    
+                    <tr>
+                        <th>1</th>
+                        <th>10/07/2024</th>
+                        <th>10/07/2024</th>
+                        <!-- <th>Simestral</th> -->
+                        <th>4,800.00</th>
+                        <th>E-mola</th>
+                    </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>10/07/2024</th>
+                            <th>10/07/2024</th>
+                            <!-- <th>Semestral</th> -->
+                            <th>4,800.00</th>
+                            <th>E-mola</th>
+                        </tr>
+                        <th>1</th>
+                        <th>10/07/2024</th>
+                        <th>10/07/2024</th>
+                        <!-- <th>Semestral</th> -->
+                        <th>4,800.00</th>
+                        <th>E-mola</th>
+                    </tbody>
+                </table>
+            </div>
+    
+           </div>
+    
+        <!--    FOOTER-->
+        <footer>
+            <p>&copy;Guizo Informática e Serviços</p>
+        </footer>
+    
+    </main>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
+
+<script src="../../components/sideBar/sideBar.js"></script>
+<script src="../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../components/table/table.js"></script>
+
+</body>
+</html>

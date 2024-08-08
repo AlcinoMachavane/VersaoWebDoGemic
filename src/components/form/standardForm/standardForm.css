@@ -72,7 +72,7 @@
 
 .joinDataConteiner{
     display: flex;
-    align-items: center!important;
+    justify-content: space-around;
     flex-direction: row;
     
 }
