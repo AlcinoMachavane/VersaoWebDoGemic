@@ -1,49 +1,62 @@
+// Função para alternar a classe 'expanded' no menu
+document.getElementById('bars').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    var menuList = document.querySelector('.menuBar > ul');
+    menu.classList.toggle('expanded');
+    menuList.classList.toggle('expanded');
 
+    // Altera o ícone de 'bars' para 'xmark'
+    toggleIcon();
+});
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-  // Função para alternar a classe 'expanded' no menu
-        document.getElementById('bars').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('expanded');
-        });
+document.getElementById('xmark').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    var menuList = document.querySelector('.menuBar > ul');
+    menu.classList.remove('expanded');
+    menuList.classList.remove('expanded');
 
-        document.getElementById('xmark').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.classList.remove('expanded');
-        });
+    // Altera o ícone de 'xmark' para 'bars'
+    toggleIcon();
+});
 
-         document.getElementById('bars').addEventListener('click', function() {
-            // Obtém o <ul> dentro da .menuBar
-            var menuList = document.querySelector('.menuBar > ul');
-            // Alterna a classe 'expanded' no <ul>
-            menuList.classList.toggle('expanded');
-        });
+// Alterna a classe 'expanded' no menu ao clicar em um botão fora do menu
+document.getElementById('buttonForBarMobile').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    var menuList = document.querySelector('.menuBar > ul');
+    var isExpanded = menuList.classList.toggle('expanded');
+    menu.classList.toggle('expanded', isExpanded);
 
-        document.getElementById('xmark').addEventListener('click', function() {
-            // Obtém o <ul> dentro da .menuBar
-            var menuList = document.querySelector('.menuBar > ul');
-            // Remove a classe 'expanded' no <ul>
-            menuList.classList.remove('expanded');
-        });
+    // Altera o ícone com base no estado do menu
+    toggleIcon();
+});
 
-        // Alternativamente, se desejar que o botão fora do menu também possa alternar o menu
-        document.getElementById('buttonForBarMobile').addEventListener('click', function() {
-            var menuList = document.querySelector('.menuBar > ul');
-            menuList.classList.toggle('expanded');
-        });
+// Altera o ícone com base no estado do menu
+function toggleIcon() {
+    var barsIcon = document.getElementById('bars');
+    var xmarkIcon = document.getElementById('xmark');
+    var menu = document.getElementById('menu');
 
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        // ... (código anterior)
-
-// Adiciona evento de clique no documento
-document.addEventListener('click', function(event) {
-    // Verifica se o elemento clicado é diferente da <ul> e de seus filhos
-    if (!event.target.closest('.menuBar > ul')) {
-      // Remove a classe 'expanded' da <ul>
-      var menuList = document.querySelector('.menuBar > ul');
-      menuList.classList.remove('expanded');
+    if (menu.classList.contains('expanded')) {
+        barsIcon.style.display = 'none';
+        xmarkIcon.style.display = 'block';
+    } else {
+        barsIcon.style.display = 'block';
+        xmarkIcon.style.display = 'none';
     }
-  });
-  
+}
+
+// Adiciona evento de clique no documento para fechar o menu ao clicar fora dele
+document.addEventListener('click', function(event) {
+    var menuList = document.querySelector('.menuBar > ul');
+    var barsIcon = document.getElementById('bars');
+    var xmarkIcon = document.getElementById('xmark');
+
+    // Verifica se o clique foi fora do menu e fora dos ícones de menu
+    if (!event.target.closest('.menuBar > ul') && !event.target.closest('#bars') && !event.target.closest('#xmark')) {
+        menuList.classList.remove('expanded');
+        menuList.parentElement.classList.remove('expanded');
+        
+        // Altera o ícone de volta para 'bars' se o menu for fechado
+        toggleIcon();
+    }
+});

@@ -5,25 +5,48 @@ html{
     /* color: #636B7E; */
 }
 
-input:focus {
-    border: 2px solid var(--myLightBlue); /* Altere as propriedades da borda conforme necessário */
+/* Estilo para inputs ao receber foco */
+input:focus,
+select:focus,
+textarea:focus,
+input[type="date"]:focus
+ {
+    border: 1px solid #fff!important; /* Cor diretamente aplicada */
     outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 20px #add8e68b; /* Sombra aplicada no foco */
 }
+
+
+/* Estilos para a barra de rolagem nos navegadores baseados em WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    /*background-color: rgba(30, 107, 215, 0.15);*/
-    background-color: rgba(30, 107, 215, 0.08);
+    background-color: rgba(30, 107, 215, 0.08); /* Cor do track */
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    /*background-color: rgba(62, 151, 255, 0.75);*/
-    background-color: rgba(62, 151, 255, 0.15);
+    background-color: rgba(62, 151, 255, 0.15); /* Cor do thumb */
     border-radius: 5px;
 }
+
+/* Estilo da barra de rolagem no Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(62, 151, 255, 0.15) rgba(30, 107, 215, 0.08); /* Cor do thumb e track */
+}
+
+/* Para navegadores legados como o Internet Explorer */
+body {
+    -ms-overflow-style: none; /* Remove a barra de rolagem no IE */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem nos navegadores baseados em WebKit */
+}
+
 
 .formConteiner{
 overflow: hidden;
