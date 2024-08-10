@@ -106,16 +106,6 @@
                 </div>
 
                 <div class="forInputs">
-                    <label class="standardFormLabel" for="contact">Contacto *</label>
-                    <input class="standardFormInput" type="tel" id="contact" name="contact">
-                    <div id="contactDocumentoFeedback" class="feedback"></div>
-                </div>
-
-            </div>
-
-                <div class="forInputsConteiner">
-
-                <div class="forInputs">
                     <h2 class="standardFormSubtitle">Estado *</h2>
                     <div class="radioInputConteiner">
                         <input class="standardFormInput" type="radio" id="active" name="status">
@@ -125,14 +115,28 @@
                     </div>
                     <div id="statusDocumentoFeedback" class="feedback"></div>
                 </div>
-                
-                <div class="forInputs">
-                    <label class="standardFormLabel" for="optionalContact">Contacto2</label>
-                    <input class="standardFormInput" type="tel" id="optionalContact" name="optionalContact">
-                    <div id="optionalContactDocumentoFeedback" class="feedback"></div>
-                </div>
 
-                
+            </div>
+
+            <div class="forInputsConteiner">
+                <!-- Container para entrada de contato -->
+                <div class="forInputs">
+                <div class="contact-input-container">
+                    <label for="contactInput" class="form-label">Adicionar Contato</label>
+                    <input type="text" id="contactInput" class="standardFormInput" placeholder="Digite o número de contato">
+                    <button id="addContactButton" class="btn btn-default form-button"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            
+              <div class="forInputs">
+                <!-- Div para mostrar a lista de contatos -->
+                <h2>Lista de contactos</h2>
+                <div class="contacts-list" id="contactsList">
+                    <ul id="contactsUl">
+                        <!-- Os contatos adicionados serão exibidos aqui -->
+                    </ul>
+                </div>
+              </div>
             </div>
 
             <h2 class="standardFormDescription">Cargo *</h2>
@@ -188,5 +192,6 @@
 </main>
 
 <script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/inputs/multItemsInput/multItemsInput.js"></script>
 </body>
 </html>
