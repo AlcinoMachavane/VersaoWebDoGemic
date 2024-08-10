@@ -1,8 +1,9 @@
 @charset "UTF_8";
 
-.btn-container {
+.modal-container .btn-container {
     margin: 50px;
 }
+
 /* Estilo para o modal */
 .modal {
     display: none; /* Esconde o modal por padrão */
@@ -15,6 +16,7 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente */
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -25,12 +27,14 @@
     max-width: 400px; /* Largura máxima do modal */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
     color: black;
@@ -38,15 +42,16 @@
     cursor: pointer;
 }
 
-.modal > .modal-content > h2,p{
+.modal-content > h2, 
+.modal-content > p {
     margin-bottom: 15px;
 }
 
-.modal > .modal-content > h2{
+.modal-content > h2 {
     font-size: 14pt;
 }
 
-.invitationLink{
+.invitationLink {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -59,4 +64,13 @@
 .invitationLink:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+.button-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: right;
+    margin: 30px 0;
 }
