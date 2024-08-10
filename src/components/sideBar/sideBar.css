@@ -29,6 +29,8 @@ ul > li > a > i {
     transition: .8s ease-in-out;
     overflow-x: hidden;
     border-right: 2px solid var(--myLightBlue);
+    touch-action: pan-y; /* Permite rolar verticalmente em dispositivos móveis */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
     z-index: 1;
     
 }
