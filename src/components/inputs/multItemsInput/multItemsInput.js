@@ -4,7 +4,12 @@ const addContactButton = document.getElementById('addContactButton');
 const contactsUl = document.getElementById('contactsUl');
 
 // Função para adicionar contato à lista
-function addContact() {
+function addContact(event) {
+    // Evita o comportamento padrão do botão, que é recarregar a página
+    if (event) {
+        event.preventDefault();
+    }
+
     const contactValue = contactInput.value.trim();
 
     // Verifica se o campo de entrada não está vazio
@@ -23,6 +28,7 @@ function addContact() {
 }
 
 // Adiciona evento de clique ao botão "Adicionar"
+// Passa o evento para a função addContact
 addContactButton.addEventListener('click', addContact);
 
 // Adiciona evento de pressionar "Enter" no campo de entrada
@@ -31,3 +37,4 @@ contactInput.addEventListener('keypress', function (e) {
         addContact();
     }
 });
+
