@@ -1,29 +1,25 @@
-@charset "UTF-8";
+@charset "UTF_8";
 
-@media screen and (max-width: 650px) {
-  .paymentDataConteiner {
-    max-width: 620px;
-  }
 
-  .arangeSmallContent {
-    justify-content: flex-start;
-    overflow: auto;
-  }
+.paymentDataConteiner{
 
-  .dataRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  fieldset {
-    display: flex;
-    flex-basis: 100%;
-  }
 }
 
-@media screen and (max-width: 500px) {
-    .paymentDataConteiner {
-        width: 90%;
-      }
+.paymentTitle{
+
+}
+
+.titleAndDataConteinerName{
+
+}
+
+@media screen and (max-width: 600px) {
+  .dataRow{
+    flex-direction: column;
   }
+
+  .titleAndDataConteiner{
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+}

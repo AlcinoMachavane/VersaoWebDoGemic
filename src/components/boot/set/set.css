@@ -154,20 +154,25 @@ input{
 
 .mainContentJustifier{
     height: calc(100vh - 130px);
+    max-width: 1300px;
     align-items: center;
+    flex-direction: row;
 }
 
 @media screen and (max-width: 800px) {
     .mainContentJustifier{
     justify-content: flex-start;
+
 }
 }
 
 .mainContentJustifierWithoutSubMenu{
     flex-wrap: wrap;
     align-items: center;
+    max-width: 1300px;
     overflow: auto;
     height: calc(100vh - 75px);
+    flex-direction: row;
 }
 
 

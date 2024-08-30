@@ -6,11 +6,6 @@
   /* background-color: blueviolet; */
 }
 
-.justifyItems{
-  display: flex;
-  flex-direction: column;
-} 
-
 .paymentDataConteiner {
   display: flex;
   max-width: 620px;

@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-.justifyItems{
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-    flex-direction: column;
-  } 
-
 .fa-angles-down{
 font-size: 10pt;
 }
