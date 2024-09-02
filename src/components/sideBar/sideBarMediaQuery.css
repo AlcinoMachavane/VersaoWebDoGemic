@@ -16,7 +16,7 @@
     }
 
     .menuBar > ul{
-        height: auto;
+        /*height: auto;*/
         width: 60%;
         height: 100vh;
         padding-bottom: 20px; 
