@@ -1,4 +1,4 @@
-@charset "UTF_8";
+@charset "UTF-8";
 
 
 .formConteiner{
@@ -6,8 +6,7 @@
     border: 1px solid rgba(128, 128, 128, 0.281);
     border-radius: 10px;
     box-shadow: var(--my-box-shadow);
-    margin: 20px auto;
-
+    margin: 20px 5px 40px 5px;
 }
 
 .standardForm{
