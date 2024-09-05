@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
 .wrapConteiner{
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* background-color: blueviolet; */
 }
 
 .paymentDataConteiner {
   display: flex;
-  max-width: 620px;
   flex-basis: 100%;
+  width: 100%;
   justify-content: center;
   box-shadow: var(--my-box-shadow);
   background-color: white;
@@ -96,9 +96,7 @@ h2 {
 .tableConteiner {
   display: block;
   flex-basis: 100%;
-  max-width: 600px;
-  flex-basis: 90%;
-  margin: 20px auto;
+  margin: 20px;
 }
 
 

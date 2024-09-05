@@ -1,25 +1,30 @@
-@charset "UTF_8";
+@charset "UTF-8";
 
 
-.paymentDataConteiner{
-
-}
-
-.paymentTitle{
+.paymentTitle {
 
 }
 
-.titleAndDataConteinerName{
+.titleAndDataConteinerName {
 
 }
 
 @media screen and (max-width: 600px) {
-  .dataRow{
-    flex-direction: column;
-  }
 
-  .titleAndDataConteiner{
-    flex-basis: 100%;
-    margin-bottom: 10px;
-  }
+    .paymentDataConteiner {
+        margin: 10px;
+    }
+
+    .dataRow {
+        flex-direction: column;
+    }
+
+    .titleAndDataConteiner {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tableConteiner {
+        margin: 10px;
+    }
 }
