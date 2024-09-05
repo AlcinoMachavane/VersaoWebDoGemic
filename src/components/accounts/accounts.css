@@ -91,7 +91,7 @@
   /*background-color: pink;*/
 }
 
-.editAcount > .fa-pencil-square{
+.editAcount > .fa-pen-clip{
   border-radius: 50%;
   height: auto;
   color: var(--myLightBlue);
@@ -103,12 +103,12 @@
   padding: 2px;
 }
 
-.editAcount > .fa-pencil-square:not(last-child){
+.editAcount > .fa-pen-clip:not(last-child){
   margin-right: 10px;
   /*border: 2px solid black;*/
 }
 
-.editAcount > .fa-pencil-square:hover{
+.editAcount > .fa-pen-clip:hover{
   box-shadow: var(--my-box-shadow);
   border: 1px solid var(--myLightBlue);
 }
