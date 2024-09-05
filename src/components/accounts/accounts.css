@@ -45,7 +45,7 @@
 .titleAndDataConteiner {
   background-color: white;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px;
   flex-basis: calc(16.6% - 70px);
   border-radius: 10px;
   border: none;
@@ -71,7 +71,7 @@
   font-weight: bold;
 }
 
-.titleAndDataConteiner > a {
+.titleAndDataConteiner > .accountValue {
   justify-content: center;
   align-items: center;
   flex-basis: 100%;
@@ -80,4 +80,35 @@
   margin: 5px;
   border: 1px solid lightgreen;
   color: darkgreen;
+}
+
+/* ///////////////////////////// EDIT BUTTON /////////////////////////// */
+.editAcount{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: flex-end;
+  /*margin-bottom: 10px;*/
+  /*background-color: pink;*/
+}
+
+.editAcount > .fa-pencil-square{
+  border-radius: 50%;
+  height: auto;
+  color: var(--myLightBlue);
+  /*background-color: var(--myLightBlueButton);*/
+  background-color: white;
+  font-size: 10pt;
+  box-shadow: var(--my-box-shadow);
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+.editAcount > .fa-pencil-square:not(last-child){
+  margin-right: 10px;
+  /*border: 2px solid black;*/
+}
+
+.editAcount > .fa-pencil-square:hover{
+  box-shadow: var(--my-box-shadow);
+  border: 1px solid var(--myLightBlue);
 }
