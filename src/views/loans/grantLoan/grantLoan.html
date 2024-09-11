@@ -29,7 +29,7 @@
 
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
-<!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
+    <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
 
 </head>
 <body>
@@ -39,7 +39,7 @@
         <i class="fa-solid fa-bars"></i>
     </span>
 
-<menu  id="menu" class="menuBar sidebar-hidden">
+<menu id="menu" class="menuBar sidebar-hidden">
 
     <ul>
         <li id="buttonForBar">
@@ -54,7 +54,8 @@
         <li><a href="../../reports/Reports.html"><i class="fa-solid fa-file-invoice"></i> Relatórios</a></li>
         <li><a href="../../configs/aboutCompany.html"><i class="fa-solid fa-briefcase"></i> Acerca</a></li>
         <li><a href="../../clientFinance/clientFinance.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
-        <li><a href="../../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
+        <li><a href="../../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i
+                class="fa-solid fa-coins"></i> Finanças</a></li>
         <li><a href="../../../../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
     </ul>
 </menu>
@@ -80,7 +81,8 @@
 
                     <div class="forInputs">
                         <label class="standardFormLabel" for="clientSearch">Nome *</label>
-                        <input type="text" id="clientSearch" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
+                        <input type="text" id="clientSearch" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
                         <ul class="dropdown hidden">
                             <li data-value="Judite da Maura">Judite da Maura</li>
                             <li data-value="Carlos Felisberto">Carlos Felisberto</li>
@@ -91,236 +93,216 @@
                         </ul>
                         <div id="clientNameDocumentoFeedback" class="feedback"></div>
                     </div>
-                    
 
-                        <div class="forInputs">
-                            <label class="standardFormLabel" for="witnessSearch">Avalista(Testemunha)</label>
-                            <input type="text" id="witnessSearch" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-                            <ul class="dropdown hidden">
-                                <li data-value="Judite da Maura">Maura Felisberto</li>
-                                <li data-value="Carlos Felisberto"> Batista Carlos</li>
-                                <li data-value="Paula Jonas Batista">Paula  Felisberto</li>
-                                <li data-value="Maura Januário">Judite Januário</li>
-                                <li data-value="Felisberto Timóteo Dengo">Maura Judite Timóteo</li>
-                                <li data-value="Jonas Baltazar">Dengo Jonas Baltazar</li>
-                            </ul>
-                            <div id="witnessNameDocumentoFeedback" class="feedback"></div>
-                        </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="witnessSearch">Avalista(Testemunha)</label>
+                        <input type="text" id="witnessSearch" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li data-value="Judite da Maura">Maura Felisberto</li>
+                            <li data-value="Carlos Felisberto"> Batista Carlos</li>
+                            <li data-value="Paula Jonas Batista">Paula Felisberto</li>
+                            <li data-value="Maura Januário">Judite Januário</li>
+                            <li data-value="Felisberto Timóteo Dengo">Maura Judite Timóteo</li>
+                            <li data-value="Jonas Baltazar">Dengo Jonas Baltazar</li>
+                        </ul>
+                        <div id="witnessNameDocumentoFeedback" class="feedback"></div>
                     </div>
 
-                    <div class="forInputsConteiner">
-
-                        <div class="forInputs">
-                            <label class="standardFormLabel" for="concessionDate">Data de concessão *</label>
-                            <input class="standardFormInput" type="date" id="concessionDate" name="concessionDate">
-                            <div id="concessionDateDocumentoFeedback" class="feedback"></div>
-                        </div>
-                   
-
-                        <div class="forInputs">
-                            <label class="standardFormLabel" for="loansFees">Juros(%) *</label>
-                            <input class="standardFormInput" type="text" id="loansFees" name="loansFees">
-                            <div id="loansFeesDocumentoFeedback" class="feedback"></div>
-                        </div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="concessionDate">Data de concessão *</label>
+                        <input class="standardFormInput" type="date" id="concessionDate" name="concessionDate">
+                        <div id="concessionDateDocumentoFeedback" class="feedback"></div>
                     </div>
+                </div>
 
-                    <div class="forInputsConteiner">
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="loansFees">Juros(%) *</label>
+                        <input class="standardFormInput" type="text" id="loansFees" name="loansFees">
+                        <div id="loansFeesDocumentoFeedback" class="feedback"></div>
+                    </div>
 
                     <div class="forInputs">
                         <label class="standardFormLabel" for="loanValue">Valor da concessão *</label>
                         <input class="standardFormInput" type="text" id="loanValue" name="loanValue">
                         <div id="loanValueDocumentoFeedback" class="feedback"></div>
                     </div>
-                
 
-                        <div class="forInputs">
-                            <label class="standardFormLabel" for="loanGoal">Finalidade *</label>
-                            <input type="text" id="loanGoal" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-                            <ul class="dropdown hidden">
-                                <li></li>
-                                <li>Agricultura</li>
-                                <li>Consumo</li>
-                                <li>Comércio</li>
-                                <li>Educação</li>
-                                <li>Habitação</li>
-                                <li>Saúde</li>
-                                <li>Pecuária</li>
-                                <li>Compra de automóvel</li>
-                                <li>Outros</li>
-                            </ul>
-                            <div id="loanGoalDocumentoFeedback" class="feedback"></div>
-                        </div>
 
-                        </div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="loanGoal">Finalidade *</label>
+                        <input type="text" id="loanGoal" class="searchable-input" placeholder="Digite para pesquisar..."
+                               autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>Agricultura</li>
+                            <li>Consumo</li>
+                            <li>Comércio</li>
+                            <li>Educação</li>
+                            <li>Habitação</li>
+                            <li>Saúde</li>
+                            <li>Pecuária</li>
+                            <li>Compra de automóvel</li>
+                            <li>Outros</li>
+                        </ul>
+                        <div id="loanGoalDocumentoFeedback" class="feedback"></div>
+                    </div>
 
-                        <div class="forInputsConteiner">
-                        
-                        <div class="forInputs">
-                            <label class="standardFormLabel" for="proceduralComission">comissão processual</label>
-                            <input class="standardFormInput" type="text" id="proceduralComission" name="proceduralComission">
-                            <div id="proceduralComissionDocumentoFeedback" class="feedback"></div>
-                        </div>
+                </div>
 
-                            <div class="forInputs">
-                                <label class="standardFormLabel" for="comission">Comissão</label>
-                                <input class="standardFormInput" type="text" id="comission" name="comission">
-                                <div id="comissionDocumentoFeedback" class="feedback"></div>
-                            </div>
+                <div class="forInputsConteiner">
 
-                        </div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="proceduralComission">comissão processual</label>
+                        <input class="standardFormInput" type="text" id="proceduralComission"
+                               name="proceduralComission">
+                        <div id="proceduralComissionDocumentoFeedback" class="feedback"></div>
+                    </div>
 
-                        <div class="forInputsConteiner">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="comission">Comissão</label>
+                        <input class="standardFormInput" type="text" id="comission" name="comission">
+                        <div id="comissionDocumentoFeedback" class="feedback"></div>
+                    </div>
 
-                            <div class="forInputs">
-                                <label class="standardFormLabel" for="loanFrequency">Periodicidade *</label>
-                                <input type="text" id="loanFrequency" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-                                <ul class="dropdown hidden">
-                                    <li></li>
-                                    <li>Diário</li>
-                                    <li>Semanal</li>
-                                    <li>Mensal</li>
-                                    <li>Trimestral</li>
-                                    <li>Semestral</li>
-                                    <li>Anual</li>
-                                </ul>
-                                <div id="loanFrequencyDocumentoFeedback" class="feedback"></div>
-                            </div>
-                        
-
-                        
-                            <div class="forInputs">
-                                <label class="standardFormLabel" for="numOfInstallments">Numero de prestações *</label>
-                                <input type="text" id="numOfInstallments" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-                                <ul class="dropdown hidden">
-                                    <li></li>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                    <li>7</li>
-                                    <li>8</li>
-                                    <li>9</li>
-                                    <li>10</li>
-                                    <li>11</li>
-                                    <li>12</li>
-                                    <li>13</li>
-                                    <li>14</li>
-                                    <li>15</li>
-                                    <li>16</li>
-                                    <li>17</li>
-                                    <li>18</li>
-                                    <li>19</li>
-                                    <li>20</li>
-                                    <li>21</li>
-                                    <li>22</li>
-                                    <li>23</li>
-                                    <li>24</li>
-                                    <li>25</li>
-                                    <li>26</li>
-                                    <li>27</li>
-                                    <li>28</li>
-                                    <li>29</li>
-                                    <li>30</li>
-                                    <li>31</li>
-                                    <li>32</li>
-                                    <li>33</li>
-                                    <li>34</li>
-                                    <li>35</li>
-                                    <li>36</li>
-                                    <li>37</li>
-                                    <li>38</li>
-                                    <li>39</li>
-                                    <li>40</li>
-                                    <li>41</li>
-                                    <li>42</li>
-                                    <li>43</li>
-                                    <li>44</li>
-                                    <li>45</li>
-                                    <li>46</li>
-                                    <li>47</li>
-                                    <li>48</li>
-                                    <li>49</li>
-                                    <li>50</li>
-                                    <li>51</li>
-                                    <li>52</li>
-                                    <li>53</li>
-                                    <li>54</li>
-                                    <li>55</li>
-                                    <li>56</li>
-                                    <li>57</li>
-                                    <li>58</li>
-                                    <li>59</li>
-                                    <li>60</li>
-                                    <li>61</li>
-                                    <li>62</li>
-                                    <li>63</li>
-                                    <li>64</li>
-                                    <li>65</li>
-                                    <li>66</li>
-                                    <li>67</li>
-                                    <li>68</li>
-                                    <li>69</li>
-                                    <li>70</li>
-                                    <li>71</li>
-                                    <li>72</li>
-                                </ul>
-                                <div id="numOfInstallmentsDocumentoFeedback" class="feedback"></div>
-                            </div>
-
-                            </div>
-
-                            <div class="forInputsConteiner">
-                            <div class="forInputs">
-                                <label class="standardFormLabel" for="autoInstallmentsValue">Parcelas</label>
-                                <select name="autoInstallmentsValue" id="autoInstallmentsValue">
-                                    <option></option>
-                                    <option>12 000,00</option>
-                                    <option>12 000,00</option>
-                                    <option>12 000,00</option>
-                                </select>
-                                <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
-                            </div>
-
-                            <div class="forInputs">
-                                <label class="standardFormLabel" for="account">Conta *</label>
-                                <input type="text" id="account" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-                                <ul class="dropdown hidden">
-                                    <li></li>
-                                    <li>M-PESA</li>
-                                    <li>E-MOLA</li>
-                                    <li>M-KESH</li>
-                                    <li>BIM</li>
-                                    <li>BCI</li>
-                                    <li>ABSA</li>
-                                </ul>
-                                <div id="accountDocumentoFeedback" class="feedback"></div>
-                            </div>
-                        </div>
-
-                            <div class="forInputsConteiner">
-                    <div class="forInputs joinDataConteiner">
-                        <div class="joinData">
-                            <h2 class="">Valor total</h2>
-                            <p id="autoTotalValue">9 746,00</p>
-                        </div>
-                        
-                        <div class="joinData">
-                            <h2 class="">Prazo</h2>
-                            <p id="autoTherm">10/08/2024</p>
-                        </div>
-                        
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="loanFrequency">Periodicidade *</label>
+                        <input type="text" id="loanFrequency" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>Diário</li>
+                            <li>Semanal</li>
+                            <li>Mensal</li>
+                            <li>Trimestral</li>
+                            <li>Semestral</li>
+                            <li>Anual</li>
+                        </ul>
+                        <div id="loanFrequencyDocumentoFeedback" class="feedback"></div>
                     </div>
                 </div>
-                        
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="numOfInstallments">Numero de prestações *</label>
+                        <input type="text" id="numOfInstallments" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li>31</li>
+                            <li>32</li>
+                            <li>33</li>
+                            <li>34</li>
+                            <li>35</li>
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                            <li>41</li>
+                            <li>42</li>
+                            <li>43</li>
+                            <li>44</li>
+                            <li>45</li>
+                            <li>46</li>
+                            <li>47</li>
+                            <li>48</li>
+                            <li>49</li>
+                            <li>50</li>
+                            <li>51</li>
+                            <li>52</li>
+                            <li>53</li>
+                            <li>54</li>
+                            <li>55</li>
+                            <li>56</li>
+                            <li>57</li>
+                            <li>58</li>
+                            <li>59</li>
+                            <li>60</li>
+                            <li>61</li>
+                            <li>62</li>
+                            <li>63</li>
+                            <li>64</li>
+                            <li>65</li>
+                            <li>66</li>
+                            <li>67</li>
+                            <li>68</li>
+                            <li>69</li>
+                            <li>70</li>
+                            <li>71</li>
+                            <li>72</li>
+                        </ul>
+                        <div id="numOfInstallmentsDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="autoInstallmentsValue">Parcelas</label>
+                        <select name="autoInstallmentsValue" id="autoInstallmentsValue">
+                            <option></option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                            <option>12 000,00</option>
+                        </select>
+                        <div id="autoInstallmentsValueDocumentoFeedback" class="feedback"></div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="account">Conta *</label>
+                        <input type="text" id="account" class="searchable-input" placeholder="Digite para pesquisar..."
+                               autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li></li>
+                            <li>M-PESA</li>
+                            <li>E-MOLA</li>
+                            <li>M-KESH</li>
+                            <li>BIM</li>
+                            <li>BCI</li>
+                            <li>ABSA</li>
+                        </ul>
+                        <div id="accountDocumentoFeedback" class="feedback"></div>
+                    </div>
+                </div>
 
                 <div class="button-container">
                     <button class="btn btn-cancel" type="reset">Descartar</button>
                     <button class="btn btn-success" type="submit">Submeter</button>
                 </div>
             </form>
-            
+
         </div>
 
     </div>
