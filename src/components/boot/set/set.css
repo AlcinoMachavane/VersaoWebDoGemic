@@ -47,11 +47,6 @@ body::-webkit-scrollbar {
     display: none; /* Esconde a barra de rolagem nos navegadores baseados em WebKit */
 }
 
-
-.formConteiner{
-overflow: hidden;
-}
-
 /* FONTE */
 .quattrocento-sans-regular {
     font-family: "Quattrocento Sans", sans-serif;

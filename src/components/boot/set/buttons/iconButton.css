@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.iconButton{
+    background: transparent;
+    border: none;
+    display: flex;
+    /*flex-basis: 100%;*/
+    justify-content: flex-end;
+}
+
+.iconButton > .fa-pen-clip{
+    border-radius: 50%;
+    height: auto;
+    color: var(--myLightBlue);
+    background-color: white;
+    font-size: 10pt;
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid transparent;
+    padding: 2px;
+}
+
+.iconButton > .fa-pen-clip:not(last-child){
+    margin-right: 10px;
+}
+
+.iconButton > .fa-pen-clip:hover{
+    box-shadow: var(--my-box-shadow);
+    border: 1px solid var(--myLightBlue);
+}

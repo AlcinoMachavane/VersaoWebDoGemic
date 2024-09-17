@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="../../../components/footer/footer.css">
 
     <link rel="stylesheet" href="../../../components/boot/set/set.css">
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/iconButton.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css">
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css">
-<!--    <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">-->
     <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css">
-    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css">
     <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css">
@@ -66,27 +65,9 @@
                 class="fa-solid fa-circle-user"></i></p></a>
     </nav>
 
-    <nav class="subNavBar">
-
-        <div class="mobileDisplay">
-
-
-                <a href="../parametrization/parametrisation.html" class="btn btn-default" id="parametrisationButton"
-                   title="Parametrização"><i class="fa-solid fa-sitemap"></i>
-                </a>
-
-                <a href="configs.html" class="btn btn-default" id="configsButton"
-                   title="Configurações">
-                                       <i id="about" class="fa-solid fa-gear"></i>
-                </a>
-
-
-        </div>
-    </nav>
-
 
     <!--  Conteiner FOR MAIN CONTENT-->
-    <div class="mainContentJustifier">
+    <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
             <h1 class="formTitle">Configurações</h1>
@@ -158,9 +139,12 @@
               <div class="forInputs">
                 <div class="contact-input-container">
                     <label for="contactInput" class="form-label">Adicionar Contato</label>
+                    <div class="contetOnRow">
                     <input type="text" id="contactInput" class="standardFormInput" placeholder="Digite o número de contato">
-                    <button id="addContactButton" class="btn btn-default form-button"><i class="fa-solid fa-circle-plus"></i></button>
-                </div>
+<!--                    <button id="addContactButton" class="btn btn-default form-button"><i class="fa-solid fa-circle-plus"></i></button>-->
+                        <button id="addContactButton" class="iconButton" title="Adicionar contacto"><i class="fa-solid fa-circle-plus"></i></button>
+                    </div>
+                    </div>
               </div>
             
               <div class="forInputs">

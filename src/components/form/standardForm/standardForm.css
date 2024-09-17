@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 
 .formConteiner {
     padding: 20px;
@@ -29,10 +29,11 @@
     font-size: 13pt;
 }
 
+/*/////////////////////////////////////////////////////////////////////////////*/
 .standardFormSubtitle{
     font-size: 12px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin: 10px 0;
+    text-align: start;
 }
 
 .infoParagraph{
@@ -74,6 +75,10 @@
     flex-direction: column;
 }
 
+.standardFormLabel{
+    margin: 10px 0;
+}
+
 .standardFormInput,
 .daysToApplyFineFormInput,
 .searchable-input {
@@ -81,7 +86,7 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .contacts-list ul {
@@ -94,10 +99,6 @@
     height: 100px;
 }
 
-.forInputs label {
-    margin-bottom: 10px 0;
-}
-
 .button-container {
     display: flex;
     flex-basis: 100%;
@@ -105,4 +106,50 @@
     justify-content: space-around;
     text-align: right;
     margin: 30px 0;
+}
+
+.contact-input-container{
+
+}
+
+.contetOnRow{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.contacts-list{
+    border: 1px solid #99ccff;
+    padding: 5px;
+    border-radius: 5px;
+
+    margin: 5px 0 0 5px;
+    line-height: 1.2em;
+}
+
+#contactsUl > li{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.remove-button{
+    background: none;
+    border: none;
+    padding: 0 5px;
+    align-items: center;
+}
+
+.remove-button > i{
+    border-radius: 25px;
+    color: deeppink;
+    font-size: 10pt;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+
+.remove-button > i:hover{
+  border: 1px solid deeppink;
 }

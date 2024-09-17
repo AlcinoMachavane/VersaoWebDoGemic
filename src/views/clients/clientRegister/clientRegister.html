@@ -1,366 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
     <link rel="shortcut icon" href="../../../assets/icons/favicon_gemic_app.png" type="image/x-icon"/>
     <title>Cadastrar mutuário</title>
-    <link rel="stylesheet" href="../../../components/header/header.css" />
-    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css" />
-    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css" />
+    <link rel="stylesheet" href="../../../components/header/header.css"/>
+    <link rel="stylesheet" href="../../../components/header/headerMediaQuery.css"/>
+    <link rel="stylesheet" href="../../../components/sideBar/sideBar.css"/>
     <link rel="stylesheet" href="../../../components/sideBar/sideBarMediaQuery.css"/>
-    <link rel="stylesheet" href="../../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../../components/footer/footer.css"/>
 
-    <link rel="stylesheet" href="../../../components/boot/set/set.css" />
+    <link rel="stylesheet" href="../../../components/boot/set/set.css"/>
+    <link rel="stylesheet" href="../../../components/boot/set/buttons/iconButton.css"/>
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttons.css"/>
     <link rel="stylesheet" href="../../../components/boot/set/buttons/buttonsMediaquery.css"/>
     <link rel="stylesheet" href="../../../components/form/standardForm/standardForm.css"/>
-    <link rel="stylesheet" href="../../../components/form/standardForm/standardFormMediaquery.css"/>
     <link rel="stylesheet" href="../../../components/inputs/searchTools/searchTools.css">
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputs.css"/>
     <link rel="stylesheet" href="../../../components/inputs/standardInputs/standardInputsMediaquery.css"/>
 
-    <link rel="stylesheet" href="../../../components/boot/uledIconSideBar.css"/>
 
     <link rel="stylesheet" href="../../../assets/fontawesome-free-6.5.1-web/css/all.min.css"/>
 
     <link href="https://cdn.jsdelivr.net/npm/ul2@4.1.0-rc.0/dist/css/ul2.min.css" rel="stylesheet"/>
 
     <!--    <script src="https://kit.fontawesome.com/07b3a47c42.js" crossorigin="anonymous"></script>-->
-  </head>
-  <body>
-    <!-- MOBILE BUTTON FOR SIDEBAR-->
-    <span id="buttonForBarMobile" onclick="toggleMenu()">
+</head>
+<body>
+<!-- MOBILE BUTTON FOR SIDEBAR-->
+<span id="buttonForBarMobile" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </span>
 
-    <menu id="menu" class="menuBar sidebar-hidden">
-      <ul>
+<menu id="menu" class="menuBar sidebar-hidden">
+    <ul>
         <li id="buttonForBar">
-          <i class="fa-regular fa-circle-xmark" id="xmark"></i
-          ><i class="fa-solid fa-bars" id="bars"></i>
+            <i class="fa-regular fa-circle-xmark" id="xmark"></i
+            ><i class="fa-solid fa-bars" id="bars"></i>
         </li>
 
         <li>
-          <a class="menu-button" href="../../dashboard/dashboard.html"
+            <a class="menu-button" href="../../dashboard/dashboard.html"
             ><i class="fa-solid fa-chart-line"></i> Dashboard</a
-          >
+            >
         </li>
         <li>
-          <a class="menu-button" href="../../admin/admin.html"
+            <a class="menu-button" href="../../admin/admin.html"
             ><i class="fa-solid fa-user-tie"></i> Administração</a
-          >
+            >
         </li>
         <li>
-          <a class="menu-button" href="../Client.html"
+            <a class="menu-button" href="../Client.html"
             ><i id="clients" class="fa-regular fa-address-card"></i>
-            mutuário(cliente)</a
-          >
+                mutuário(cliente)</a
+            >
         </li>
         <li>
-          <a class="menu-button" href="../../loans/loans.html"
+            <a class="menu-button" href="../../loans/loans.html"
             ><i class="fa-solid fa-hand-holding-dollar"></i> Empréstimos</a
-          >
+            >
         </li>
         <li>
-          <a class="menu-button" href="../../cashFlow/dailyTransitions.html"
+            <a class="menu-button" href="../../cashFlow/dailyTransitions.html"
             ><i class="fa-solid fa-cash-register"></i> Caixa</a
-          >
+            >
         </li>
         <li>
-          <a class="menu-button" href="../../reports/Reports.html"
+            <a class="menu-button" href="../../reports/Reports.html"
             ><i class="fa-solid fa-file-invoice"></i> Relatórios</a
-          >
+            >
         </li>
         <li>
-          <a class="menu-button" href="../../configs/aboutCompany.html"
+            <a class="menu-button" href="../../configs/aboutCompany.html"
             ><i class="fa-solid fa-briefcase"></i> Acerca</a
-          >
+            >
         </li>
         <li><a href="../../clientFinance/clientFinance.html"><i class="fa-solid fa-money-bill"></i>finaças</a></li>
-        <li><a href="../../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i class="fa-solid fa-coins"></i> Finanças</a></li>
+        <li><a href="../../finance/companiesWithActiveLicense/companiesWithActiveLicense.html"><i
+                class="fa-solid fa-coins"></i> Finanças</a></li>
         <li>
-          <a class="menu-button" href="../../../../index.html"
+            <a class="menu-button" href="../../../../index.html"
             ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
-          >
+            >
         </li>
-      </ul>
-    </menu>
+    </ul>
+</menu>
 
-    <!--MAIN Conteiner-->
-    <main class="mainContent">
-      <!-- LOGGED NAME AND BUTTON TO PROFILE-->
-      <nav class="navBar">
+<!--MAIN Conteiner-->
+<main class="mainContent">
+    <!-- LOGGED NAME AND BUTTON TO PROFILE-->
+    <nav class="navBar">
         <span></span>
         <a href="../../admin/userProfile/profile.html" title="Ver meu perfil"
-          ><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p
+        ><p>Ola Brian Smith <i class="fa-solid fa-circle-user"></i></p
         ></a>
-      </nav>
+    </nav>
 
-      <!--  Conteiner FOR MAIN CONTENT-->
-      <div class="mainContentJustifierWithoutSubMenu">
+    <!--  Conteiner FOR MAIN CONTENT-->
+    <div class="mainContentJustifierWithoutSubMenu">
         <!-- SIGN form-->
         <div class="formConteiner">
-          <h1 class="formTitle">Cadastro mutuário(cliente)</h1>
-        <form action="#" class="standardForm">
+            <h1 class="formTitle">Cadastro mutuário(cliente)</h1>
+            <form action="#" class="standardForm">
 
-          <div class="forInputsConteiner">
-          
-            <div class="forInputs">
-              <label class="standardFormLabel" for="fullName">Nome completo *</label>
-              <input class="standardFormInput" type="text" id="fullName" name="fullName" autofocus />
-              <div id="fullNameDocumentoFeedback" class="feedback">
-              </div>
-            </div>
+                <div class="forInputsConteiner">
 
-            <div class="forInputs">
-              <h2 class="standardFormSubtitle">Género *</h2>
-              <div class="radioInputConteiner">
-                <input class="standardFormInput" type="radio" id="male" name="gender" />
-                <label class="standardFormLabel" for="male">Masculino</label>
-                <input class="standardFormInput" type="radio" id="female" name="gender" />
-                <label class="standardFormLabel" for="female">Femenino</label>
-              </div>
-              <div id="genderDocumentoFeedback" class="feedback">
-              </div>
-            </div>
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="fullName">Nome completo *</label>
+                        <input class="standardFormInput" type="text" id="fullName" name="fullName" autofocus/>
+                        <div id="fullNameDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
 
-          </div>
+                    <div class="forInputs">
+                        <h2 class="standardFormSubtitle">Género *</h2>
+                        <div class="radioInputConteiner">
+                            <input class="standardFormInput" type="radio" id="male" name="gender"/>
+                            <label class="standardFormLabel" for="male">Masculino</label>
+                            <input class="standardFormInput" type="radio" id="female" name="gender"/>
+                            <label class="standardFormLabel" for="female">Femenino</label>
+                        </div>
+                        <div id="genderDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
 
-          <div class="forInputsConteiner">
-
-            <div class="forInputs">
-              <h2 class="standardFormSubtitle">Estado civil *</h2>
-              <div class="radioInputConteiner">
-                <input class="standardFormInput" type="radio" id="single" name="maritalStatus" />
-                <label class="standardFormLabel" for="single">Solteiro(a)</label>
-                <input class="standardFormInput" type="radio" id="married" name="maritalStatus" />
-                <label class="standardFormLabel" for="married">Casado(a)</label>
-              </div>
-              <div id="maritalStatusDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-
-            <div class="forInputs">
-              <label class="standardFormLabel" for="typeOfDocument">Tipo de documento *</label>
-              <input type="text" id="typeOfDocument" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-              <ul class="dropdown hidden">
-                <li value="vazio"></li>
-                <li value="BI">BI</li>
-                <li value="Passaporte">Passaporte</li>
-                <li value="Passaporte">Cartão de eleitor</li>
-                <li value="Passaporte">carta de condução</li>
-              </ul>
-              <div id="typeOfDocumentDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-
-          </div>
-
-          <div class="forInputsConteiner">
-
-            <div class="forInputs">
-              <label class="standardFormLabel" for="documentNumber">Documento nº *</label>
-              <input class="standardFormInput" type="text" id="documentNumber" name="documentNumber" />
-              <div id="documentNumberDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-            
-            <div class="forInputs">
-              <label class="standardFormLabel" for="placeOfIssue">Emitido em *</label>
-              <input class="standardFormInput" type="text" id="placeOfIssue" name="placeOfIssue" />
-              <div id="placeOfIssueDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-
-          </div>
-
-          <div class="forInputsConteiner">
-            
-              <div class="forInputs">
-                <label class="standardFormLabel" for="dateOfIssue">Data de emissão *</label>
-                <input class="standardFormInput" type="date" id="dateOfIssue" name="dateOfIssue" />
-                <div id="dateOfIssueDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-              <div class="forInputs">
-                <label class="standardFormLabel" for="expirationDate">Validade *</label>
-                <input class="standardFormInput" type="date" id="expirationDate" name="expirationDate" />
-                <div id="expirationDateDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-            </div>
-
-            <div class="forInputsConteiner">
-
-            <div class="forInputs">
-              <label class="standardFormLabel" for="NUIT">NUIT *</label>
-              <input class="standardFormInput" type="text" id="NUIT" name="NUIT" />
-              <div id="NUITDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-
-            <div class="forInputs">
-              <label class="standardFormLabel" for="sourceOfIncome">Fonte de renda *</label>
-              <input type="text" id="sourceOfIncome" class="searchable-input" placeholder="Digite para pesquisar..." autocomplete="off">
-              <ul class="dropdown hidden">
-                <li value="vazio"></li>
-                <li value="Salário de Emprego Formal">
-                  Salário de Emprego Formal
-                </li>
-                <li value="Pequenos Negócios">Pequenos Negócios</li>
-                <li value="Agricultura Familiar">
-                  Agricultura Familiar
-                </li>
-                <li value="Artesanato">Artesanato</li>
-                <li value="Serviços Autônomos">Serviços Autônomos</li>
-                <li value="Pensões de Reforma">Pensões de Reforma</li>
-                <li value="Subsídios de Assistência Social">
-                  Subsídios de Assistência Social
-                </li>
-                <li value="Juros e Dividendos">Juros e Dividendos</li>
-                <li value="Aluguel de Imóveis">Aluguel de Imóveis</li>
-                <li value="Propriedades e Terras">
-                  Propriedades e Terras
-                </li>
-                <li value="Trabalho Freelancer">Trabalho Freelancer</li>
-                <li value="Trabalho Remoto">Trabalho Remoto</li>
-                <li value="Produção Agrícola">Produção Agrícola</li>
-                <li value="Pecuária">Pecuária</li>
-                <li value="Pensão de Alimentos">Pensão de Alimentos</li>
-                <li value="Outras Fontes">Outras Fontes</li>
-              </ul>
-
-              <div id="sourceOfIncomeDocumentoFeedback" class="feedback">
-              </div>
-            </div>
-
-          </div>
-
-          <div class="forInputsConteiner">
-
-              <div class="forInputs">
-                <label class="standardFormLabel" for="locationOfActivity">Local de atividade *</label>
-                <input class="standardFormInput" type="text" id="locationOfActivity" name="locationOfActivity"/>
-                <div id="locationOfActivityDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-              <div class="forInputs">
-                <label class="standardFormLabel" for="naturalness">Naturalidade *</label>
-                <input class="standardFormInput" type="text" id="naturalness" name="naturalness"/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam 
-                <div id="naturalnessDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-            </div>
-
-            <div class="forInputsConteiner">
-              <div class="forInputs">
-                <label class="standardFormLabel" for="email">Email *</label>
-                <input class="standardFormInput" type="email" id="email" name="email" />
-                <div id="emailDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-            </div>
-
-            <div class="forInputsConteiner">
-
-              <div class="forInputs">
-                <label class="standardFormLabel" for="residence">Residência *</label>
-                <input class="standardFormInput" type="text" id="residence" name="residence" />
-                <div id="residenceDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-              <div class="forInputs">
-                <label class="standardFormLabel" for="neighborhood">Bairro *</label>
-                <input class="standardFormInput" type="text" id="neighborhood" name="neighborhood" />
-                <div id="neighborhoodDocumentoFeedback" class="feedback">
-                </div>
-              </div>
-
-            </div>
-
-            <div class="forInputsConteiner">
-              
-                <div class="forInputs">
-                  <label class="standardFormLabel" for="block">Quarteirão *</label>
-                  <input class="standardFormInput" type="text" id="block" name="block" />
-                  <div id="blockDocumentoFeedback" class="feedback">
-                  </div>
                 </div>
 
-                <div class="forInputs">
-                  <label class="standardFormLabel" for="houseNumber">Casa nº *</label>
-                  <input class="standardFormInput" type="text" id="houseNumber" name="houseNumber" />
-                  <div id="houseNumberDocumentoFeedback" class="feedback">
-                  </div>
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <h2 class="standardFormSubtitle">Estado civil *</h2>
+                        <div class="radioInputConteiner">
+                            <input class="standardFormInput" type="radio" id="single" name="maritalStatus"/>
+                            <label class="standardFormLabel" for="single">Solteiro(a)</label>
+                            <input class="standardFormInput" type="radio" id="married" name="maritalStatus"/>
+                            <label class="standardFormLabel" for="married">Casado(a)</label>
+                        </div>
+                        <div id="maritalStatusDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="typeOfDocument">Tipo de documento *</label>
+                        <input type="text" id="typeOfDocument" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li value="vazio"></li>
+                            <li value="BI">BI</li>
+                            <li value="Passaporte">Passaporte</li>
+                            <li value="Passaporte">Cartão de eleitor</li>
+                            <li value="Passaporte">carta de condução</li>
+                        </ul>
+                        <div id="typeOfDocumentDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
                 </div>
 
-              </div>
+                <div class="forInputsConteiner">
 
-              <div class="forInputsConteiner">
-            
-              <div class="forInputs">
-                <label class="standardFormLabel" for="fathersName">Nome do pai *</label>
-                <input class="standardFormInput" type="text" id="fathersName" name="fathersName" />
-                <div id="fathersNameDocumentoFeedback" class="feedback">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="documentNumber">Documento nº *</label>
+                        <input class="standardFormInput" type="text" id="documentNumber" name="documentNumber"/>
+                        <div id="documentNumberDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="placeOfIssue">Emitido em *</label>
+                        <input class="standardFormInput" type="text" id="placeOfIssue" name="placeOfIssue"/>
+                        <div id="placeOfIssueDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
                 </div>
-              </div>
 
-              <div class="forInputs">
-                <label class="standardFormLabel" for="mothersName">Nome da mãe *</label>
-                <input class="standardFormInput" type="text" id="mothersName" name="mothersName" />
-                <div id="mothersNameDocumentoFeedback" class="feedback">
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="dateOfIssue">Data de emissão *</label>
+                        <input class="standardFormInput" type="date" id="dateOfIssue" name="dateOfIssue"/>
+                        <div id="dateOfIssueDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="expirationDate">Validade *</label>
+                        <input class="standardFormInput" type="date" id="expirationDate" name="expirationDate"/>
+                        <div id="expirationDateDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
                 </div>
-              </div>
 
-            </div>
+                <div class="forInputsConteiner">
 
-            <div class="forInputsConteiner">
-              <!-- Container para entrada de contato -->
-              <div class="forInputs">
-              <div class="contact-input-container">
-                  <label for="contactInput" class="form-label">Adicionar Contato</label>
-                  <input type="text" id="contactInput" class="standardFormInput" placeholder="Digite o número de contato">
-                  <button id="addContactButton" class="btn btn-default form-button"><i class="fa-solid fa-circle-plus"></i></button>
-              </div>
-            </div>
-          
-            <div class="forInputs">
-              <!-- Div para mostrar a lista de contatos -->
-              <h2>Lista de contactos</h2>
-              <div class="contacts-list" id="contactsList">
-                  <ul id="contactsUl">
-                      <!-- Os contatos adicionados serão exibidos aqui -->
-                  </ul>
-              </div>
-            </div>
-          </div>
-          
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="NUIT">NUIT *</label>
+                        <input class="standardFormInput" type="text" id="NUIT" name="NUIT"/>
+                        <div id="NUITDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
 
-          <div class="button-container">
-            <button class="btn btn-cancel" type="reset">Descartar</button>
-            <button class="btn btn-success" type="submit">Submeter</button>
-          </div>
-        </form>    
-      </div> 
-    </div> 
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="sourceOfIncome">Fonte de renda *</label>
+                        <input type="text" id="sourceOfIncome" class="searchable-input"
+                               placeholder="Digite para pesquisar..." autocomplete="off">
+                        <ul class="dropdown hidden">
+                            <li value="vazio"></li>
+                            <li value="Salário de Emprego Formal">
+                                Salário de Emprego Formal
+                            </li>
+                            <li value="Pequenos Negócios">Pequenos Negócios</li>
+                            <li value="Agricultura Familiar">
+                                Agricultura Familiar
+                            </li>
+                            <li value="Artesanato">Artesanato</li>
+                            <li value="Serviços Autônomos">Serviços Autônomos</li>
+                            <li value="Pensões de Reforma">Pensões de Reforma</li>
+                            <li value="Subsídios de Assistência Social">
+                                Subsídios de Assistência Social
+                            </li>
+                            <li value="Juros e Dividendos">Juros e Dividendos</li>
+                            <li value="Aluguel de Imóveis">Aluguel de Imóveis</li>
+                            <li value="Propriedades e Terras">
+                                Propriedades e Terras
+                            </li>
+                            <li value="Trabalho Freelancer">Trabalho Freelancer</li>
+                            <li value="Trabalho Remoto">Trabalho Remoto</li>
+                            <li value="Produção Agrícola">Produção Agrícola</li>
+                            <li value="Pecuária">Pecuária</li>
+                            <li value="Pensão de Alimentos">Pensão de Alimentos</li>
+                            <li value="Outras Fontes">Outras Fontes</li>
+                        </ul>
 
-      <!--  FOOTER-->
-      <footer>
+                        <div id="sourceOfIncomeDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="locationOfActivity">Local de atividade *</label>
+                        <input class="standardFormInput" type="text" id="locationOfActivity" name="locationOfActivity"/>
+                        <div id="locationOfActivityDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="naturalness">Naturalidade *</label>
+                        <input class="standardFormInput" type="text" id="naturalness" name="naturalness"/>Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Soluta aperiam
+                        <div id="naturalnessDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="email">Email *</label>
+                        <input class="standardFormInput" type="email" id="email" name="email"/>
+                        <div id="emailDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="residence">Residência *</label>
+                        <input class="standardFormInput" type="text" id="residence" name="residence"/>
+                        <div id="residenceDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="neighborhood">Bairro *</label>
+                        <input class="standardFormInput" type="text" id="neighborhood" name="neighborhood"/>
+                        <div id="neighborhoodDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="block">Quarteirão *</label>
+                        <input class="standardFormInput" type="text" id="block" name="block"/>
+                        <div id="blockDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="houseNumber">Casa nº *</label>
+                        <input class="standardFormInput" type="text" id="houseNumber" name="houseNumber"/>
+                        <div id="houseNumberDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="fathersName">Nome do pai *</label>
+                        <input class="standardFormInput" type="text" id="fathersName" name="fathersName"/>
+                        <div id="fathersNameDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <label class="standardFormLabel" for="mothersName">Nome da mãe *</label>
+                        <input class="standardFormInput" type="text" id="mothersName" name="mothersName"/>
+                        <div id="mothersNameDocumentoFeedback" class="feedback">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="forInputsConteiner">
+                    <!-- Container para entrada de contato -->
+                    <div class="forInputs">
+                        <div class="contact-input-container">
+                            <label for="contactInput" class="form-label">Adicionar Contato</label>
+                            <div class="contetOnRow">
+                                <input type="text" id="contactInput" class="standardFormInput"
+                                       placeholder="Digite o número de contato">
+                                <button id="addContactButton" class="iconButton"><i class="fa-solid fa-circle-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forInputs">
+                        <!-- Div para mostrar a lista de contatos -->
+                        <h2>Lista de contactos</h2>
+                        <div class="contacts-list" id="contactsList">
+                            <ul id="contactsUl">
+                                <!-- Os contatos adicionados serão exibidos aqui -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="button-container">
+                    <button class="btn btn-cancel" type="reset">Descartar</button>
+                    <button class="btn btn-success" type="submit">Submeter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--  FOOTER-->
+    <footer>
         <p>&copy;Guizo Informática e Serviços</p>
-      </footer>
-    </main>
+    </footer>
+</main>
 
-    <script src="../../../components/sideBar/sideBar.js"></script>
-    <script src="../../../components/sideBar/sideBarMediaquery.js"></script>
-    <script src="../../../components/inputs/searchTools/searchTools.js"></script>
-    <script src="../../../components/inputs/multItemsInput/multItemsInput.js"></script>
-  </body>
+<script src="../../../components/sideBar/sideBar.js"></script>
+<script src="../../../components/sideBar/sideBarMediaquery.js"></script>
+<script src="../../../components/inputs/searchTools/searchTools.js"></script>
+<script src="../../../components/inputs/multItemsInput/multItemsInput.js"></script>
+</body>
 </html>

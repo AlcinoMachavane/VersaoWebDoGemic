@@ -46,13 +46,6 @@
     }
 }
 
-@media screen and (max-width: 640px) {
-    .formConteiner {
-        width: 90%;
-    }
-}
-
-
 @media screen and (max-width: 570px) {
     .dropDown {
 
