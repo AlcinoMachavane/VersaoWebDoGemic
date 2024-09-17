@@ -1,0 +1,55 @@
+@charset "UTF_8";
+
+.terms_page{
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: var(--my-box-shadow);
+    border-right: 2px solid var(--myLightBlue);
+    text-align: justify;
+}
+
+.terms_page_header{
+    margin-bottom: 20px;
+}
+
+.note{
+    color: deeppink!important;
+    font-weight: bold;
+}
+
+.articleSection{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.infoTitle{
+    font-size: 1.5em;
+    margin: 20px auto;
+    font-weight: bold;
+    color: var(--myLightBlue);
+
+}
+
+.infoParagraph{
+    /* max-width: 600px; */
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #161616;
+    padding: 10px;
+    line-height: 2em;
+}
+
+.infoCaption{
+    margin-top: 40px;
+    /* background-color: rgba(0, 194, 228, 0.030); */
+    padding: 5px;
+    color: var(--myLightBlue);
+}
